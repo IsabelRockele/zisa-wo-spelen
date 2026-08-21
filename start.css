@@ -83,6 +83,9 @@ h3 { margin: 7px 0; font-size: 1.45rem; }
 .card-copy strong { color: #137267; }
 .soon { opacity: .82; }
 .grade-card .picture { min-height: 190px; color: white; font-size: 7rem; font-weight: 900; text-shadow: 0 5px 0 #0002; }
+.grade-card .picture { position: relative; overflow: hidden; }
+.grade-card .picture img { position: absolute; right: 8%; bottom: -12%; width: min(47%,210px); height: 115%; object-fit: contain; filter: drop-shadow(0 8px 7px #2333); }
+.grade-card .picture b { position: absolute; left: 16%; top: 50%; transform: translateY(-50%); }
 .grade-one .picture { background: linear-gradient(135deg, #7660c8, #a891ee); }
 .grade-two .picture { background: linear-gradient(135deg, #148274, #54b79e); }
 .back-link { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 25px; padding: 12px 16px; border-radius: 15px; color: #176b62; background: #e1f4ee; font-weight: 900; text-decoration: none; }

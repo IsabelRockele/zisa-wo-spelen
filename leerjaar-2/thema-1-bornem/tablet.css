@@ -4,7 +4,15 @@
 .top-actions { display: flex; align-items: center; gap: 8px; }
 .hub-button { display: inline-flex; align-items: center; gap: 7px; min-height: 48px; padding: 0 15px; border-radius: 16px; color: var(--green); background: var(--green2); font-weight: 900; text-decoration: none; white-space: nowrap; }
 .game-menu-button { border: 0; cursor: pointer; }
+.answer-audio { display: inline-grid; place-items: center; flex: 0 0 38px; width: 38px; height: 38px; margin-right: 9px; border-radius: 50%; background: #ffe16f; box-shadow: 0 3px 0 #d3ad29; font-size: 18px; vertical-align: middle; cursor: pointer; }
+.answer,.sort-choice { align-items: center; }
+.board-option .answer-audio { display: inline-grid; margin-right: 12px; }
 .hub-button:hover, .hub-button:focus-visible { background: #cdebe2; }
+.housing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.housing-answer { display: flex; flex-direction: column; padding: 10px; min-height: 220px; }
+.housing-answer img { width: 100%; height: 155px; object-fit: cover; border-radius: 15px; }
+.housing-answer span:not(.answer-audio) { display: block; padding: 9px 4px 3px; }
+.game-card.color-7 { background: #f4e8ff; }
 
 @media (max-width: 1024px) {
   .shell { padding: 18px 16px 45px; }
@@ -37,6 +45,11 @@
   .answer-grid { grid-template-columns: 1fr 1fr; }
 }
 
+@media (min-width: 600px) and (max-width: 1024px) {
+  .game-grid { grid-template-columns: repeat(4, 1fr); }
+  .game-card h3 { font-size: 15px; }
+}
+
 @media (max-width: 520px) {
   .topbar { height: 62px; }
   .topbar { padding-inline: 9px; }
@@ -61,6 +74,9 @@
   .photo-question img { height: min(27vh, 210px); }
   .answer-grid { gap: 8px; }
   .answer { min-height: 55px; font-size: 15px; }
+  .housing-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .housing-answer { min-height: 170px; }
+  .housing-answer img { height: 112px; }
   .game-head { margin-bottom: 14px; }
   .game-head h1 { font-size: 24px; }
 }
