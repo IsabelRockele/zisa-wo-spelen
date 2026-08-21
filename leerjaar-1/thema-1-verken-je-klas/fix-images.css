@@ -23,3 +23,18 @@
   .classroom-picture { min-height: 210px !important; }
   .classroom-picture img { height: min(28vh, 190px) !important; }
 }
+
+.place-picture {
+  height: min(47vh, 470px) !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #e9f5f2 !important;
+}
+
+@media (max-width: 800px) {
+  .place-picture { height: min(40vh, 390px) !important; }
+}
+
+@media (max-width: 520px) {
+  .place-picture { height: min(34vh, 300px) !important; }
+}
