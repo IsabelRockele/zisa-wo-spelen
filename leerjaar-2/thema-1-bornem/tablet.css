@@ -15,6 +15,9 @@
 .housing-answer span:not(.answer-audio) { display: block; padding: 9px 4px 3px; }
 .game-card.color-7 { background: #f4e8ff; }
 .game-card.color-8 { background: #e9f8ef; }
+.game-card.color-9 { background:#fff4da; border-color:#e5bd58; }
+.game-card.color-10 { background:#edf8e7; border-color:#8dc978; }
+.game-card.color-11 { background:#e9f3ff; border-color:#79a9dc; }
 .class-tip { margin: 0 0 12px; padding: 9px 13px; border-radius: 12px; background: #fff3c8; color: #624d12; font-weight: 800; text-align: center; }
 .waste-object { display: flex; align-items: center; justify-content: center; gap: 16px; width: max-content; max-width: 100%; margin: 5px auto 14px; padding: 10px 18px; border: 3px dashed #7b62a3; border-radius: 18px; background: #fbf7ff; cursor: grab; touch-action: none; user-select: none; }
 .waste-object span { font-size: clamp(52px, 8vw, 86px); }
@@ -86,6 +89,11 @@
 .board-option.board-dim { opacity:.32; filter:grayscale(.7); transform:scale(.97); }
 .area-visual>span { font-size:110px; }
 .area-question>.prompt { text-align:center; }
+.landscape-photo { display:block; width:100%; height:min(43vh,340px); margin-bottom:18px; border-radius:22px; object-fit:cover; box-shadow:0 0 0 5px #fff,0 0 0 9px #87bd76; }
+.landscape-icon { margin:0 auto 18px; font-size:clamp(80px,13vw,130px); line-height:1; text-align:center; }
+.landscape-question>.prompt { text-align:center; }
+.service-icon { margin:0 auto 15px; font-size:clamp(76px,12vw,120px); line-height:1; text-align:center; }
+.service-question>.prompt { text-align:center; }
 
 /* Alle oefenkaarten krijgen opnieuw een even groot, beeldvullend beeldvak. */
 .game-thumb { object-fit:cover; object-position:center; padding:0; background:#fff; }
@@ -153,6 +161,7 @@
   .ladder-task .prompt { font-size:18px; }
   .ladder-choice { min-height:44px; }
   .area-visual { height:min(30vh,220px); margin-bottom:9px; }
+  .landscape-photo { height:min(27vh,210px); margin-bottom:12px; }
   .area-visual>span { font-size:80px; }
 }
 
@@ -178,6 +187,7 @@
   .game-card h3 { font-size: 15px; }
   .question-card { padding: 17px; border-radius: 20px; }
   .photo-question img { height: min(27vh, 210px); }
+  .landscape-photo { height:min(25vh,180px); }
   .answer-grid { gap: 8px; }
   .answer { min-height: 55px; font-size: 15px; }
   .housing-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
