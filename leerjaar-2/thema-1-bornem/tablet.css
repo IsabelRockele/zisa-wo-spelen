@@ -96,6 +96,34 @@
 .service-icon { margin:0 auto 15px; font-size:clamp(76px,12vw,120px); line-height:1; text-align:center; }
 .service-question>.prompt { text-align:center; }
 
+/* Tijdens het spelen moet de volledige vraag zonder scrollen zichtbaar zijn. */
+.playing .topbar { height:62px; }
+.playing .shell { max-width:1040px; padding:10px 16px 22px; }
+.playing .game-head { max-width:940px; margin:0 auto 8px; }
+.playing .game-head .eyebrow { display:none; }
+.playing .game-head h1 { font-size:clamp(24px,3vw,34px); line-height:1; }
+.playing .question-card { max-width:940px; padding:16px 22px; border-radius:24px; }
+.playing .question-card .prompt { margin:0 0 11px; font-size:clamp(21px,2.5vw,29px); line-height:1.08; }
+.playing .prompt-audio { width:42px; height:42px; margin-right:8px; font-size:19px; }
+.playing .answer-grid { gap:8px 10px; }
+.playing .answer { min-height:52px; padding-top:8px; padding-bottom:8px; font-size:15px; }
+.playing .feedback { min-height:0; margin:9px 0 0; }
+.playing .feedback:not(:empty) { position:fixed; z-index:20; left:50%; bottom:10px; transform:translateX(-50%); width:min(900px,calc(100% - 28px)); margin:0; padding:10px 14px; border:3px solid #fff; border-radius:17px; background:#e4f5eb; box-shadow:0 10px 30px #17313a55; }
+.playing .feedback:not(:empty) .next-button { display:inline-block; float:right; margin:-6px 0 -6px 12px; padding:11px 18px; }
+.playing .photo-question img { height:min(28vh,240px); margin-bottom:11px; object-fit:contain; background:#f4f7f5; }
+.playing .area-visual { height:min(29vh,245px); margin-bottom:10px; }
+.playing .landscape-photo { height:min(29vh,245px); margin-bottom:11px; }
+.playing .landscape-icon,.playing .service-icon { margin-bottom:9px; font-size:min(11vh,90px); }
+.playing .map-canvas { height:min(36vh,290px); }
+.playing .map-legend { margin:4px 0 7px; }
+.playing .ladder-question { padding-top:12px; padding-bottom:12px; }
+.playing .board-shell { min-height:calc(100dvh - 94px); padding:18px 28px; }
+.playing .board-question { margin:12px auto 16px; font-size:clamp(27px,4vw,48px); }
+.playing .board-image { height:min(24vh,210px); margin:-6px auto 14px; }
+.playing .board-option { min-height:82px; padding-top:14px; padding-bottom:14px; font-size:clamp(18px,2vw,26px); }
+.playing .board-controls { margin-top:12px; }
+.playing .board-explain { margin-top:12px; padding:12px 16px; font-size:18px; }
+
 /* Alle oefenkaarten krijgen opnieuw een even groot, beeldvullend beeldvak. */
 .game-thumb { object-fit:cover; object-position:center; padding:0; background:#fff; }
 
@@ -218,4 +246,10 @@
   .photo-question img { height: 28vh; margin-bottom: 9px; }
   .question-card .prompt { margin-bottom: 10px; }
   .answer { min-height: 50px; }
+}
+
+@media (max-width:520px) {
+  .answer:not(.waste-bin),.sort-choice,.board-option { padding-left:49px !important; }
+  .answer-audio { top:7px; left:7px; width:32px; height:32px; font-size:15px; }
+  .housing-answer { padding-left:10px !important; padding-top:48px !important; }
 }
