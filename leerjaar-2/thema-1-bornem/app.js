@@ -190,7 +190,7 @@ const games=[
  {id:'bord',icon:'🟥',title:'Klassikale kleurenquiz',text:'Kinderen steken rood, blauw of geel omhoog.',img:'breeven.jpg'},
  {id:'kaartvak',icon:'🗺️',title:'Zoek het vak op de kaart',text:'Gebruik kolomletters, rijnummers en de legende.',img:'stratenplan-school.png'},
  {id:'afvalladder',icon:'♻️',title:'De afval-ladder',text:'Wat is voorkomen, hergebruik, recycleren, verbranden of storten?',img:'recycleren-illustratie.jpg'},
- {id:'gebieden',icon:'🌍',title:'Herken het gebied',text:'Woongebied, natuurgebied, landbouwgebied of industriegebied?',img:'landbouwgebied-illustratie.jpg'}
+ {id:'gebieden',icon:'🌍',title:'Herken het gebied',text:'Woongebied, natuurgebied, landbouwgebied of industriegebied?',img:'gebied-landbouwgebied-foto-v2.webp'}
 ];
 const app=document.querySelector('#app'),home=document.querySelector('#homeButton'),hub=document.querySelector('#hubButton');let state={game:null,index:0,score:0,items:[],revealed:false};
 const shuffle=a=>{const copy=[...a];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]]}return copy};const sample=(a,n)=>shuffle(a).slice(0,n);const esc=s=>s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
