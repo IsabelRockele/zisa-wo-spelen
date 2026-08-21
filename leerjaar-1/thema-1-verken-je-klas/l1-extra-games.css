@@ -52,6 +52,23 @@
 .grid-cell { position:relative; border:1px solid #56606a; background:#fff; cursor:pointer; }
 .grid-cell:hover,.grid-cell:focus-visible { background:#fff5bc; z-index:1; }
 .tiny-desk { position:absolute; left:24%; top:24%; width:52%; height:34%; border:3px solid #8e421a; border-radius:4px; background:#d8752c; box-shadow:0 12px 0 -4px #71a55d; }
+.pupil-desk { position:absolute; inset:0; }
+.desk-top { position:absolute; left:18%; top:16%; width:64%; height:29%; border:3px solid #874219; border-radius:4px; background:#d97a31; box-shadow:inset 0 3px #f3ad67; }
+.chair-back { position:absolute; left:34%; top:53%; width:32%; height:24%; border:3px solid #376d31; border-radius:3px; background:#73a95f; }
+.chair-seat { position:absolute; left:38%; top:74%; width:24%; height:8%; background:#315f2d; box-shadow:-6px 8px 0 -4px #315f2d,6px 8px 0 -4px #315f2d; }
+.teacher-desk { position:absolute; inset:0; }
+.teacher-top { position:absolute; left:10%; top:18%; width:76%; height:48%; border:4px solid #65300f; border-radius:5px; background:#a95621; box-shadow:inset 0 5px #d87b3e; }
+.teacher-chair { position:absolute; left:35%; top:70%; width:35%; height:18%; border:3px solid #376d31; background:#73a95f; }
+.teacher-computer { position:absolute; left:23%; top:22%; color:#1e2936; font-size:22px; font-style:normal; }
+.teacher-books { position:absolute; right:17%; top:29%; color:#fff1b0; font-size:19px; font-style:normal; }
+.class-board { position:absolute; left:5%; top:18%; display:grid; place-items:center; width:90%; height:48%; border:5px solid #815531; background:#245d45; box-shadow:inset 0 0 0 2px #183f30; }
+.class-board:after { content:'a b c'; color:#fff; font:700 12px/1 Arial,sans-serif; letter-spacing:2px; }
+.class-window,.class-door { position:absolute; inset:8%; display:grid; place-items:center; color:#3278a4; background:#dcf2ff; border:3px solid #4285ad; font-size:31px; font-style:normal; }
+.class-door { color:#765027; background:#f2dfbc; border-color:#8a633c; }
+.class-legend { display:flex; justify-content:center; flex-wrap:wrap; gap:7px 14px; max-width:650px; margin:7px auto 0; color:#586071; font-size:12px; font-weight:800; }
+.class-legend span { display:flex; align-items:center; gap:4px; }
+.legend-pupil,.legend-teacher { display:inline-block; width:24px; height:13px; border:2px solid #874219; background:#d97a31; box-shadow:0 7px 0 -2px #73a95f; }
+.legend-teacher { width:28px; height:16px; background:#a95621; }
 .grid-cross { position:absolute; inset:0; display:grid; place-items:center; color:#087db0; font-size:56px; line-height:1; text-shadow:0 2px #fff; }
 .grid-cell.grid-wrong { animation:bin-shake .5s ease-in-out; background:#ffe2df; }
 .grid-cell.grid-correct { background:#dff5e8; box-shadow:inset 0 0 0 4px #3ca66b; }
