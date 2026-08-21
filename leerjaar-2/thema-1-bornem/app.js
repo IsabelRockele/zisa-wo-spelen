@@ -185,7 +185,7 @@ const games=[
  {id:'beeldwoord',icon:'🖼️',title:'Verbind woord en beeld',text:'Bekijk de afbeelding en kies het woord dat erbij hoort.',img:'adres-illustratie.jpg'},
  {id:'betekenis',icon:'💡',title:'Kies de betekenis',text:'Kies bij ieder woord de juiste uitleg.',img:'bestuur-illustratie.jpg'},
  {id:'bornem',icon:'📍',title:'Waar in Bornem?',text:'Herken echte gebouwen en plaatsen uit onze gemeente.',img:'kasteel-bornem.jpg'},
- {id:'sorteren',icon:'🧺',title:'Sorteer het woord',text:'Hoort het bij kaart, landschap of bestuur?',img:'legende-illustratie.jpg'},
+ {id:'sorteren',icon:'🧺',title:'Sorteer het woord',text:'Hoort het bij kaart, landschap of bestuur?',img:'legende-kaart-uitgesneden.webp'},
  {id:'toets',icon:'⭐',title:'Toetstraining',text:'Tien vragen over dezelfde doelen als de toets.',img:'school-de-linde.png'},
  {id:'bord',icon:'🟥',title:'Klassikale kleurenquiz',text:'Kinderen steken rood, blauw of geel omhoog.',img:'breeven.jpg'},
  {id:'kaartvak',icon:'🗺️',title:'Zoek het vak op de kaart',text:'Gebruik kolomletters, rijnummers en de legende.',img:'stratenplan-school.png'},
