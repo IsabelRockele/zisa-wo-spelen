@@ -19,8 +19,7 @@
 .l1-waste-bin.drag-over { outline:6px solid #ffe16f; outline-offset:2px; filter:brightness(1.08); }
 .l1-waste-bin.wrong-shake { animation:bin-shake .55s ease-in-out; }
 .l1-waste-bin.bin-catch { animation:bin-happy .55s ease-out; }
-.l1-waste-ghost { position:fixed; z-index:9999; transform:translate(-50%,-50%); display:flex; align-items:center; gap:8px; padding:8px 13px; border-radius:16px; background:#fff; box-shadow:0 12px 35px #0004; pointer-events:none; }
-.l1-waste-ghost { font-size:58px; }
+.l1-waste-ghost { position:fixed; z-index:9999; transform:translate(-50%,-50%); display:block; width:110px; height:90px; object-fit:contain; padding:7px; border-radius:16px; background:#fff; box-shadow:0 12px 35px #0004; pointer-events:none; }
 @keyframes bin-shake { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-9px) rotate(-3deg)} 40%{transform:translateX(9px) rotate(3deg)} 60%{transform:translateX(-7px)} 80%{transform:translateX(7px)} }
 @keyframes bin-happy { 0%,100%{transform:scale(1)} 50%{transform:scale(1.1) translateY(-8px)} }
 @keyframes waste-drop { to{transform:translateY(85px) scale(.25);opacity:0} }
