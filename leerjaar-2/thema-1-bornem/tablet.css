@@ -80,6 +80,10 @@
 .board-mix { max-width:760px; margin:-8px auto 22px; font-weight:800; color:#5f5270; }
 .board-image { display:block; width:min(520px,70vw); height:min(250px,28vh); margin:-18px auto 22px; border:5px solid #fff; border-radius:22px; object-fit:cover; box-shadow:0 0 0 4px #d8d2c4; }
 .board-icon { margin:-18px auto 18px; font-size:clamp(64px,9vw,110px); line-height:1; text-align:center; }
+.board-option { transition:opacity .25s,filter .25s,transform .25s,box-shadow .25s; }
+.board-option.board-correct { background:#dcf6df; border-color:#36a54d; box-shadow:0 0 0 7px #9ee5aa,0 10px 26px #28743844; transform:scale(1.035); }
+.board-option.board-correct b { box-shadow:0 0 0 4px #fff,0 0 0 8px #38aa51; }
+.board-option.board-dim { opacity:.32; filter:grayscale(.7); transform:scale(.97); }
 .area-visual>span { font-size:110px; }
 .area-question>.prompt { text-align:center; }
 
