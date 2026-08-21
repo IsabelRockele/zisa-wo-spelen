@@ -13,6 +13,23 @@
 .housing-answer img { width: 100%; height: 155px; object-fit: cover; border-radius: 15px; }
 .housing-answer span:not(.answer-audio) { display: block; padding: 9px 4px 3px; }
 .game-card.color-7 { background: #f4e8ff; }
+.game-card.color-8 { background: #e9f8ef; }
+.class-tip { margin: 0 0 12px; padding: 9px 13px; border-radius: 12px; background: #fff3c8; color: #624d12; font-weight: 800; text-align: center; }
+.waste-object { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 5px auto 14px; }
+.waste-object span { font-size: clamp(52px, 8vw, 86px); }
+.waste-object strong { font-size: clamp(22px, 3vw, 34px); }
+.waste-card .prompt { text-align: center; }
+.waste-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+.waste-bin { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px; padding: 30px 8px 10px; border-width: 4px; border-radius: 10px 10px 24px 24px; color: #fff; }
+.waste-bin .bin-lid { position: absolute; top: 10px; left: 8%; width: 84%; height: 12px; border-radius: 8px; background: currentColor; filter: brightness(.78); }
+.waste-bin strong { font-size: 17px; line-height: 1.1; }
+.waste-bin small { margin-top: 6px; font-weight: 900; opacity: .9; }
+.waste-bin .answer-audio { position: absolute; top: 20px; right: 7px; margin: 0; color: #222; }
+.bin-glas { background: #df4b42; border-color: #b52d27; }
+.bin-papier { background: #e3b916; border-color: #bd9300; color: #2e2814; }
+.bin-pmd { background: #277fc6; border-color: #1262a3; }
+.bin-gft { background: #62a63f; border-color: #397d24; }
+.bin-rest { background: #666d72; border-color: #41474b; }
 
 @media (max-width: 1024px) {
   .shell { padding: 18px 16px 45px; }
@@ -77,6 +94,8 @@
   .housing-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
   .housing-answer { min-height: 170px; }
   .housing-answer img { height: 112px; }
+  .waste-grid { grid-template-columns: repeat(2, 1fr); }
+  .waste-bin { min-height: 105px; }
   .game-head { margin-bottom: 14px; }
   .game-head h1 { font-size: 24px; }
 }
