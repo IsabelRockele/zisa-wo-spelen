@@ -1,0 +1,15 @@
+NOG TE CONTROLEREN VOOR OPENBARE PUBLICATIE
+
+De afbeeldingen in assets/images zijn afkomstig uit:
+- gebouwen in Bornem.docx
+- de door de gebruiker aangeleverde foto van burgemeester Greet De Bruyn
+
+De website is lokaal bruikbaar. Voor publicatie via een openbare GitHub Pages-site
+moet per foto worden nagegaan wie de fotograaf of rechthebbende is en of openbaar
+hergebruik is toegestaan. Vervang een foto wanneer toestemming ontbreekt.
+
+Bij voorkeur bewaren we per afbeelding:
+- bron of fotograaf
+- webadres van de bron
+- licentie of schriftelijke toestemming
+- vereiste naamsvermelding
