@@ -4,10 +4,10 @@
 .top-actions { display: flex; align-items: center; gap: 8px; }
 .hub-button { display: inline-flex; align-items: center; gap: 7px; min-height: 48px; padding: 0 15px; border-radius: 16px; color: var(--green); background: var(--green2); font-weight: 900; text-decoration: none; white-space: nowrap; }
 .game-menu-button { border: 0; cursor: pointer; }
-.answer-audio { display: inline-grid; place-items: center; flex: 0 0 38px; width: 38px; height: 38px; margin-right: 9px; border-radius: 50%; background: #ffe16f; box-shadow: 0 3px 0 #d3ad29; font-size: 18px; vertical-align: middle; cursor: pointer; }
+.answer-audio { position:absolute; z-index:2; top:8px; left:8px; display:grid; place-items:center; width:34px; height:34px; margin:0; border-radius:50%; background:#ffe16f; box-shadow:0 3px 0 #d3ad29; font-size:16px; cursor:pointer; }
 .prompt-audio { display: inline-grid; place-items: center; width: 52px; height: 52px; margin: 0 12px 4px 0; padding: 0; border: 0; border-radius: 50%; background: #ffe16f; box-shadow: 0 4px 0 #d3ad29; font-size: 23px; vertical-align: middle; cursor: pointer; }
-.answer,.sort-choice { align-items: center; }
-.board-option .answer-audio { display: inline-grid; margin-right: 12px; }
+.answer,.sort-choice,.board-option { position:relative; align-items:center; padding-left:52px; }
+.board-option .answer-audio { top:9px; left:9px; margin:0; }
 .hub-button:hover, .hub-button:focus-visible { background: #cdebe2; }
 .housing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .housing-answer { display: flex; flex-direction: column; padding: 10px; min-height: 220px; }
@@ -31,7 +31,7 @@
 .waste-bin .bin-lid { position: absolute; top: 10px; left: 8%; width: 84%; height: 12px; border-radius: 8px; background: currentColor; filter: brightness(.78); }
 .waste-bin strong { font-size: 17px; line-height: 1.1; }
 .waste-bin small { margin-top: 6px; font-weight: 900; opacity: .9; }
-.waste-bin .answer-audio { position: absolute; top: 20px; right: 7px; margin: 0; color: #222; }
+.waste-bin .answer-audio { top:20px; left:7px; right:auto; color:#222; }
 .waste-bin.drag-over { transform: translateY(-10px) scale(1.04); box-shadow: 0 12px 0 #0002; }
 .waste-bin.wrong-shake { animation: bin-shake .55s ease-in-out; filter: saturate(1.25); }
 .waste-bin.bin-catch { animation: bin-happy .55s ease-out; }
