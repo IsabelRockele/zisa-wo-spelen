@@ -184,16 +184,16 @@ const boardQuestions=[...testQuestions,...boardExtraQuestions];
 const landscapeQuestions=[
  {q:'Welk landschap zie je rond Kasteel van Bornem?',img:'landschap-kasteel-bornem.webp',a:['een landelijk landschap','een stedelijk landschap','een industriegebied'],right:0},
  {q:'Welk landschap zie je? Dit beeld past bij de omgeving van Bornem.',img:'landschap-bornem-landelijk-2.webp',a:['een landelijk landschap','een stedelijk landschap','een industriegebied'],right:0},
- {q:'Welk landschap zie je op deze stadsfoto?',img:'landschap-stad-stedelijk-1.webp',a:['een stedelijk landschap','een landelijk landschap','een natuurgebied'],right:0},
- {q:'Welk landschap zie je op deze stadsfoto?',img:'landschap-stad-stedelijk-2.webp',a:['een stedelijk landschap','een landelijk landschap','een natuurgebied'],right:0},
+ {q:'Welk landschap zie je op deze afbeelding?',img:'landschap-stad-stedelijk-1.webp',a:['een stedelijk landschap','een landelijk landschap','een natuurgebied'],right:0},
+ {q:'Welk landschap zie je op deze afbeelding?',img:'landschap-stad-stedelijk-2.webp',a:['een stedelijk landschap','een landelijk landschap','een natuurgebied'],right:0},
  {q:'Welke soort landbouw zie je?',img:'landbouw-veeteelt-foto.webp',a:['de veeteelt','de akkerbouw','de tuinbouw','de glastuinbouw'],right:0},
  {q:'Welke soort landbouw zie je?',img:'landbouw-akkerbouw-foto.webp',a:['de akkerbouw','de veeteelt','de tuinbouw','de glastuinbouw'],right:0},
  {q:'Welke soort landbouw zie je?',img:'landbouw-tuinbouw-foto.webp',a:['de tuinbouw','de veeteelt','de akkerbouw','de glastuinbouw'],right:0},
  {q:'Welke soort landbouw zie je?',img:'landbouw-glastuinbouw-foto.webp',a:['de glastuinbouw','de tuinbouw','de akkerbouw','de veeteelt'],right:0},
- {q:'De boer houdt koeien voor melk. Welke landbouwvorm is dit?',icon:'🐄',a:['de veeteelt','de tuinbouw','de akkerbouw','de glastuinbouw'],right:0},
- {q:'De boer oogst graan met een grote machine. Welke landbouwvorm is dit?',icon:'🌾',a:['de akkerbouw','de veeteelt','de tuinbouw','de glastuinbouw'],right:0},
- {q:'De teler plukt appels met de hand. Welke landbouwvorm is dit?',icon:'🍎',a:['de tuinbouw','de glastuinbouw','de veeteelt','de akkerbouw'],right:0},
- {q:'Groenten en bloemen groeien in een serre. Welke landbouwvorm is dit?',icon:'🌱',a:['de glastuinbouw','de tuinbouw','de veeteelt','de akkerbouw'],right:0}
+ {q:'De boer houdt koeien voor melk. Welke landbouwvorm is dit?',img:'landbouw-veeteelt-foto.webp',a:['de veeteelt','de tuinbouw','de akkerbouw','de glastuinbouw'],right:0},
+ {q:'De boer oogst graan met een grote machine. Welke landbouwvorm is dit?',img:'landbouw-akkerbouw-foto.webp',a:['de akkerbouw','de veeteelt','de tuinbouw','de glastuinbouw'],right:0},
+ {q:'De teler plukt appels met de hand. Welke landbouwvorm is dit?',img:'landbouw-tuinbouw-foto.webp',a:['de tuinbouw','de glastuinbouw','de veeteelt','de akkerbouw'],right:0},
+ {q:'Groenten en bloemen groeien in een serre. Welke landbouwvorm is dit?',img:'landbouw-glastuinbouw-foto.webp',a:['de glastuinbouw','de tuinbouw','de veeteelt','de akkerbouw'],right:0}
 ];
 const serviceQuestions=[
  {q:'Je hebt een nieuw paspoort of een nieuwe identiteitskaart nodig. Wie helpt?',icon:'🪪',a:['de dienst burgerzaken','de burgemeester','de milieudienst'],right:0,why:'De dienst burgerzaken helpt met identiteitskaarten en paspoorten.'},
