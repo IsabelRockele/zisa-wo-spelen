@@ -83,6 +83,9 @@
 .area-visual>span { font-size:110px; }
 .area-question>.prompt { text-align:center; }
 
+/* Toon de volledige oefenafbeelding, ook op een smal gsm-scherm. */
+.game-thumb { object-fit:contain; object-position:center; padding:7px; background:#fff; }
+
 @media (max-width: 1024px) {
   .shell { padding: 18px 16px 45px; }
   .hero { grid-template-columns: 1fr 210px; min-height: 190px; border-radius: 25px; }
@@ -166,8 +169,8 @@
   .section-title { font-size: 22px; margin: 17px 0 9px; }
   .game-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
   .game-card { min-height: 120px; padding: 69px 9px 9px; }
-  .game-thumb { height: 60px; }
-  .game-icon { top: 39px; width: 34px; height: 34px; }
+  .game-thumb { height: 68px; padding:4px; border-radius:17px 17px 22% 10%; }
+  .game-icon { top: 47px; width: 34px; height: 34px; }
   .game-card h3 { font-size: 15px; }
   .question-card { padding: 17px; border-radius: 20px; }
   .photo-question img { height: min(27vh, 210px); }
