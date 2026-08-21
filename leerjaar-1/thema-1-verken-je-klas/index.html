@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#6552b8">
+  <meta name="description" content="Beeldrijke luisterspelletjes bij Thema 1 - Verken je klas.">
+  <title>Zisa WO Spelen - Verken je klas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="extras.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a id="allThemes" class="nav" href="../../">← <span>Alle thema’s</span></a>
+    <button id="gameMenu" class="nav" type="button" hidden>← <span>Spelletjes</span></button>
+    <div class="brand"><b>Z</b><span><small>1STE LEERJAAR</small>Verken je klas</span></div>
+    <div class="actions"><button id="speak" class="speak" type="button" aria-label="Lees de opdracht voor">🔊</button><button id="openQr" class="speak qr" type="button" aria-label="Toon de QR-code">QR</button></div>
+  </header>
+  <main id="app" aria-live="polite"></main>
+  <dialog id="qrDialog"><button id="closeQr" class="close" aria-label="Sluiten">×</button><h2>Scan en speel</h2><p>Scan deze code om dit thema te openen.</p><div id="qrBox"></div><small id="qrUrl"></small><button id="printQr">Print de QR-code</button></dialog>
+</body>
+</html>

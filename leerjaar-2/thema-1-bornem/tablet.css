@@ -1,6 +1,7 @@
 /* Compacte bediening voor iPads, tablets en kleinere laptops. */
 [hidden] { display: none !important; }
 .nav-buttons { display: flex; align-items: center; gap: 8px; }
+.top-actions { display: flex; align-items: center; gap: 8px; }
 .hub-button { display: inline-flex; align-items: center; gap: 7px; min-height: 48px; padding: 0 15px; border-radius: 16px; color: var(--green); background: var(--green2); font-weight: 900; text-decoration: none; white-space: nowrap; }
 .game-menu-button { border: 0; cursor: pointer; }
 .hub-button:hover, .hub-button:focus-visible { background: #cdebe2; }
@@ -43,6 +44,7 @@
   .hub-button span { font-size: 24px; }
   .brand small { display: none; }
   .brand strong { font-size: 13px; }
+  .top-actions .icon-button { min-width: 42px; width: 42px; height: 42px; font-size: 14px; }
   .shell { padding: 12px 10px 35px; }
   .hero { grid-template-columns: 1fr; min-height: 0; border-radius: 20px; }
   .hero > div { padding: 19px; }
