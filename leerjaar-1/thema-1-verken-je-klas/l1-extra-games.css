@@ -29,3 +29,20 @@
 
 @media (min-width:600px) and (max-width:1024px) { .games{grid-template-columns:repeat(4,1fr)} .home-pictures .picture img{height:180px} .l1-waste-bin{min-height:105px} }
 @media (max-width:599px) { .home-pictures .picture img{height:145px} .l1-waste-bins{grid-template-columns:repeat(2,1fr)} .l1-waste-bin{min-height:100px} .l1-waste-object span{font-size:54px} .l1-waste-object strong{font-size:18px} }
+
+.grid-question { max-width: 760px; }
+.grid-instruction { margin: -5px 0 12px; color:#6552b8; font-size:22px; font-weight:900; }
+.class-grid { display:grid; grid-template-columns:42px repeat(6,1fr); grid-template-rows:52px repeat(6,58px); max-width:650px; margin:auto; }
+.grid-corner,.grid-symbol,.grid-number { display:grid; place-items:center; font-weight:900; }
+.grid-corner { color:#8d94a0; font-size:24px; }
+.grid-symbol { color:#c00068; font-size:35px; }
+.grid-number { color:#4b5260; font-size:20px; }
+.grid-cell { position:relative; border:1px solid #56606a; background:#fff; cursor:pointer; }
+.grid-cell:hover,.grid-cell:focus-visible { background:#fff5bc; z-index:1; }
+.tiny-desk { position:absolute; left:24%; top:24%; width:52%; height:34%; border:3px solid #8e421a; border-radius:4px; background:#d8752c; box-shadow:0 12px 0 -4px #71a55d; }
+.grid-cross { position:absolute; inset:0; display:grid; place-items:center; color:#087db0; font-size:56px; line-height:1; text-shadow:0 2px #fff; }
+.grid-cell.grid-wrong { animation:bin-shake .5s ease-in-out; background:#ffe2df; }
+.grid-cell.grid-correct { background:#dff5e8; box-shadow:inset 0 0 0 4px #3ca66b; }
+
+@media (max-width:800px) { .class-grid{grid-template-columns:34px repeat(6,1fr);grid-template-rows:43px repeat(6,50px)} .grid-symbol{font-size:29px}.grid-instruction{font-size:19px}.tiny-desk{border-width:2px} }
+@media (max-width:520px) { .class-grid{grid-template-columns:28px repeat(6,1fr);grid-template-rows:36px repeat(6,43px)} .grid-symbol{font-size:23px}.grid-number{font-size:16px}.grid-instruction{font-size:17px}.grid-cross{font-size:42px} }
