@@ -1,4 +1,8 @@
 /* Compacte bediening voor iPads, tablets en kleinere laptops. */
+.nav-buttons { display: flex; align-items: center; gap: 8px; }
+.hub-button { display: inline-flex; align-items: center; gap: 7px; min-height: 48px; padding: 0 15px; border-radius: 16px; color: var(--green); background: var(--green2); font-weight: 900; text-decoration: none; white-space: nowrap; }
+.hub-button:hover, .hub-button:focus-visible { background: #cdebe2; }
+
 @media (max-width: 1024px) {
   .shell { padding: 18px 16px 45px; }
   .hero { grid-template-columns: 1fr 210px; min-height: 190px; border-radius: 25px; }
@@ -32,6 +36,12 @@
 
 @media (max-width: 520px) {
   .topbar { height: 62px; }
+  .topbar { padding-inline: 9px; }
+  .hub-button { min-height: 42px; padding: 0 10px; font-size: 0; }
+  .hub-button span { font-size: 24px; }
+  .nav-buttons .icon-button { min-width: 42px; width: 42px; height: 42px; }
+  .brand small { display: none; }
+  .brand strong { font-size: 13px; }
   .shell { padding: 12px 10px 35px; }
   .hero { grid-template-columns: 1fr; min-height: 0; border-radius: 20px; }
   .hero > div { padding: 19px; }
