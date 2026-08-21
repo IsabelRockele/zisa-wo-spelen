@@ -32,6 +32,18 @@
 
 .grid-question { max-width: 760px; }
 .grid-instruction { margin: -5px 0 12px; color:#6552b8; font-size:22px; font-weight:900; }
+.grid-tray { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; max-width:650px; margin:0 auto 10px; }
+.grid-object { position:relative; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:7px; min-height:62px; padding:7px 42px 7px 9px; border:3px solid #d8cff8; border-radius:16px; background:#f8f5ff; cursor:grab; touch-action:none; user-select:none; }
+.grid-object>span { font-size:35px; }
+.grid-object>strong { font-size:14px; }
+.grid-object>b { display:grid; place-items:center; min-width:43px; height:38px; border-radius:11px; background:#fff0bd; color:#b30062; font-size:20px; }
+.grid-object>button { position:absolute; right:5px; top:50%; transform:translateY(-50%); display:grid; place-items:center; width:32px; height:32px; padding:0; border:0; border-radius:50%; background:#ffe16f; cursor:pointer; }
+.grid-object.selected { border-color:#6552b8; box-shadow:0 0 0 4px #e7e0ff; }
+.grid-object.dragging { opacity:.45; }
+.grid-object.placed { opacity:.35; pointer-events:none; }
+.grid-object-ghost { position:fixed; z-index:9999; transform:translate(-50%,-50%); display:flex; align-items:center; gap:7px; padding:8px 12px; border-radius:14px; background:#fff; box-shadow:0 12px 35px #0004; pointer-events:none; }
+.grid-object-ghost>span { font-size:45px; }
+.grid-object-ghost button { display:none; }
 .class-grid { display:grid; grid-template-columns:42px repeat(6,1fr); grid-template-rows:52px repeat(6,58px); max-width:650px; margin:auto; }
 .grid-corner,.grid-symbol,.grid-number { display:grid; place-items:center; font-weight:900; }
 .grid-corner { color:#8d94a0; font-size:24px; }
@@ -43,6 +55,8 @@
 .grid-cross { position:absolute; inset:0; display:grid; place-items:center; color:#087db0; font-size:56px; line-height:1; text-shadow:0 2px #fff; }
 .grid-cell.grid-wrong { animation:bin-shake .5s ease-in-out; background:#ffe2df; }
 .grid-cell.grid-correct { background:#dff5e8; box-shadow:inset 0 0 0 4px #3ca66b; }
+.grid-cell.grid-over { background:#fff0a9; transform:scale(1.04); z-index:2; }
+.grid-placed { position:absolute; inset:0; display:grid; place-items:center; color:#17313a; font-size:34px; background:#dff5e8cc; }
 
-@media (max-width:800px) { .class-grid{grid-template-columns:34px repeat(6,1fr);grid-template-rows:43px repeat(6,50px)} .grid-symbol{font-size:29px}.grid-instruction{font-size:19px}.tiny-desk{border-width:2px} }
-@media (max-width:520px) { .class-grid{grid-template-columns:28px repeat(6,1fr);grid-template-rows:36px repeat(6,43px)} .grid-symbol{font-size:23px}.grid-number{font-size:16px}.grid-instruction{font-size:17px}.grid-cross{font-size:42px} }
+@media (max-width:800px) { .class-grid{grid-template-columns:34px repeat(6,1fr);grid-template-rows:43px repeat(6,47px)} .grid-symbol{font-size:29px}.grid-instruction{font-size:19px}.tiny-desk{border-width:2px}.grid-object{min-height:54px;padding-left:6px}.grid-object>span{font-size:29px}.grid-object>strong{display:none} }
+@media (max-width:520px) { .grid-tray{gap:5px}.grid-object{grid-template-columns:1fr;padding:5px 35px 5px 4px}.grid-object>b{font-size:17px}.grid-object>span{display:none}.class-grid{grid-template-columns:28px repeat(6,1fr);grid-template-rows:36px repeat(6,40px)} .grid-symbol{font-size:23px}.grid-number{font-size:16px}.grid-instruction{font-size:17px}.grid-cross{font-size:42px} }
