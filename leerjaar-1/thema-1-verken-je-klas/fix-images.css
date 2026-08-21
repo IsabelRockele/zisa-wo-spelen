@@ -1,0 +1,25 @@
+.classroom-picture {
+  display: grid !important;
+  place-items: center !important;
+  min-height: 390px !important;
+  background: #f7f5ef !important;
+}
+
+.classroom-picture img {
+  width: 100% !important;
+  height: min(39vh, 350px) !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #f7f5ef !important;
+  padding: 5px !important;
+}
+
+@media (max-width: 800px) {
+  .classroom-picture { min-height: 300px !important; }
+  .classroom-picture img { height: min(35vh, 270px) !important; }
+}
+
+@media (max-width: 520px) {
+  .classroom-picture { min-height: 210px !important; }
+  .classroom-picture img { height: min(28vh, 190px) !important; }
+}
