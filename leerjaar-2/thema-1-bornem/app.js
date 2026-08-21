@@ -53,10 +53,10 @@ const places=[
  {name:'burgemeester Greet De Bruyn',img:'burgemeester-greet-de-bruyn.png',clue:'Zij is de burgemeester van Bornem.'}
 ];
 const picturePairs=[
- {w:'het adres',img:'adres-illustratie.jpg'},{w:'het afval',img:'afval-illustratie.jpg'},{w:'hergebruiken',img:'hergebruiken-illustratie.jpg'},{w:'recycleren',img:'recycleren-illustratie.jpg'},
- {w:'afval verbranden',img:'verbranden-illustratie.jpg'},{w:'afval voorkomen',img:'voorkomen-illustratie.jpg'},{w:'de akkerbouw',img:'akkerbouw-illustratie.jpg'},{w:'het bestuur',img:'bestuur-illustratie.jpg'},
+ {w:'het adres',img:'foto-adres.webp'},{w:'het afval',img:'foto-afval.webp'},{w:'hergebruiken',img:'foto-hergebruik.webp'},{w:'recycleren',img:'foto-recycleren.webp'},
+ {w:'afval verbranden',img:'foto-afval-verbranden.webp'},{w:'afval voorkomen',img:'foto-afval-voorkomen.webp'},{w:'de akkerbouw',img:'landbouw-akkerbouw-foto.webp'},{w:'het bestuur',img:'foto-gemeentebestuur.webp'},
  {w:'de burgemeester',img:'burgemeester-greet-de-bruyn.png'},{w:'de cultuur',img:'ter-dilft.jpg'},{w:'de dienst',img:'brandweer-bornem.jpg'},{w:'het gemeentehuis',img:'gemeentehuis-bornem.jpg'},
- {w:'de gids',img:'gids-illustratie.jpg'},{w:'de glastuinbouw',img:'landbouw-glastuinbouw-foto.webp'},{w:'de handel',img:'winkelstraat-bornem.jpg'},{w:'het industriegebied',img:'gebied-industriegebied-foto-v2.webp'},
+ {w:'de gids',img:'foto-gids.webp'},{w:'de glastuinbouw',img:'landbouw-glastuinbouw-foto.webp'},{w:'de handel',img:'winkelstraat-bornem.jpg'},{w:'het industriegebied',img:'gebied-industriegebied-foto-v2.webp'},
  {w:'het landelijk landschap',img:'landschap-kasteel-bornem.webp'},{w:'de legende',img:'legende-kaart-uitgesneden.webp'},{w:'de luchtfoto',img:'luchtfoto-school.png'},{w:'het natuurgebied',img:'gebied-natuurgebied-foto-v2.webp'},
  {w:'het recreatiegebied',img:'breeven.jpg'},{w:'het stedelijk landschap',img:'landschap-stad-stedelijk-2.webp'},{w:'het stratenplan',img:'stratenplan-school.png'},{w:'het openbaar vervoer',img:'station-bornem.jpg'}
 ];

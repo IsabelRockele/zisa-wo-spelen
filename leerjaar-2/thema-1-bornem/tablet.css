@@ -110,7 +110,7 @@
 .playing .feedback { min-height:0; margin:9px 0 0; }
 .playing .feedback:not(:empty) { position:fixed; z-index:20; left:50%; bottom:10px; transform:translateX(-50%); width:min(900px,calc(100% - 28px)); margin:0; padding:10px 14px; border:3px solid #fff; border-radius:17px; background:#e4f5eb; box-shadow:0 10px 30px #17313a55; }
 .playing .feedback:not(:empty) .next-button { display:inline-block; float:right; margin:-6px 0 -6px 12px; padding:11px 18px; }
-.playing .photo-question img { height:min(28vh,240px); margin-bottom:11px; object-fit:contain; background:#f4f7f5; }
+.playing .photo-question img { height:min(28vh,240px); margin-bottom:11px; object-fit:cover; object-position:center; background:#f4f7f5; }
 .playing .area-visual { height:min(29vh,245px); margin-bottom:10px; }
 .playing .landscape-photo { height:min(29vh,245px); margin-bottom:11px; }
 .playing .landscape-icon,.playing .service-icon { margin-bottom:9px; font-size:min(11vh,90px); }
