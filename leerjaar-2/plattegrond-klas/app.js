@@ -46,7 +46,7 @@ const objectRounds=[
 ];
 const mixedRounds=[
  {anchors:[['Noor',10]],tasks:[['Liv','L','desk-9','zit links van Noor'],['het boek','📘','desk-11','ligt op de bank rechts van Noor'],['de vuilbak','🗑️','bin-place','staat rechts naast het kastje links vooraan'],['de computer','💻','teacher','staat op het bureau van de juf']]},
- {anchors:[['Sam',15]],tasks:[['Elias','E','desk-14','zit links van Sam'],['Lina','L','desk-16','zit rechts van Sam'],['de boekentas','🎒','desk-20','staat bij de bank schuin voor Sam'],['de plant','🪴','cabinet-back-right','staat op de kast rechts achteraan']]},
+ {anchors:[['Sam',15]],tasks:[['Elias','E','desk-14','zit links van Sam'],['Lina','L','desk-16','zit rechts van Sam'],['de boekentas','🎒','desk-20','staat bij de bank schuin rechts voor Sam'],['de plant','🪴','cabinet-back-right','staat op de kast rechts achteraan']]},
  {anchors:[['Emma',5],['Jules',7]],tasks:[['Mats','M','desk-6','zit tussen Emma en Jules'],['de drinkfles','🧴','sink','staat bij de wastafel'],['de doos','📦','cabinet-front-left','staat op de kast links vooraan'],['de klok','🕐','board-back','hangt bij het bord achteraan']]},
  {anchors:[['Mauro',2]],tasks:[['Yana','Y','desk-3','zit rechts van Mauro'],['Finn','F','desk-6','zit voor Mauro'],['de bal','⚽','desk-8','ligt op de bank helemaal rechts in de tweede rij'],['de spons','🧽','board-front','ligt bij het bord vooraan']]},
  {anchors:[['Imani',18],['Seppe',20]],tasks:[['Aya','A','desk-19','zit tussen Imani en Seppe'],['de brooddoos','🍱','desk-17','ligt op de bank helemaal links vooraan'],['de wereldbol','🌍','cabinet-back-3','staat op de kast rechts van het midden achteraan'],['de vuilbak','🗑️','bin-place','staat rechts naast het kastje links vooraan']]},
