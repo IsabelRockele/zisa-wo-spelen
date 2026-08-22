@@ -15,19 +15,27 @@
 .teacher { font-size: clamp(8px, 1.1vw, 13px); }
 .chair {
   z-index: 5;
+  min-width: 0;
+  padding: 0;
+  appearance: none;
   background: #83b95a;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .window {
   z-index: 8;
+  min-width: 0 !important;
+  max-width: 4px;
+  padding: 0 !important;
+  appearance: none;
   background: #8fd8fa;
-  border-color: #4f9fc8;
+  border: 0 !important;
+  border-radius: 0;
   opacity: .96;
 }
 #window-left-back,
 #window-left-front {
   left: 0 !important;
-  width: 5px !important;
+  width: 4px !important;
   transform: translate(0,-50%) !important;
 }
 #window-right-back,
@@ -35,7 +43,7 @@
 #window-right-front {
   left: auto !important;
   right: 0 !important;
-  width: 5px !important;
+  width: 4px !important;
   transform: translateY(-50%) !important;
 }
 .door {
