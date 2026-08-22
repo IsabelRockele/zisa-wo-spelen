@@ -36,3 +36,19 @@
 .cycle-scroll + .bank + .controls{margin:9px}
 .cycle-scroll + .bank + .controls .primary{padding:9px 15px}
 @media(max-width:760px){.cycle-wheel{width:650px;height:390px}.cycle-slot{width:120px;min-height:140px}.cycle-slot-1{top:6px}.cycle-slot-2{right:22px;top:105px}.cycle-slot-3{right:140px}.cycle-slot-4{left:140px}.cycle-slot-5{left:22px;top:105px}.cycle-scroll + .bank{grid-template-columns:repeat(5,130px);overflow-x:auto}.cycle-scroll + .bank .stage{height:132px}.cycle-scroll + .bank .stage-photo{height:96px}}
+
+/* Echte ronde kring met vijf gelijkmatig verdeelde fasen. */
+.cycle-scroll{padding:14px 28px 10px;overflow:visible}
+.cycle-wheel{width:560px;height:560px;border-radius:50%}
+.cycle-slot{width:130px;min-height:150px}
+.cycle-slot-1{left:50%;top:-4px;transform:translateX(-50%)}
+.cycle-slot-2{right:-4px;top:142px}
+.cycle-slot-3{right:72px;bottom:-8px}
+.cycle-slot-4{left:72px;bottom:-8px}
+.cycle-slot-5{left:-4px;top:142px}
+.cycle-slot .stage{font-size:13px;line-height:1.05}
+.cycle-slot .stage p{margin:5px 2px;white-space:normal;overflow-wrap:anywhere}
+.cycle-slot .stage-photo{height:112px;object-fit:contain}
+.arrow-1{right:112px;top:72px}.arrow-2{right:12px;bottom:142px}.arrow-3{bottom:26px}.arrow-4{left:12px;bottom:142px}.arrow-5{left:112px;top:72px}
+.cycle-centre{width:112px;height:112px;font-size:16px}
+@media(max-width:760px){.cycle-scroll{overflow-x:auto;padding:14px 16px 10px}.cycle-wheel{width:520px;height:520px}.cycle-slot{width:118px;min-height:138px}.cycle-slot-1{top:-2px}.cycle-slot-2{right:-2px;top:132px}.cycle-slot-3{right:64px;bottom:-5px}.cycle-slot-4{left:64px;bottom:-5px}.cycle-slot-5{left:-2px;top:132px}.cycle-slot .stage-photo{height:100px}.arrow-1{right:104px;top:66px}.arrow-2{right:10px;bottom:132px}.arrow-4{left:10px;bottom:132px}.arrow-5{left:104px;top:66px}}
