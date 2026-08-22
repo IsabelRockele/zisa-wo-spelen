@@ -10,7 +10,63 @@
   background-size: 8.333% 5%;
 }
 .furniture { overflow: hidden; line-height: 1; }
-.mode-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.mode-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.mode {
+  position: relative;
+  min-height: 220px;
+  padding: 22px 22px 58px;
+  border: 3px solid #7abbaa;
+  background: linear-gradient(145deg, #ffffff, #eaf7f2);
+  box-shadow: 0 7px 0 #c8e3da, 0 12px 24px #173c3218;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+.mode:nth-child(2n) {
+  border-color: #e0b84f;
+  background: linear-gradient(145deg, #fffef8, #fff4cf);
+  box-shadow: 0 7px 0 #f0dda0, 0 12px 24px #4d3c1118;
+}
+.mode:hover,
+.mode:focus-visible {
+  transform: translateY(-3px);
+  border-color: #176b62;
+  box-shadow: 0 9px 0 #b9dbd0, 0 16px 28px #173c3224;
+  outline: none;
+}
+.mode:active {
+  transform: translateY(4px);
+  box-shadow: 0 3px 0 #b9dbd0;
+}
+.mode::after {
+  content: 'Start →';
+  position: absolute;
+  left: 22px;
+  bottom: 18px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #176b62;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1rem;
+}
+.mode h2 { font-size: clamp(1.25rem, 2vw, 1.65rem); }
+.mode p { font-size: 1.05rem; line-height: 1.35; }
+.help-button {
+  background: linear-gradient(145deg, #fff7bf, #ffd760);
+  color: #173f3a;
+  border: 3px solid #d59600;
+  box-shadow: 0 5px 0 #b57900, 0 9px 18px #51390022;
+  font-weight: 900;
+  font-size: 18px;
+  padding: 13px 18px;
+}
+.help-button:hover,
+.help-button:focus-visible { transform: translateY(-2px); }
+.help-button:active { transform: translateY(3px); box-shadow: 0 2px 0 #b57900; }
+.help-button[aria-pressed="true"] {
+  background: #d8f5df;
+  border-color: #27844e;
+  box-shadow: 0 4px 0 #176a3a;
+}
 .placement-spot {
   z-index: 3;
   min-width: 0;
@@ -176,6 +232,10 @@
   .room { aspect-ratio: 3 / 5; }
   .mode-grid { grid-template-columns: 1fr; }
   .tasks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 801px) and (max-width: 1050px) {
+  .mode-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 .color-room .furniture {
