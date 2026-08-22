@@ -14,3 +14,25 @@
 .cycle-slot.correct{border-color:#278a4b;background:#eaf8ed}
 .cycle-scroll{overflow-x:auto;padding:4px 0 14px}.cycle-wheel{position:relative;width:max(720px,100%);height:660px;margin:auto;background:#f8fbf4;border:4px solid #87ac80;border-radius:50%}.cycle-slot{position:absolute;width:210px;min-height:245px;z-index:2}.cycle-slot-1{left:50%;top:18px;transform:translateX(-50%)}.cycle-slot-2{right:38px;top:190px}.cycle-slot-3{right:220px;bottom:22px}.cycle-slot-4{left:220px;bottom:22px}.cycle-slot-5{left:38px;top:190px}.cycle-number{position:absolute;left:-13px;top:-13px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#315b2a;color:#fff;font-weight:900;z-index:4}.cycle-arrow{position:absolute;color:#176f64;font-size:72px;font-weight:900;line-height:1;z-index:1}.arrow-1{right:245px;top:88px}.arrow-2{right:92px;bottom:170px}.arrow-3{left:50%;bottom:58px;transform:translateX(-50%)}.arrow-4{left:92px;bottom:170px}.arrow-5{left:245px;top:88px}.cycle-centre{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:160px;height:160px;border-radius:50%;display:grid;place-items:center;background:#dff1d7;color:#315b2a;border:4px solid #87ac80;font-weight:900;font-size:22px}
 @media(max-width:760px){.sequence-workspace{grid-template-columns:1fr}.sentence-bank{grid-row:1}.sequence{grid-row:2}.sequence-row{grid-template-columns:38px 1fr}.sequence-row>b{width:36px;height:36px;font-size:18px}.sentence-card{font-size:15px;min-height:46px}.sentence-slot{min-height:54px}}
+
+/* Compacte kring: de sleepkaarten blijven samen met de hele oefening in beeld. */
+.instruction:has(+.cycle-scroll){margin:0 0 8px;font-size:clamp(18px,2.2vw,27px)}
+.cycle-scroll{padding:0 0 8px}
+.cycle-wheel{width:min(900px,100%);height:420px}
+.cycle-slot{width:140px;min-height:150px}
+.cycle-slot-1{top:8px}
+.cycle-slot-2{right:40px;top:112px}
+.cycle-slot-3{right:205px;bottom:8px}
+.cycle-slot-4{left:205px;bottom:8px}
+.cycle-slot-5{left:40px;top:112px}
+.cycle-number{left:-10px;top:-10px;width:30px;height:30px}
+.cycle-arrow{font-size:44px}
+.arrow-1{right:205px;top:54px}.arrow-2{right:92px;bottom:92px}.arrow-3{bottom:28px}.arrow-4{left:92px;bottom:92px}.arrow-5{left:205px;top:54px}
+.cycle-centre{width:105px;height:105px;font-size:16px}
+.cycle-scroll + .bank{max-width:900px;margin:8px auto 0;display:grid;grid-template-columns:repeat(5,1fr);gap:9px;padding:10px}
+.cycle-scroll + .bank .stage{height:140px;font-size:15px}
+.cycle-scroll + .bank .stage p{margin:5px}
+.cycle-scroll + .bank .stage-photo{height:105px}
+.cycle-scroll + .bank + .controls{margin:9px}
+.cycle-scroll + .bank + .controls .primary{padding:9px 15px}
+@media(max-width:760px){.cycle-wheel{width:650px;height:390px}.cycle-slot{width:120px;min-height:140px}.cycle-slot-1{top:6px}.cycle-slot-2{right:22px;top:105px}.cycle-slot-3{right:140px}.cycle-slot-4{left:140px}.cycle-slot-5{left:22px;top:105px}.cycle-scroll + .bank{grid-template-columns:repeat(5,130px);overflow-x:auto}.cycle-scroll + .bank .stage{height:132px}.cycle-scroll + .bank .stage-photo{height:96px}}
