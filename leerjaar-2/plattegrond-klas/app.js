@@ -1,16 +1,27 @@
 const app=document.querySelector('#app');
-const room={left:70,top:100,width:400,height:640};
-const desks=[[112.4,199.5],[165.5,199.7],[235.3,200.1],[288.1,200.2],[359.8,200.2],[117,300.7],[200.2,302],[285.8,302.7],[371.3,303.9],[116.1,398.7],[200.2,399.5],[287.2,396.7],[374.2,395.8],[117.9,485.4],[201.3,487.4],[287,484.5],[378,485],[166.9,585.6],[194.4,571.2],[248.7,570.9],[302.2,571],[381.2,569.6]];
+const room={left:90,top:120,width:360,height:600};
+// Middelpunten berekend uit de echte JSON-posities en afmetingen.
+const desks=[[139.2,214.5],[192.3,214.7],[262.1,215.2],[315.0,215.2],[386.7,215.2],[143.9,317.1],[227.1,317.1],[312.6,317.7],[398.2,318.9],[143.0,413.7],[227.0,414.5],[314.0,411.7],[401.1,410.8],[144.8,500.4],[228.2,502.4],[313.8,499.5],[404.8,500.0],[166.9,585.6],[221.3,586.2],[275.6,585.9],[329.1,586.0],[408.1,584.7]];
 const fixed=[
- {id:'board-back',kind:'board',x:265,y:128,w:270,h:15,label:''},
- {id:'board-front',kind:'board',x:268,y:712,w:270,h:15,label:''},
- {id:'teacher',kind:'teacher',x:412,y:665,w:66,h:42,label:'BUREAU JUF'},
- {id:'cabinet-back-right',kind:'cabinet',x:435,y:142,w:45,h:34,label:'🗄️'},
- {id:'cabinet-front-left',kind:'cabinet',x:165,y:682,w:52,h:32,label:'🗄️'},
- {id:'sink',kind:'sink',x:105,y:712,w:30,h:30,label:'🚰'},
- {id:'door',kind:'door',x:138,y:598,w:38,h:54,label:'🚪'},
- {id:'window-left',kind:'window',x:98,y:372,w:12,h:180,label:''},
- {id:'window-right',kind:'window',x:457,y:337,w:12,h:150,label:''}
+ {id:'board-back',kind:'board',x:261.2,y:127.7,w:270.7,h:9,label:''},
+ {id:'board-front',kind:'board',x:268.1,y:712.0,w:270.7,h:9,label:''},
+ {id:'teacher',kind:'teacher',x:412.3,y:664.5,w:41.8,h:65.3,label:'JUF'},
+ {id:'teacher-chair',kind:'chair',x:441,y:690,w:12,h:22,label:''},
+ {id:'cabinet-back-left',kind:'cabinet',x:140.9,y:150.5,w:60.2,h:26.8,label:''},
+ {id:'cabinet-back-1',kind:'cabinet',x:202.5,y:144.2,w:47.9,h:17.9,label:''},
+ {id:'cabinet-back-2',kind:'cabinet',x:255.7,y:144.9,w:47.9,h:17.9,label:''},
+ {id:'cabinet-back-3',kind:'cabinet',x:308.8,y:145.5,w:47.9,h:17.9,label:''},
+ {id:'cabinet-back-right',kind:'cabinet',x:429.6,y:163.0,w:26.8,h:72.4,label:''},
+ {id:'cabinet-front-left',kind:'cabinet',x:164.7,y:688.5,w:60.2,h:26.8,label:''},
+ {id:'cabinet-left-back',kind:'cabinet wall-cabinet',x:105,y:225.9,w:12.2,h:210.1,label:''},
+ {id:'cabinet-left-front',kind:'cabinet wall-cabinet',x:107,y:461.3,w:12.2,h:210.1,label:''},
+ {id:'sink',kind:'sink',x:107.3,y:680.2,w:30.2,h:36,label:'🚰'},
+ {id:'door',kind:'door',x:117,y:625.2,w:54.1,h:54.1,label:''},
+ {id:'window-left-back',kind:'window',x:92,y:222,w:7,h:180,label:''},
+ {id:'window-left-front',kind:'window',x:92,y:462,w:7,h:180,label:''},
+ {id:'window-right-back',kind:'window',x:451,y:210,w:7,h:150,label:''},
+ {id:'window-right-middle',kind:'window',x:451,y:412,w:7,h:150,label:''},
+ {id:'window-right-front',kind:'window',x:451,y:623,w:7,h:150,label:''}
 ];
 const nameRounds=[
  {anchors:[['Noor',10]],tasks:[['Liv','L','desk-9','zit links van Noor'],['Adam','A','desk-11','zit rechts van Noor'],['Mila','M','desk-6','zit achter Noor']]},
@@ -27,7 +38,7 @@ const quiz=[
  ['Waar staat het bureau van de juf?','teacher',['teacher','sink','cabinet-back-right']],
  ['Wat vind je links vooraan?','sink',['sink','cabinet-back-right','board-back']],
  ['Welke kast staat rechts achteraan?','cabinet-back-right',['cabinet-back-right','cabinet-front-left','teacher']],
- ['Welke deur ligt het dichtst bij de voorste banken?','door',['door','window-left','window-right']]
+ ['Welke deur ligt het dichtst bij de voorste banken?','door',['door','window-left-front','window-right-front']]
 ];
 let state={mode:null,round:0,index:0,mistakes:[],reviewErrors:[],review:false,items:[],placed:0,spoken:''};
 const pctX=x=>(x-room.left)/room.width*100,pctY=y=>(y-room.top)/room.height*100;
@@ -35,13 +46,13 @@ function say(text=state.spoken){if(!text||!('speechSynthesis'in window))return;c
 document.querySelector('#sound').onclick=()=>say();
 function menu(){state={mode:null,round:0,index:0,mistakes:[],reviewErrors:[],review:false,items:[],placed:0,spoken:'Kies een oefening over de plattegrond van onze klas.'};app.innerHTML=`<section class="welcome"><p>2de leerjaar · extra herhaling</p><h1>Ik herhaal de plattegrond van de klas</h1><p>Oefen met tijdelijke namen en voorwerpen in onze echte klas.</p><div class="mode-grid"><button class="mode" data-mode="names"><i>🧒</i><h2>Zet de kinderen juist</h2><p>Links, rechts, voor, achter en tussen.</p></button><button class="mode" data-mode="objects"><i>🪴</i><h2>Plaats de voorwerpen</h2><p>Op een bank, kast, bord of bureau.</p></button><button class="mode" data-mode="quiz"><i>🧭</i><h2>Waar is het?</h2><p>Herken vooraan, achteraan, links en rechts.</p></button></div></section>`;document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>start(b.dataset.mode));say()}
 function start(mode){state.mode=mode;state.round=0;state.index=0;state.mistakes=[];state.reviewErrors=[];state.review=false;state.items=mode==='quiz'?[...quiz]:mode==='names'?[...nameRounds]:[...objectRounds];render()}
-function roomHTML(anchors=[]){return `<div class="orientation" style="justify-content:center"><span>⬆ ACHTERAAN</span></div><div class="room" id="room">${desks.map((d,i)=>`<button class="furniture desk" id="desk-${i}" data-target="desk-${i}" style="left:${pctX(d[0])}%;top:${pctY(d[1])}%;width:15%;height:5%;transform:translate(-50%,-50%)" aria-label="schoolbank ${i+1}">${i+1}</button>`).join('')}${fixed.map(o=>`<button class="furniture ${o.kind}" id="${o.id}" data-target="${o.id}" style="left:${pctX(o.x)}%;top:${pctY(o.y)}%;width:${o.w/room.width*100}%;height:${Math.max(o.h/room.height*100,2.4)}%;transform:translate(-50%,-50%)">${o.label}</button>`).join('')}${anchors.map(a=>tokenHTML(a[0],desks[a[1]],'anchor')).join('')}</div><div class="orientation front" style="justify-content:center;padding-top:8px"><span>VOORAAN ⬇</span></div>`}
+function roomHTML(anchors=[]){return `<div class="orientation" style="justify-content:center"><span>⬆ ACHTERAAN</span></div><div class="room" id="room">${desks.map((d,i)=>`<button class="furniture desk" id="desk-${i}" data-target="desk-${i}" style="left:${pctX(d[0])}%;top:${pctY(d[1])}%;width:15%;height:5%;transform:translate(-50%,-50%)" aria-label="schoolbank ${i+1}"></button>`).join('')}${fixed.map(o=>`<button class="furniture ${o.kind}" id="${o.id}" data-target="${o.id}" style="left:${pctX(o.x)}%;top:${pctY(o.y)}%;width:${o.w/room.width*100}%;height:${Math.max(o.h/room.height*100,2.4)}%;transform:translate(-50%,-50%)">${o.label}</button>`).join('')}${anchors.map(a=>tokenHTML(a[0],desks[a[1]],'anchor')).join('')}</div><div class="orientation front" style="justify-content:center;padding-top:8px"><span>VOORAAN ⬇</span></div>`}
 function tokenHTML(label,pos,cls='placed-token'){return `<span class="${cls}" style="left:${pctX(pos[0])}%;top:${pctY(pos[1])}%">${label}</span>`}
 function render(){if(state.index>=state.items.length)return finish();if(state.mode==='names')renderPlacement(state.items[state.index],'names');if(state.mode==='objects')renderPlacement(state.items[state.index],'objects');if(state.mode==='quiz')renderQuiz(state.items[state.index])}
 function renderPlacement(roundData,type){state.placed=0;const tasks=roundData.tasks;const anchors=roundData.anchors||[];state.spoken=type==='names'?'Sleep de drie kinderen naar de juiste bank. Luister goed naar links, rechts, voor, achter en tussen.':'Sleep de drie voorwerpen naar de juiste plaats in de klas.';app.innerHTML=`<div class="game-head"><h1>${type==='names'?'Zet de kinderen juist':'Plaats de voorwerpen'}</h1><span class="counter">${state.index+1} / ${state.items.length}</span></div><div class="game-layout"><section class="room-wrap">${roomHTML(anchors)}</section><aside class="side"><p class="instruction">${state.spoken}</p><div class="tasks">${tasks.map((t,i)=>`<div class="task" data-task="${i}"><button class="drag-token" data-i="${i}" data-target="${t[2]}" aria-label="Sleep ${t[0]}">${t[1]}</button><span><strong>${t[0]}</strong>${t[3]}</span></div>`).join('')}</div><p class="feedback" id="feedback"></p><div class="actions"><button class="secondary" id="listen">🔊 Luister</button></div></aside></div>`;document.querySelector('#listen').onclick=()=>say();bindTokens(tasks)}
 function bindTokens(tasks){document.querySelectorAll('.drag-token').forEach(token=>{let ghost=null,moved=false;const drop=(target)=>{if(!target)return;const right=target.dataset.target===token.dataset.target;if(!right){remember();feedback('Nog niet. Kijk en luister opnieuw.','bad');target.classList.add('wrong');setTimeout(()=>target.classList.remove('wrong'),450);return}const i=Number(token.dataset.i),task=tasks[i],pos=target.id.startsWith('desk-')?desks[Number(target.id.slice(5))]:[fixed.find(o=>o.id===target.id).x,fixed.find(o=>o.id===target.id).y];document.querySelector('#room').insertAdjacentHTML('beforeend',tokenHTML(task[1],pos));token.closest('.task').classList.add('done');token.disabled=true;state.placed++;feedback('Goed geplaatst!','good');if(state.placed===tasks.length)setTimeout(next,700)};token.onclick=()=>{document.querySelectorAll('[data-target]').forEach(t=>{t.onclick=()=>drop(t)})};token.onpointerdown=e=>{if(token.disabled)return;e.preventDefault();moved=false;token.setPointerCapture(e.pointerId);ghost=document.createElement('span');ghost.className='ghost';ghost.textContent=token.textContent;document.body.append(ghost);ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'};token.onpointermove=e=>{if(!ghost)return;moved=true;ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px';document.querySelectorAll('.drop-target').forEach(t=>t.classList.remove('drop-target'));document.elementsFromPoint(e.clientX,e.clientY).map(x=>x.closest?.('[data-target]')).find(Boolean)?.classList.add('drop-target')};token.onpointerup=e=>{if(!ghost)return;const target=document.elementsFromPoint(e.clientX,e.clientY).map(x=>x.closest?.('[data-target]')).find(Boolean);ghost.remove();ghost=null;document.querySelectorAll('.drop-target').forEach(t=>t.classList.remove('drop-target'));if(moved)drop(target)};token.onpointercancel=()=>{ghost?.remove();ghost=null}})}
 function renderQuiz(q){state.spoken=q[0];app.innerHTML=`<div class="game-head"><h1>Waar is het?</h1><span class="counter">${state.index+1} / ${state.items.length}</span></div><div class="game-layout"><section class="room-wrap">${roomHTML()}</section><aside class="side"><p class="instruction">${q[0]}</p><div class="choice-list">${q[2].sort(()=>Math.random()-.5).map(id=>`<button class="choice" data-right="${id===q[1]}" data-id="${id}">${labelFor(id)}</button>`).join('')}</div><p class="feedback" id="feedback"></p><button class="secondary" id="listen">🔊 Luister</button></aside></div>`;document.querySelector('#listen').onclick=()=>say();document.querySelectorAll('.choice').forEach(b=>b.onclick=()=>{if(document.querySelector('.choice.correct'))return;const right=b.dataset.right==='true';b.classList.add(right?'correct':'wrong');document.querySelector(`#${b.dataset.id}`)?.classList.add(right?'drop-target':'wrong');if(!right){remember();feedback('Kijk nog eens naar de plattegrond.','bad');setTimeout(()=>b.classList.remove('wrong'),500);return}feedback('Juist!','good');setTimeout(next,650)})}
-function labelFor(id){return ({'board-front':'het bord vooraan','board-back':'het bord achteraan',teacher:'het bureau van de juf',sink:'de wastafel',door:'de deur','cabinet-back-right':'de kast rechts achteraan','cabinet-front-left':'de kast links vooraan','window-left':'het raam links','window-right':'het raam rechts'})[id]||id}
+function labelFor(id){return ({'board-front':'het bord vooraan','board-back':'het bord achteraan',teacher:'het bureau van de juf',sink:'de wastafel',door:'de deur','cabinet-back-right':'de kast rechts achteraan','cabinet-front-left':'de kast links vooraan','window-left-front':'het raam links','window-right-front':'het raam rechts'})[id]||id}
 function remember(){const item=state.items[state.index],list=state.review?state.reviewErrors:state.mistakes;if(!list.includes(item))list.push(item)}
 function feedback(text,kind){const el=document.querySelector('#feedback');el.textContent=text;el.className=`feedback ${kind}`;say(text)}
 function next(){state.index++;render()}

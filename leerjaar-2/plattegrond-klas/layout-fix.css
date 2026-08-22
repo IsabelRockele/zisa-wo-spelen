@@ -1,8 +1,24 @@
 /* De volledige klas blijft zichtbaar: ook op een laptop zonder scrollen. */
-.room { aspect-ratio: 5 / 8; }
+.room {
+  aspect-ratio: 3 / 5;
+  background-color: #fffef8;
+  background-image:
+    linear-gradient(#dbe2df 1px, transparent 1px),
+    linear-gradient(90deg, #dbe2df 1px, transparent 1px);
+  background-size: 8.333% 5%;
+}
 .furniture { overflow: hidden; line-height: 1; }
 .board { font-size: clamp(10px, 1.3vw, 16px); }
+.desk { width: 14% !important; }
 .teacher { font-size: clamp(8px, 1.1vw, 13px); }
+.chair { background: #83b95a; border-radius: 7px; }
+.door {
+  background: transparent;
+  border: 0;
+  border-left: 3px solid #263f45;
+  border-top: 3px solid #263f45;
+  border-radius: 0 100% 0 0;
+}
 
 @media (min-width: 801px) {
   main { max-width: 1120px; padding: 12px 22px; }
@@ -19,5 +35,5 @@
 }
 
 @media (max-width: 800px) {
-  .room { aspect-ratio: 5 / 8; }
+  .room { aspect-ratio: 3 / 5; }
 }
