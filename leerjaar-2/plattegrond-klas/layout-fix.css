@@ -16,8 +16,8 @@
   min-width: 0;
   padding: 0;
   appearance: none;
-  background: rgba(255,212,91,.08);
-  border: 2px dashed rgba(23,107,98,.28);
+  background: transparent;
+  border: 0;
   border-radius: 9px;
 }
 .board { font-size: clamp(10px, 1.3vw, 16px); }
@@ -184,6 +184,7 @@
   box-shadow: none !important;
 }
 .color-room .window { background: #f7f7f3 !important; }
+.color-room .placement-spot { background: transparent !important; border-color: transparent !important; }
 .color-room .sink { color: #59696b; }
 .color-room .painted.paint-desk, .paint-swatch.paint-desk { background: #f6a037 !important; }
 .color-room .painted.paint-teacher, .paint-swatch.paint-teacher { background: #86c354 !important; }
