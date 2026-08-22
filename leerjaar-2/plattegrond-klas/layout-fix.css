@@ -20,27 +20,34 @@
 .chair::before {
   content: "";
   position: absolute;
-  left: -5px;
+  right: -5px;
   top: 13%;
   width: 5px;
   height: 74%;
   box-sizing: border-box;
   background: #6fa44a;
   border: 1px solid #39552d;
-  border-radius: 3px 0 0 3px;
-}
-.chair::after {
-  content: "";
-  position: absolute;
-  inset: 24% 20%;
-  border: 1px solid rgba(57, 85, 45, .55);
-  border-radius: 2px;
+  border-radius: 0 3px 3px 0;
 }
 .window {
   z-index: 8;
   background: #8fd8fa;
   border-color: #4f9fc8;
   opacity: .96;
+}
+#window-left-back,
+#window-left-front {
+  left: -5px !important;
+  width: 10px !important;
+  transform: translateY(-50%) !important;
+}
+#window-right-back,
+#window-right-middle,
+#window-right-front {
+  left: auto !important;
+  right: -5px !important;
+  width: 10px !important;
+  transform: translateY(-50%) !important;
 }
 .door {
   background: transparent;
