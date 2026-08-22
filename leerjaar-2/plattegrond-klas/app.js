@@ -57,7 +57,7 @@ const quiz=[
  ['Waar staat het bureau van de juf?','teacher',['teacher','sink','cabinet-back-right']],
  ['Wat vind je links vooraan?','sink',['sink','cabinet-back-right','board-back']],
  ['Welke kast staat rechts achteraan?','cabinet-back-right',['cabinet-back-right','cabinet-front-left','teacher']],
- ['Welke deur ligt het dichtst bij de voorste banken?','door',['door','window-left-front','window-right-front']],
+ ['Tik de deur aan.','door',['door','window-left-front','window-right-front']],
  ['Welk raam ligt rechts in het midden?','window-right-middle',['window-right-middle','window-right-front','window-right-back']],
  ['Welk raam ligt rechts vooraan?','window-right-front',['window-right-front','window-left-front','window-right-back']],
  ['Wat vind je links van het bureau van de juf?','board-front',['board-front','cabinet-back-right','window-right-back']],
