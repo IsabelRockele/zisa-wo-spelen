@@ -59,18 +59,35 @@
 }
 .cabinet:not(.wall-cabinet)::before { left: calc(50% - 7px); }
 .cabinet:not(.wall-cabinet)::after { right: calc(50% - 7px); }
-.wall-cabinet,
-#cabinet-back-right {
+.wall-cabinet {
   background:
     repeating-linear-gradient(0deg,
       transparent 0,
-      transparent calc(25% - 1px),
-      #344a92 calc(25% - 1px),
-      #344a92 calc(25% + 1px)),
+      transparent calc(33.333% - 1px),
+      #344a92 calc(33.333% - 1px),
+      #344a92 calc(33.333% + 1px)),
+    linear-gradient(90deg,#617bd0,#4e67b9);
+}
+#cabinet-back-right {
+  background:
+    linear-gradient(0deg,
+      transparent calc(50% - 1px),
+      #344a92 calc(50% - 1px),
+      #344a92 calc(50% + 1px),
+      transparent calc(50% + 1px)),
     linear-gradient(90deg,#617bd0,#4e67b9);
 }
 #cabinet-back-right::before,
-#cabinet-back-right::after { display: none; }
+#cabinet-back-right::after {
+  display: block;
+  left: 3px;
+  right: auto;
+  top: auto;
+  width: 3px;
+  height: 3px;
+}
+#cabinet-back-right::before { bottom: calc(25% - 2px); }
+#cabinet-back-right::after { top: calc(25% - 2px); }
 .window {
   z-index: 8;
   min-width: 0 !important;
