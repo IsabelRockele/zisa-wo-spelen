@@ -5,9 +5,9 @@ const desks=[[139.2,214.5],[192.3,214.7],[262.1,215.2],[315.0,215.2],[386.7,215.
 const fixed=[
  {id:'board-back',kind:'board',x:261.2,y:127.7,w:270.7,h:9,label:''},
  {id:'board-front',kind:'board',x:268.1,y:712.0,w:270.7,h:9,label:''},
- {id:'teacher',kind:'teacher',x:412.3,y:664.5,w:41.8,h:65.3,label:'JUF'},
- {id:'teacher-chair',kind:'chair',x:441,y:690,w:12,h:22,label:''},
- {id:'cabinet-back-left',kind:'cabinet',x:140.9,y:150.5,w:60.2,h:26.8,label:''},
+ {id:'teacher',kind:'teacher',x:412.3,y:664.5,w:41.8,h:65.3,label:''},
+ {id:'teacher-chair',kind:'chair',x:441,y:688,w:13,h:24,label:''},
+ {id:'cabinet-back-left',kind:'cabinet',x:146.5,y:150.5,w:55,h:26.8,label:''},
  {id:'cabinet-back-1',kind:'cabinet',x:202.5,y:144.2,w:47.9,h:17.9,label:''},
  {id:'cabinet-back-2',kind:'cabinet',x:255.7,y:144.9,w:47.9,h:17.9,label:''},
  {id:'cabinet-back-3',kind:'cabinet',x:308.8,y:145.5,w:47.9,h:17.9,label:''},
@@ -17,11 +17,11 @@ const fixed=[
  {id:'cabinet-left-front',kind:'cabinet wall-cabinet',x:107,y:461.3,w:12.2,h:210.1,label:''},
  {id:'sink',kind:'sink',x:107.3,y:680.2,w:30.2,h:36,label:'🚰'},
  {id:'door',kind:'door',x:117,y:625.2,w:54.1,h:54.1,label:''},
- {id:'window-left-back',kind:'window',x:92,y:222,w:7,h:180,label:''},
- {id:'window-left-front',kind:'window',x:92,y:462,w:7,h:180,label:''},
- {id:'window-right-back',kind:'window',x:451,y:210,w:7,h:150,label:''},
- {id:'window-right-middle',kind:'window',x:451,y:412,w:7,h:150,label:''},
- {id:'window-right-front',kind:'window',x:451,y:623,w:7,h:150,label:''}
+ {id:'window-left-back',kind:'window',x:90,y:222,w:10,h:180,label:''},
+ {id:'window-left-front',kind:'window',x:90,y:462,w:10,h:180,label:''},
+ {id:'window-right-back',kind:'window',x:450,y:210,w:10,h:150,label:''},
+ {id:'window-right-middle',kind:'window',x:450,y:412,w:10,h:150,label:''},
+ {id:'window-right-front',kind:'window',x:450,y:623,w:10,h:150,label:''}
 ];
 const nameRounds=[
  {anchors:[['Noor',10]],tasks:[['Liv','L','desk-9','zit links van Noor'],['Adam','A','desk-11','zit rechts van Noor'],['Mila','M','desk-6','zit achter Noor']]},

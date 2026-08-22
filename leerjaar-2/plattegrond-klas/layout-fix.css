@@ -11,7 +11,37 @@
 .board { font-size: clamp(10px, 1.3vw, 16px); }
 .desk { width: 14% !important; }
 .teacher { font-size: clamp(8px, 1.1vw, 13px); }
-.chair { background: #83b95a; border-radius: 7px; }
+.chair {
+  overflow: visible;
+  z-index: 5;
+  background: #83b95a;
+  border-radius: 3px;
+}
+.chair::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 13%;
+  width: 5px;
+  height: 74%;
+  box-sizing: border-box;
+  background: #6fa44a;
+  border: 1px solid #39552d;
+  border-radius: 3px 0 0 3px;
+}
+.chair::after {
+  content: "";
+  position: absolute;
+  inset: 24% 20%;
+  border: 1px solid rgba(57, 85, 45, .55);
+  border-radius: 2px;
+}
+.window {
+  z-index: 8;
+  background: #8fd8fa;
+  border-color: #4f9fc8;
+  opacity: .96;
+}
 .door {
   background: transparent;
   border: 0;
