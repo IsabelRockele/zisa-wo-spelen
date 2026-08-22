@@ -25,14 +25,14 @@
 .chair::before {
   content: "";
   position: absolute;
-  left: 14%;
-  bottom: -5px;
-  width: 72%;
-  height: 5px;
+  right: -5px;
+  top: 14%;
+  width: 5px;
+  height: 72%;
   box-sizing: border-box;
   background: #6fa44a;
   border: 1px solid #39552d;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 3px 3px 0;
 }
 .cabinet {
   overflow: visible;
