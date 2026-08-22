@@ -205,6 +205,23 @@
 .small-help { font-weight: 700; text-align: center; }
 .quiz-room .furniture { cursor: pointer; }
 .quiz-room .furniture:hover { filter: brightness(1.08); }
+.room.lr-help::before,
+.room.lr-help::after {
+  position: absolute;
+  top: 47%;
+  z-index: 12;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: #fff4b8;
+  border: 3px solid #176b62;
+  color: #123341;
+  font-size: clamp(.72rem, 2vw, 1rem);
+  font-weight: 900;
+  pointer-events: none;
+  box-shadow: 0 3px 10px #0002;
+}
+.room.lr-help::before { content: '← LINKS'; left: 5px; }
+.room.lr-help::after { content: 'RECHTS →'; right: 5px; }
 .color-count {
   text-align: center;
   font-size: 1.15rem;
