@@ -10,6 +10,16 @@
   background-size: 8.333% 5%;
 }
 .furniture { overflow: hidden; line-height: 1; }
+.mode-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.placement-spot {
+  z-index: 3;
+  min-width: 0;
+  padding: 0;
+  appearance: none;
+  background: rgba(255,212,91,.08);
+  border: 2px dashed rgba(23,107,98,.28);
+  border-radius: 9px;
+}
 .board { font-size: clamp(10px, 1.3vw, 16px); }
 .desk { width: 14% !important; }
 .teacher { font-size: clamp(8px, 1.1vw, 13px); }
@@ -164,4 +174,31 @@
 
 @media (max-width: 800px) {
   .room { aspect-ratio: 3 / 5; }
+  .mode-grid { grid-template-columns: 1fr; }
+  .tasks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+.color-room .furniture {
+  background: #f7f7f3 !important;
+  border-color: #59696b !important;
+  box-shadow: none !important;
+}
+.color-room .window { background: #f7f7f3 !important; }
+.color-room .sink { color: #59696b; }
+.color-room .painted.paint-desk, .paint-swatch.paint-desk { background: #f6a037 !important; }
+.color-room .painted.paint-teacher, .paint-swatch.paint-teacher { background: #86c354 !important; }
+.color-room .painted.paint-board, .paint-swatch.paint-board { background: #397c4d !important; color: #fff; }
+.color-room .painted.paint-cabinet, .paint-swatch.paint-cabinet { background: #536fc0 !important; color: #fff; }
+.color-room .painted.paint-window, .paint-swatch.paint-window { background: #8bd4f3 !important; }
+.color-room .painted.paint-sink, .paint-swatch.paint-sink { background: #43c7cf !important; }
+.paint-swatch {
+  width: min(220px, 100%);
+  margin: 8px auto 16px;
+  padding: 14px 18px;
+  border: 3px solid #29454a;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.small-help { font-weight: 700; text-align: center; }
