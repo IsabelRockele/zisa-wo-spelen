@@ -52,3 +52,15 @@
 .arrow-1{right:112px;top:72px}.arrow-2{right:12px;bottom:142px}.arrow-3{bottom:26px}.arrow-4{left:12px;bottom:142px}.arrow-5{left:112px;top:72px}
 .cycle-centre{width:112px;height:112px;font-size:16px}
 @media(max-width:760px){.cycle-scroll{overflow-x:auto;padding:14px 16px 10px}.cycle-wheel{width:520px;height:520px}.cycle-slot{width:118px;min-height:138px}.cycle-slot-1{top:-2px}.cycle-slot-2{right:-2px;top:132px}.cycle-slot-3{right:64px;bottom:-5px}.cycle-slot-4{left:64px;bottom:-5px}.cycle-slot-5{left:-2px;top:132px}.cycle-slot .stage-photo{height:100px}.arrow-1{right:104px;top:66px}.arrow-2{right:10px;bottom:132px}.arrow-4{left:10px;bottom:132px}.arrow-5{left:104px;top:66px}}
+
+/* Kring en volledige sleepprenten staan tegelijk in beeld. */
+.cycle-layout{max-width:1180px;margin:auto;display:grid;grid-template-columns:580px minmax(430px,1fr);gap:22px;align-items:center}
+.cycle-layout .cycle-scroll{padding:8px;overflow:visible}
+.cycle-layout .cycle-wheel{width:520px;height:520px}
+.cycle-layout .cycle-slot{width:122px;min-height:142px}
+.cycle-layout .cycle-slot-2{top:132px}.cycle-layout .cycle-slot-3{right:66px}.cycle-layout .cycle-slot-4{left:66px}.cycle-layout .cycle-slot-5{top:132px}
+.cycle-bank{display:grid;grid-template-columns:repeat(2,minmax(175px,1fr));gap:12px;padding:14px;align-content:center}
+.cycle-bank .stage{height:174px;font-size:16px}
+.cycle-bank .stage-photo{height:136px;width:100%;object-fit:contain;background:#f5f3ef}
+.cycle-bank .stage p{margin:5px}
+@media(max-width:1050px){.cycle-layout{grid-template-columns:1fr}.cycle-layout .cycle-scroll{overflow-x:auto}.cycle-bank{grid-template-columns:repeat(5,150px);overflow-x:auto}.cycle-bank .stage{height:160px}.cycle-bank .stage-photo{height:122px}}
