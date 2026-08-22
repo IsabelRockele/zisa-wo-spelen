@@ -1,16 +1,16 @@
 const app=document.querySelector('#app');
-const room={left:90,top:120,width:360,height:600};
+const room={left:70,top:100,width:400,height:640};
 const desks=[[112.4,199.5],[165.5,199.7],[235.3,200.1],[288.1,200.2],[359.8,200.2],[117,300.7],[200.2,302],[285.8,302.7],[371.3,303.9],[116.1,398.7],[200.2,399.5],[287.2,396.7],[374.2,395.8],[117.9,485.4],[201.3,487.4],[287,484.5],[378,485],[166.9,585.6],[194.4,571.2],[248.7,570.9],[302.2,571],[381.2,569.6]];
 const fixed=[
- {id:'board-back',kind:'board',x:265,y:128,w:270,h:15,label:'BORD ACHTERAAN'},
- {id:'board-front',kind:'board',x:268,y:712,w:270,h:15,label:'BORD VOORAAN'},
- {id:'teacher',kind:'teacher',x:412,y:665,w:66,h:42,label:'JUF'},
- {id:'cabinet-back-right',kind:'cabinet',x:443,y:127,w:54,h:28,label:'KAST'},
- {id:'cabinet-front-left',kind:'cabinet',x:135,y:675,w:60,h:27,label:'KAST'},
- {id:'sink',kind:'sink',x:104,y:698,w:36,h:31,label:'🚰'},
- {id:'door',kind:'door',x:138,y:598,w:54,h:54,label:'DEUR'},
- {id:'window-left',kind:'window',x:98,y:372,w:12,h:180,label:'RAAM'},
- {id:'window-right',kind:'window',x:457,y:337,w:12,h:150,label:'RAAM'}
+ {id:'board-back',kind:'board',x:265,y:128,w:270,h:15,label:''},
+ {id:'board-front',kind:'board',x:268,y:712,w:270,h:15,label:''},
+ {id:'teacher',kind:'teacher',x:412,y:665,w:66,h:42,label:'BUREAU JUF'},
+ {id:'cabinet-back-right',kind:'cabinet',x:435,y:142,w:45,h:34,label:'🗄️'},
+ {id:'cabinet-front-left',kind:'cabinet',x:165,y:682,w:52,h:32,label:'🗄️'},
+ {id:'sink',kind:'sink',x:105,y:712,w:30,h:30,label:'🚰'},
+ {id:'door',kind:'door',x:138,y:598,w:38,h:54,label:'🚪'},
+ {id:'window-left',kind:'window',x:98,y:372,w:12,h:180,label:''},
+ {id:'window-right',kind:'window',x:457,y:337,w:12,h:150,label:''}
 ];
 const nameRounds=[
  {anchors:[['Noor',10]],tasks:[['Liv','L','desk-9','zit links van Noor'],['Adam','A','desk-11','zit rechts van Noor'],['Mila','M','desk-6','zit achter Noor']]},

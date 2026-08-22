@@ -1,0 +1,23 @@
+/* De volledige klas blijft zichtbaar: ook op een laptop zonder scrollen. */
+.room { aspect-ratio: 5 / 8; }
+.furniture { overflow: hidden; line-height: 1; }
+.board { font-size: clamp(10px, 1.3vw, 16px); }
+.teacher { font-size: clamp(8px, 1.1vw, 13px); }
+
+@media (min-width: 801px) {
+  main { max-width: 1120px; padding: 12px 22px; }
+  .game-layout { grid-template-columns: 430px minmax(390px, 1fr); justify-content: center; }
+  .room-wrap { padding: 9px; }
+  .room {
+    width: auto;
+    height: min(68vh, 650px);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .side { max-height: min(68vh, 650px); }
+  .task { min-height: 82px; }
+}
+
+@media (max-width: 800px) {
+  .room { aspect-ratio: 5 / 8; }
+}
