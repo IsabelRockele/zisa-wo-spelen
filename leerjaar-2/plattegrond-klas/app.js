@@ -6,7 +6,7 @@ const fixed=[
  {id:'board-back',kind:'board',x:261.2,y:127.7,w:270.7,h:9,label:''},
  {id:'board-front',kind:'board',x:268.1,y:712.0,w:270.7,h:9,label:''},
  {id:'teacher',kind:'teacher',x:412.3,y:664.5,w:41.8,h:65.3,label:''},
- {id:'teacher-chair',kind:'chair',x:440,y:688,w:8,h:19,label:''},
+ {id:'teacher-chair',kind:'chair',x:381,y:688,w:17,h:21,label:''},
  {id:'cabinet-back-left',kind:'cabinet',x:146.5,y:150.5,w:55,h:26.8,label:''},
  {id:'cabinet-back-1',kind:'cabinet',x:202.5,y:144.2,w:47.9,h:17.9,label:''},
  {id:'cabinet-back-2',kind:'cabinet',x:255.7,y:144.9,w:47.9,h:17.9,label:''},
