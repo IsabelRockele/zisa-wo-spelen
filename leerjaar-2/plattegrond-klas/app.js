@@ -62,7 +62,13 @@ const quiz=[
  ['Welk raam ligt rechts vooraan?','window-right-front',['window-right-front','window-left-front','window-right-back']],
  ['Wat vind je links van het bureau van de juf?','board-front',['board-front','cabinet-back-right','window-right-back']],
  ['Welke kast staat links vooraan?','cabinet-front-left',['cabinet-front-left','cabinet-back-right','teacher']],
- ['Waar vind je de wastafel?','sink',['sink','board-back','window-right-middle']]
+ ['Waar vind je de wastafel?','sink',['sink','board-back','window-right-middle']],
+ ['Tik de tweede bank van links aan op de eerste rij.','desk-18',['desk-18','desk-17','desk-19']],
+ ['Tik de vierde bank van links aan op de voorlaatste rij.','desk-8',['desk-8','desk-7','desk-6']],
+ ['Tik de derde bank van links aan op de tweede rij.','desk-15',['desk-15','desk-14','desk-16']],
+ ['Tik de eerste bank van links aan op de derde rij.','desk-9',['desk-9','desk-10','desk-11']],
+ ['Tik de tweede bank van links aan op de laatste rij.','desk-1',['desk-1','desk-0','desk-2']],
+ ['Tik de vijfde bank van links aan op de eerste rij.','desk-21',['desk-21','desk-20','desk-17']]
 ];
 const colorRounds=[
  {label:'banken',singular:'bank',kind:'desk',color:'oranje',spoken:'Geef alle banken de oranje kleur.'},
