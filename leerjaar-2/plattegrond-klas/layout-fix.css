@@ -265,23 +265,24 @@
 .small-help { font-weight: 700; text-align: center; }
 .quiz-room .furniture { cursor: pointer; }
 .quiz-room .furniture:hover { filter: brightness(1.08); }
-.room.lr-help::before,
-.room.lr-help::after {
-  position: absolute;
-  top: 47%;
-  z-index: 12;
-  padding: 8px 10px;
+.lr-guide {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+.show-lr-help .lr-guide { display: grid; }
+.lr-guide span {
+  padding: 9px 12px;
   border-radius: 12px;
   background: #fff4b8;
   border: 3px solid #176b62;
   color: #123341;
-  font-size: clamp(.72rem, 2vw, 1rem);
+  text-align: center;
+  font-size: clamp(.82rem, 2vw, 1rem);
   font-weight: 900;
-  pointer-events: none;
-  box-shadow: 0 3px 10px #0002;
+  box-shadow: 0 3px 0 #d2b84c;
 }
-.room.lr-help::before { content: '← LINKS'; left: 5px; }
-.room.lr-help::after { content: 'RECHTS →'; right: 5px; }
 .color-count {
   text-align: center;
   font-size: 1.15rem;
