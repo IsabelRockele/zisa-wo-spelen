@@ -7,14 +7,16 @@
   <title>Ik herhaal de plattegrond van de klas</title>
   <link rel="stylesheet" href="styles.css?v=2">
   <link rel="stylesheet" href="layout-fix.css?v=2">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
   <script src="app.js?v=1" defer></script>
 </head>
 <body>
   <header>
     <a href="../" class="back">← 2de leerjaar</a>
     <div class="brand"><b>Z</b><span><small>JUF ZISA · HERHALEN</small>Plattegrond van de klas</span></div>
-    <button id="sound" aria-label="Lees de opdracht voor">🔊</button>
+    <div class="top-actions"><button id="sound" aria-label="Lees de opdracht voor">🔊</button><button id="qrButton" aria-label="Maak een QR-code voor deze herhaling">QR</button></div>
   </header>
   <main id="app"></main>
+  <dialog id="qrDialog"><button class="dialog-close" id="closeQr" aria-label="Sluiten">×</button><h2>QR-code van de klasplattegrond</h2><p>Kinderen komen via deze code rechtstreeks op de startpagina van deze herhaling.</p><div id="qrBox" class="qr-box"></div><p id="qrMessage" class="qr-message"></p><button id="printQr" class="primary">Print de QR-code</button></dialog>
 </body>
 </html>
