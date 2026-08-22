@@ -12,13 +12,14 @@
 <link rel="stylesheet" href="l1-extra-games.css?v=6">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
 <script src="app.js?v=10" defer></script>
+  <style>.teacher-shortcut{display:inline-flex;align-items:center;justify-content:center;padding:.7rem .85rem;border-radius:1rem;background:#6552b8;color:#fff;text-decoration:none;font-weight:900;white-space:nowrap}@media(max-width:700px){.teacher-shortcut{font-size:0;padding:.65rem}.teacher-shortcut::first-letter{font-size:1.3rem}}</style>
 </head>
 <body>
   <header class="topbar">
     <a id="allThemes" class="nav" href="../">← <span>Alle thema’s</span></a>
     <button id="gameMenu" class="nav" type="button" hidden>← <span>Spelletjes</span></button>
     <div class="brand"><b>Z</b><span><small>1STE LEERJAAR</small>Verken je klas</span></div>
-    <div class="actions"><button id="speak" class="speak" type="button" aria-label="Lees de opdracht voor">🔊</button><button id="openQr" class="speak qr" type="button" aria-label="Toon de QR-code">QR</button></div>
+    <div class="actions"><a class="teacher-shortcut" href="woordenschat.html">👩‍🏫 Voor de juf</a><button id="speak" class="speak" type="button" aria-label="Lees de opdracht voor">🔊</button><button id="openQr" class="speak qr" type="button" aria-label="Toon de QR-code">QR</button></div>
   </header>
   <main id="app" aria-live="polite"></main>
 <dialog id="qrDialog"><button id="closeQr" class="close" aria-label="Sluiten">×</button><h2>Voor de leerkracht</h2><p>Scan deze code om dit thema te openen. De wandplaten staan niet in het kindermenu.</p><div id="qrBox"></div><small id="qrUrl"></small><a href="woordenschat.html" class="primary">🖼️ Open wandplaten en kaartjes</a><button id="printQr">Print de QR-code</button></dialog>

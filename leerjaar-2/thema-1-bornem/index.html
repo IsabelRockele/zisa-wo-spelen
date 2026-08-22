@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="tablet.css?v=20">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
   <script src="app.js?v=21" defer></script>
+  <style>.teacher-shortcut{display:inline-flex;align-items:center;justify-content:center;gap:.35rem;padding:.72rem .9rem;border-radius:1rem;background:#145c57;color:#fff;text-decoration:none;font-weight:900;white-space:nowrap}@media(max-width:760px){.teacher-shortcut{font-size:0;padding:.7rem}.teacher-shortcut::first-letter{font-size:1.35rem}}</style>
 </head>
 <body>
   <header class="topbar">
@@ -20,7 +21,7 @@
       <button class="hub-button game-menu-button" id="homeButton" type="button" aria-label="Terug naar de oefeningen van Bornem" hidden><span aria-hidden="true">←</span> Oefeningen</button>
     </div>
     <div class="brand"><span class="brand-dot">Z</span><div><small>ZISA WO SPELEN</small><strong>Op stap in Bornem</strong></div></div>
-    <div class="top-actions"><button class="icon-button" id="readButton" type="button" aria-label="Lees de opdracht en antwoorden voor">🔊</button><button class="icon-button" id="teacherButton" type="button" aria-label="Leerkrachtenvenster">QR</button></div>
+    <div class="top-actions"><a class="teacher-shortcut" href="woordenschat.html">👩‍🏫 Voor de juf</a><button class="icon-button" id="readButton" type="button" aria-label="Lees de opdracht en antwoorden voor">🔊</button><button class="icon-button" id="teacherButton" type="button" aria-label="Leerkrachtenvenster">QR</button></div>
   </header>
 
   <main id="app" class="shell" aria-live="polite"></main>
