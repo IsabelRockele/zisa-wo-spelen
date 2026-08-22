@@ -203,6 +203,8 @@
   font-size: 1.2rem;
 }
 .small-help { font-weight: 700; text-align: center; }
+.quiz-room .furniture { cursor: pointer; }
+.quiz-room .furniture:hover { filter: brightness(1.08); }
 .color-count {
   text-align: center;
   font-size: 1.15rem;
