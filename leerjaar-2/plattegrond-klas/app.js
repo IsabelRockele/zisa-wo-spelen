@@ -29,7 +29,7 @@ const nameRounds=[
  {anchors:[['Sam',15]],tasks:[['Elias','E','desk-14','zit links van Sam'],['Lina','L','desk-16','zit rechts van Sam'],['Nore','N','desk-11','zit achter Sam']]},
  {anchors:[['Emma',5],['Jules',7]],tasks:[['Mats','M','desk-6','zit tussen Emma en Jules'],['Fien','F','desk-9','zit voor Emma'],['Rayan','R','desk-1','zit achter Mats']]},
  {anchors:[['Mauro',2]],tasks:[['Lotte','L','desk-1','zit links van Mauro'],['Yana','Y','desk-3','zit rechts van Mauro'],['Finn','F','desk-6','zit voor Mauro']]},
- {anchors:[['Imani',18],['Seppe',20]],tasks:[['Aya','A','desk-19','zit tussen Imani en Seppe'],['Leon','L','desk-14','zit achter Imani'],['Lou','L','desk-16','zit achter Seppe']]},
+ {anchors:[['Imani',18],['Seppe',20]],tasks:[['Aya','A','desk-19','zit tussen Imani en Seppe'],['Leon','L','desk-14','zit achter Imani'],['Lou','L','desk-15','zit achter Seppe']]},
  {anchors:[['Amir',11]],tasks:[['Zoë','Z','desk-10','zit links van Amir'],['Tuur','T','desk-12','zit rechts van Amir'],['Lio','L','desk-15','zit voor Amir']]}
 ];
 const objectRounds=[
