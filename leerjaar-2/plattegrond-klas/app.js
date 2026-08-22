@@ -33,7 +33,7 @@ const nameRounds=[
  {anchors:[['Amir',11]],tasks:[['Zoë','Z','desk-10','zit links van Amir'],['Tuur','T','desk-12','zit rechts van Amir'],['Lio','L','desk-15','zit voor Amir']]},
  {anchors:[['Nina',11]],tasks:[['Omar','O','desk-6','zit schuin links achter Nina'],['Roos','R','desk-8','zit schuin rechts achter Nina'],['Vik','V','desk-15','zit voor Nina']]},
  {anchors:[['Bo',10]],tasks:[['Mira','M','desk-13','zit schuin links voor Bo'],['Ilias','I','desk-15','zit schuin rechts voor Bo'],['Kaat','K','desk-6','zit achter Bo']]},
- {anchors:[],tasks:[['Fleur','F','desk-20','zit op de eerste rij vooraan, op de vierde bank van links'],['Mathis','M','desk-15','zit op de voorlaatste rij, op de tweede bank vanaf rechts'],['Lena','L','desk-17','zit op de eerste rij vooraan, op de eerste bank van links']]},
+ {anchors:[],tasks:[['Fleur','F','desk-20','zit op de eerste rij vooraan, op de vierde bank van links'],['Mathis','M','desk-7','zit op de voorlaatste rij, op de tweede bank vanaf rechts'],['Lena','L','desk-17','zit op de eerste rij vooraan, op de eerste bank van links']]},
  {anchors:[],tasks:[['Sami','S','desk-3','zit op de eerste rij achteraan, op de tweede bank vanaf rechts'],['Ella','E','desk-7','zit op de tweede rij achteraan, op de derde bank van links'],['Raf','R','desk-12','zit op de derde rij achteraan, op de eerste bank vanaf rechts']]}
 ];
 const objectRounds=[
