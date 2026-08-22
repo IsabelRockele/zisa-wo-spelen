@@ -6,7 +6,7 @@ const fixed=[
  {id:'board-back',kind:'board',x:261.2,y:127.7,w:270.7,h:9,label:''},
  {id:'board-front',kind:'board',x:268.1,y:712.0,w:270.7,h:9,label:''},
  {id:'teacher',kind:'teacher',x:412.3,y:664.5,w:41.8,h:65.3,label:''},
- {id:'teacher-chair',kind:'chair',x:439,y:688,w:14,h:24,label:''},
+ {id:'teacher-chair',kind:'chair',x:439,y:688,w:18,h:18,label:''},
  {id:'cabinet-back-left',kind:'cabinet',x:146.5,y:150.5,w:55,h:26.8,label:''},
  {id:'cabinet-back-1',kind:'cabinet',x:202.5,y:144.2,w:47.9,h:17.9,label:''},
  {id:'cabinet-back-2',kind:'cabinet',x:255.7,y:144.9,w:47.9,h:17.9,label:''},
@@ -29,9 +29,9 @@ const nameRounds=[
  {anchors:[['Emma',5],['Jules',7]],tasks:[['Mats','M','desk-6','zit tussen Emma en Jules'],['Fien','F','desk-9','zit voor Emma'],['Rayan','R','desk-1','zit achter Mats']]}
 ];
 const objectRounds=[
- {tasks:[['de computer','💻','teacher','staat op het bureau van de juf'],['de plant','🪴','cabinet-back-right','staat op de kast rechts achteraan'],['het boek','📘','desk-7','ligt op de middelste bank in de tweede rij vanaf achteraan']]},
- {tasks:[['de boekentas','🎒','desk-14','staat bij een bank links vooraan'],['de spons','🧽','board-front','ligt bij het bord vooraan'],['de drinkfles','🧴','sink','staat bij de wastafel']]},
- {tasks:[['de klok','🕐','board-back','hangt bij het bord achteraan'],['de doos','📦','cabinet-front-left','staat op de kast links vooraan'],['de bal','⚽','desk-12','ligt bij de bank rechts van de middelste bank']]}
+ {tasks:[['de computer','💻','teacher','staat op het bureau van de juf'],['de plant','🪴','cabinet-back-right','staat op de kast rechts achteraan'],['het boek','📘','desk-6','ligt op de tweede bank van links in de tweede rij vanaf achteraan']]},
+ {tasks:[['de boekentas','🎒','desk-14','staat bij de tweede bank van links in de vierde rij vanaf achteraan'],['de spons','🧽','board-front','ligt bij het bord vooraan'],['de drinkfles','🧴','sink','staat bij de wastafel']]},
+ {tasks:[['de klok','🕐','board-back','hangt bij het bord achteraan'],['de doos','📦','cabinet-front-left','staat op de kast links vooraan'],['de bal','⚽','desk-12','ligt bij de bank helemaal rechts in de derde rij vanaf achteraan']]}
 ];
 const quiz=[
  ['Welk bord is vooraan in onze klas?','board-front',['board-front','board-back','door']],
