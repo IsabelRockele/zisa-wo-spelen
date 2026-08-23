@@ -1,4 +1,5 @@
 const app=document.querySelector('#app');let state={mode:null,i:0,list:[],mistakes:[],review:false,spoken:''};
+const shuffle=a=>[...a].sort(()=>Math.random()-.5);
 const img={forest:'assets/images/boslagen-realistisch.png',mushroom:'assets/images/paddenstoelen-realistisch.png',squirrel:'assets/images/eekhoorn-realistisch.png',spider:'assets/images/kruisspin-realistisch.png'};
 const sets={
  rules:[['Waarom blijf je in het bos op het pad?','Dan stoor en beschadig je minder','Dan groeien bomen sneller','Dan vind je meer afval',0,'forest'],['Wat doe je met een lege verpakking?','Je laat ze bij een boom liggen','Je neemt ze mee','Je verstopt ze onder mos',1,'forest'],['Waarom maak je geen luid lawaai?','Om de dieren rust te geven','Omdat bomen kunnen schrikken','Om sneller te wandelen',0,'forest'],['Wat betekent respect voor het bos?','Alles meenemen wat mooi is','De regels volgen en de natuur heel laten','Zo luid mogelijk spelen',1,'forest']],
