@@ -145,7 +145,7 @@ const wasteItems=[
  {name:'een kapotte spons',icon:'🧽',bin:'rest'}
 ];
 const testQuestions=[
- {q:'Welke zeven plaatsen horen bij Bornem?',a:['Bornem, Weert, Mariekerke, Hingene, Wintam, Branst en Eikevliet','Bornem, Temse, Hamme, Puurs, Niel, Schelle en Boom','Bornem, Breeven, Buitenland, Oppuurs, Temse, Niel en Boom'],right:0,why:'Op onze kaart duiden we Bornem, Weert, Mariekerke, Hingene, Wintam, Branst en Eikevliet aan.'},
+ {q:'Welke vier officiële deelgemeenten horen bij Bornem?',a:['Bornem, Hingene, Mariekerke en Weert','Bornem, Temse, Hamme en Puurs-Sint-Amands','Bornem, Branst, Wintam en Eikevliet'],right:0,why:'De vier officiële deelgemeenten zijn Bornem, Hingene, Mariekerke en Weert.'},
  {q:'Wat is een buurgemeente?',a:['Een gemeente naast jouw gemeente','Een wijk in jouw straat','Een gebouw van het bestuur'],right:0,why:'Buurgemeenten grenzen aan elkaar.'},
  {q:'Wat hoort allemaal bij een volledig adres?',a:['Straatnaam, huisnummer, postcode en gemeente','Alleen straatnaam en voornaam','Postcode en land'],right:0,why:'Een adres bevat straatnaam, huisnummer, postcode en gemeente.'},
  {q:'Welke afbeelding is vanuit de lucht genomen?',a:['Een luchtfoto','Een stratenplan','Een legende'],right:0,why:'Een luchtfoto is een echte foto van bovenaf.'},
