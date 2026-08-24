@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="15 105 805 665" role="img" aria-label="Echte kaart van Bornem met een raster van vakcoördinaten met letters en cijfers">
+  <rect x="15" y="105" width="805" height="665" fill="#fff"/>
+  <image href="kaart-deelgemeenten-buurgemeenten-bornem.png" x="0" y="0" width="1300" height="900"/>
+  <g fill="none" stroke="#17323b" stroke-width="4" opacity=".9">
+    <rect x="30" y="120" width="750" height="608"/>
+    <path d="M217.5 120V728M405 120V728M592.5 120V728M30 272H780M30 424H780M30 576H780"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="28" font-weight="900" fill="#17323b" stroke="#fff" stroke-width="7" paint-order="stroke" text-anchor="middle">
+    <text x="123.75" y="150">A</text><text x="311.25" y="150">B</text><text x="498.75" y="150">C</text><text x="686.25" y="150">D</text>
+    <text x="50" y="205">1</text><text x="50" y="357">2</text><text x="50" y="509">3</text><text x="50" y="661">4</text>
+  </g>
+</svg>

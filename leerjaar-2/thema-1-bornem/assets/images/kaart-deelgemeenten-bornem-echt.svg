@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 105 810 665" role="img" aria-label="Echte kaart van Bornem waarop Bornem, Hingene, Mariekerke en Weert duidelijk zijn aangeduid">
+  <rect x="20" y="105" width="810" height="665" fill="#fff"/>
+  <image href="kaart-deelgemeenten-buurgemeenten-bornem.png" x="0" y="0" width="1300" height="900"/>
+  <path d="M138 350C155 270 260 236 333 260L625 233 650 431 489 500 365 615 192 612Z" fill="#fff7cf" fill-opacity=".15" stroke="#c8322b" stroke-width="8" stroke-linejoin="round"/>
+  <g font-family="Arial,sans-serif" font-size="24" font-weight="800" fill="#17323b" stroke="#fff" stroke-width="6" paint-order="stroke">
+    <text x="345" y="340">Bornem</text><text x="605" y="340">Hingene</text>
+    <text x="225" y="570">Mariekerke</text><text x="195" y="350">Weert</text>
+  </g>
+</svg>
