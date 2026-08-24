@@ -4,6 +4,7 @@ data.find(([word])=>word==='de deelgemeente')[1]='kaart-bornem-plaatsen-echt.png
 data.find(([word])=>word==='de buurgemeente')[1]='kaart-bornem-buurgemeenten-echt.png';
 data.find(([word])=>word==='de vakcoördinaat')[1]='kaart-vakcoordinaat-bornem.svg';
 data.find(([word])=>word==='de landbouw')[1]='landbouw-overzicht.png';
+data.find(([word])=>word==='het adres')[1]='envelop-adres-school.svg';
 const THEME='Op stap in Bornem',HOME=new URL('./',location.href).href,tool=document.querySelector('#tool'),intro=document.querySelector('#intro');
 function cards(){return `<section id="cards">${data.map(([word,img])=>`<article class="card"><img class="photo" src="${base+img}" alt="${word}"><h2>${word}</h2></article>`).join('')}</section>`}
 const ACTIONS=new Set(['hergebruiken','recycleren','afval verbranden','afval voorkomen']);
