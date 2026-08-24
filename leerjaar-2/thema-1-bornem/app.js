@@ -53,7 +53,7 @@ const places=[
  {name:'burgemeester Greet De Bruyn',img:'burgemeester-greet-de-bruyn.png',clue:'Zij is de burgemeester van Bornem.'}
 ];
 const picturePairs=[
- {w:'het adres',img:'foto-adres.webp'},{w:'het afval',img:'foto-afval.webp'},{w:'hergebruiken',img:'foto-hergebruiken-v2.png'},{w:'recycleren',img:'foto-recycleren.webp'},
+ {w:'het adres',img:'postkaart-adres-school.svg'},{w:'het afval',img:'foto-afval.webp'},{w:'hergebruiken',img:'foto-hergebruiken-v2.png'},{w:'recycleren',img:'foto-recycleren.webp'},
  {w:'afval verbranden',img:'foto-afval-verbranden.webp'},{w:'afval voorkomen',img:'foto-afval-voorkomen-v2.png'},{w:'de akkerbouw',img:'landbouw-akkerbouw-foto.webp'},{w:'het bestuur',img:'foto-gemeentebestuur.webp'},
  {w:'de burgemeester',img:'burgemeester-greet-de-bruyn.png'},{w:'de cultuur',img:'ter-dilft.jpg'},{w:'de dienst',img:'brandweer-bornem.jpg'},{w:'het gemeentehuis',img:'gemeentehuis-bornem.jpg'},
  {w:'de gids',img:'foto-gids.webp'},{w:'de glastuinbouw',img:'landbouw-glastuinbouw-foto.webp'},{w:'de handel',img:'winkelstraat-bornem.jpg'},{w:'het industriegebied',img:'gebied-industriegebied-foto-v2.webp'},
