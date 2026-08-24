@@ -29,12 +29,12 @@ function boardGame(){
   document.querySelector('#boardListen').onclick=()=>speak(x.q);
   document.querySelectorAll('[data-say]').forEach(b=>b.onclick=()=>speak(b.dataset.say));
   document.querySelectorAll('[data-team]').forEach(b=>b.onclick=()=>{state.teams[Number(b.dataset.team)]++;boardGame()});
-  document.querySelector('#revealBoard').onclick=()=>{document.querySelectorAll('.l1-board-option').forEach(o=>o.classList.add(o.dataset.right==='true'?'board-correct':'board-dim'));boardExplain.hidden=false;nextBoard.hidden=false;revealBoard.hidden=true;speak(`Het juiste antwoord is ${x.a[x.right]}. ${x.why}`)};
+  document.querySelector('#revealBoard').onclick=()=>{document.querySelectorAll('.l1-board-option').forEach(o=>o.classList.add(o.dataset.right==='true'?'board-correct':'board-dim'));document.querySelector('#boardExplain').hidden=false;document.querySelector('#nextBoard').hidden=false;document.querySelector('#revealBoard').hidden=true;speak(`Het juiste antwoord is ${x.a[x.right]}. ${x.why}`)};
   document.querySelector('#nextBoard').onclick=()=>{state.index++;render()};
 }
 function boardResult(){
   state.spoken=`De quiz is klaar. Team zon heeft ${state.teams[0]} punten en team maan ${state.teams[1]} punten.`;
   app.innerHTML=`<section class="result"><div class="trophy">🏆</div><h1>Kleurenquiz klaar!</h1><p>☀️ Team zon: <b>${state.teams[0]}</b> punten</p><p>🌙 Team maan: <b>${state.teams[1]}</b> punten</p><p>Knap samengewerkt!</p><div class="l1-board-controls"><button class="board-secondary" id="boardMenu">Andere oefening</button><button class="board-primary" id="boardAgain">Nieuwe ronde</button></div></section>`;
-  boardMenu.onclick=menu; boardAgain.onclick=()=>start('board'); speak();
+  document.querySelector('#boardMenu').onclick=menu; document.querySelector('#boardAgain').onclick=()=>start('board'); speak();
 }
 menu();
