@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="Overzicht van akkerbouw, glastuinbouw, tuinbouw en veeteelt">
+  <defs><clipPath id="a"><rect width="390" height="265" rx="18"/></clipPath></defs>
+  <rect width="800" height="560" fill="#f4f0df"/>
+  <g transform="translate(5 5)" clip-path="url(#a)"><image href="landbouw-akkerbouw-foto.webp" width="390" height="265" preserveAspectRatio="xMidYMid slice"/></g>
+  <g transform="translate(405 5)" clip-path="url(#a)"><image href="landbouw-glastuinbouw-foto.webp" width="390" height="265" preserveAspectRatio="xMidYMid slice"/></g>
+  <g transform="translate(5 290)" clip-path="url(#a)"><image href="landbouw-tuinbouw-foto.webp" width="390" height="265" preserveAspectRatio="xMidYMid slice"/></g>
+  <g transform="translate(405 290)" clip-path="url(#a)"><image href="landbouw-veeteelt-foto.webp" width="390" height="265" preserveAspectRatio="xMidYMid slice"/></g>
+  <path d="M400 0V560M0 280H800" stroke="#fff" stroke-width="10"/>
+</svg>
