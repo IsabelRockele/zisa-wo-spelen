@@ -20,7 +20,7 @@ const data=[
 ['de luchtfoto',l2+'luchtfoto-school-nieuw.png','Een foto die vanuit de lucht is genomen.','what'],
 ['de maquette',local+'begrip-maquette.png','Een gebouw of omgeving die in het klein is nagemaakt.','what'],
 ['de natuur',l2+'gebied-natuurgebied-foto-v2.webp','Alles wat niet door mensen is gemaakt, zoals planten en dieren.','what'],
-['de omgeving',l2+'stratenplan-school.png','Alles wat rond een plek of persoon is.','place'],
+['de omgeving',l2+'luchtfoto-school-nieuw.png','Alles wat rond een plek of persoon is.','place'],
 ['(zich) ontspannen',local+'begrip-ontspannen.png','Iets doen wat je graag doet en waar je rustig van wordt.','verb'],
 ['het ontwerp',local+'begrip-ontwerp.png','Een plan voor iets dat je wilt maken.','what'],
 ['het pictogram',local+'begrip-pictogram.png','Een eenvoudige tekening of een symbool dat iets duidelijk maakt.','what'],
