@@ -58,7 +58,7 @@ const picturePairs=[
  {w:'de burgemeester',img:'burgemeester-greet-de-bruyn.png'},{w:'de cultuur',img:'ter-dilft.jpg'},{w:'de dienst',img:'brandweer-bornem.jpg'},{w:'het gemeentehuis',img:'gemeentehuis-bornem.jpg'},
  {w:'de gids',img:'foto-gids.webp'},{w:'de glastuinbouw',img:'landbouw-glastuinbouw-foto.webp'},{w:'de handel',img:'winkelstraat-bornem.jpg'},{w:'het industriegebied',img:'gebied-industriegebied-foto-v2.webp'},
  {w:'het landelijk landschap',img:'landschap-kasteel-bornem.webp'},{w:'de legende',img:'legende-kaart-uitgesneden.webp'},{w:'de luchtfoto',img:'luchtfoto-school-nieuw.png'},{w:'het natuurgebied',img:'gebied-natuurgebied-foto-v2.webp'},
- {w:'het recreatiegebied',img:'breeven.jpg'},{w:'het stedelijk landschap',img:'landschap-stad-stedelijk-2.webp'},{w:'het stratenplan',img:'stratenplan-school.png'},{w:'het openbaar vervoer',img:'station-bornem.jpg'}
+ {w:'het recreatiegebied',img:'breeven.jpg'},{w:'het stedelijk landschap',img:'landschap-stad-stedelijk-2.webp'},{w:'het stratenplan',img:'stratenplan-school-wandplaat.png'},{w:'het openbaar vervoer',img:'station-bornem.jpg'}
 ];
 const homeOptions=[
  {key:'flat',label:'de flat',img:'flat-eigen.webp'},
@@ -80,13 +80,11 @@ const housingQuestions=[
  {q:'Waar zie je een landelijk landschap met veel velden en groen?',correct:'landelijk',opts:landscapeOptions}
 ];
 const mapLocations=[
- {name:'het station',icon:'🚉',col:'C',row:1,x:63,y:16},
- {name:'de parking',icon:'🅿️',col:'B',row:2,x:38,y:38},
- {name:'de kerk',icon:'⛪',col:'D',row:2,x:86,y:40},
- {name:'het gemeentehuis',icon:'🏛️',col:'A',row:3,x:13,y:64},
- {name:'de bibliotheek',icon:'📚',col:'C',row:3,x:62,y:65},
- {name:'de supermarkt',icon:'🛒',col:'B',row:4,x:38,y:87},
- {name:'het kasteel',icon:'🏰',col:'D',row:4,x:87,y:86}
+ {name:'het station',icon:'🚉',col:'B',row:1,x:35,y:5},
+ {name:'onze school De Linde',icon:'🏫',col:'C',row:2,x:51,y:46},
+ {name:'de brandweer',icon:'🚒',col:'B',row:3,x:47,y:58},
+ {name:'het recreatiegebied Breeven',icon:'🌳',col:'B',row:4,x:32,y:91},
+ {name:'een woongebied',icon:'🏠',col:'D',row:3,x:82,y:54}
 ];
 const wasteLadder=[
  {key:'voorkomen',label:'voorkomen',short:'geen afval maken',color:'#16813b'},
