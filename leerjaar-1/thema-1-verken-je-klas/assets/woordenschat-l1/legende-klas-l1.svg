@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+  <title id="title">Plattegrond van een klas met een legende</title>
+  <desc id="desc">Een vlakke plattegrond met banken, bord, deur en kast. Rechts legt de legende de tekens uit.</desc>
+  <rect width="1000" height="700" fill="#fffdf6"/>
+  <text x="315" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#17313a">PLATTEGROND VAN DE KLAS</text>
+  <rect x="55" y="80" width="590" height="560" rx="4" fill="#f7f3e8" stroke="#273f45" stroke-width="12"/>
+  <path d="M55 505v100h100" fill="none" stroke="#fffdf6" stroke-width="18"/>
+  <path d="M58 605h96M58 605A96 96 0 0 1 154 509" fill="none" stroke="#2779b8" stroke-width="9"/>
+  <rect x="182" y="96" width="335" height="38" rx="4" fill="#36794d" stroke="#205436" stroke-width="5"/>
+  <rect x="76" y="112" width="62" height="150" rx="3" fill="#7054b6" stroke="#49338d" stroke-width="5"/>
+  <rect x="535" y="108" width="82" height="128" rx="3" fill="#7054b6" stroke="#49338d" stroke-width="5"/>
+  <g fill="#f39a32" stroke="#824412" stroke-width="5">
+    <rect x="170" y="200" width="105" height="55" rx="7"/><rect x="350" y="200" width="105" height="55" rx="7"/>
+    <rect x="170" y="315" width="105" height="55" rx="7"/><rect x="350" y="315" width="105" height="55" rx="7"/>
+    <rect x="170" y="430" width="105" height="55" rx="7"/><rect x="350" y="430" width="105" height="55" rx="7"/>
+  </g>
+  <g fill="#7eb25c" stroke="#3c7130" stroke-width="4">
+    <rect x="197" y="263" width="51" height="20" rx="5"/><rect x="377" y="263" width="51" height="20" rx="5"/>
+    <rect x="197" y="378" width="51" height="20" rx="5"/><rect x="377" y="378" width="51" height="20" rx="5"/>
+    <rect x="197" y="493" width="51" height="20" rx="5"/><rect x="377" y="493" width="51" height="20" rx="5"/>
+  </g>
+  <rect x="482" y="530" width="120" height="62" rx="7" fill="#b86f36" stroke="#68391d" stroke-width="5"/>
+  <text x="350" y="672" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#4d6268">Alles is vlak van bovenaf getekend.</text>
+  <rect x="685" y="80" width="270" height="560" rx="16" fill="#ffffff" stroke="#16746c" stroke-width="7"/>
+  <text x="820" y="132" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="800" fill="#145c57">LEGENDE</text>
+  <line x1="715" y1="155" x2="925" y2="155" stroke="#c8d9d4" stroke-width="3"/>
+  <g font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#17313a">
+    <rect x="720" y="190" width="72" height="40" rx="6" fill="#f39a32" stroke="#824412" stroke-width="4"/><text x="815" y="221">bank</text>
+    <rect x="720" y="280" width="72" height="25" rx="3" fill="#36794d" stroke="#205436" stroke-width="4"/><text x="815" y="304">bord</text>
+    <path d="M721 393h67M721 393A67 67 0 0 1 788 326" fill="none" stroke="#2779b8" stroke-width="7"/><text x="815" y="376">deur</text>
+    <rect x="720" y="440" width="72" height="62" rx="3" fill="#7054b6" stroke="#49338d" stroke-width="4"/><line x1="756" y1="444" x2="756" y2="498" stroke="#49338d" stroke-width="3"/><text x="815" y="482">kast</text>
+    <rect x="720" y="550" width="72" height="40" rx="5" fill="#b86f36" stroke="#68391d" stroke-width="4"/><text x="815" y="581">bureau</text>
+  </g>
+</svg>

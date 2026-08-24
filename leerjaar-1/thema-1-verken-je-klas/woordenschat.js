@@ -15,7 +15,7 @@ const data=[
 ['het koetswerk',local+'begrip-koetswerk.png','Het buitenste deel van een auto.','what'],
 ['landelijk',theme+'landelijk.webp','Met veel velden, weinig huizen en veel groen.','quality'],
 ['het landschap',l2+'landschap-kasteel-bornem.webp','Hoe een plaats eruitziet: de natuur en de gebouwen samen.','what'],
-['de legende',l2+'legende-kaart-uitgesneden.webp','De uitleg van kleuren en tekens op een kaart.','what'],
+['de legende','assets/woordenschat-l1/legende-klas-l1.svg','De uitleg van kleuren en tekens op een kaart.','what'],
 ['links',local+'begrip-links.png','De kant waar een zin begint.','place'],
 ['de luchtfoto',l2+'luchtfoto-school-nieuw.png','Een foto die vanuit de lucht is genomen.','what'],
 ['de maquette',local+'begrip-maquette.png','Een gebouw of omgeving die in het klein is nagemaakt.','what'],
