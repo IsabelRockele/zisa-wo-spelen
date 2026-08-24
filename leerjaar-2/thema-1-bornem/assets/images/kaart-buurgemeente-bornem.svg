@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="Bornem met de gemeenten eromheen">
+  <rect width="800" height="560" fill="#f7fbf8"/>
+  <g stroke="#fff" stroke-width="8" font-family="Arial, sans-serif" font-size="27" font-weight="700" text-anchor="middle" fill="#173744">
+    <path d="M70 72h230v130H70z" fill="#a9d2ea"/><text x="185" y="146">Temse</text>
+    <path d="M500 72h230v130H500z" fill="#b9dda3"/><text x="615" y="146">Hamme</text>
+    <path d="M45 340h260v145H45z" fill="#f6c85f"/><text x="175" y="402">Puurs-</text><text x="175" y="439">Sint-Amands</text>
+    <path d="M495 340h260v145H495z" fill="#d8b5df"/><text x="625" y="424">Willebroek</text>
+  </g>
+  <path d="M293 176 445 143 550 238 508 366 352 389 250 300Z" fill="#ef8f67" stroke="#9d3d27" stroke-width="10"/>
+  <circle cx="400" cy="273" r="14" fill="#9d3d27"/>
+  <text x="400" y="285" font-family="Arial, sans-serif" font-size="44" font-weight="800" fill="#173744" text-anchor="middle">Bornem</text>
+  <g stroke="#226b55" stroke-width="7" fill="none" marker-end="url(#a)"><path d="M285 191 240 165"/><path d="M516 194 560 165"/><path d="M285 350 245 390"/><path d="M516 350 560 390"/></g>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 9 3 0 6Z" fill="#226b55"/></marker></defs>
+  <text x="400" y="535" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#226b55" text-anchor="middle">andere gemeenten rond Bornem</text>
+</svg>
