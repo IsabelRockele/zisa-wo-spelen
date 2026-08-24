@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-label="Vier Belgische F43-plaatsnaamborden van de officiële deelgemeenten van Bornem">
+  <rect width="1000" height="700" fill="#eef4f1"/>
+  <text x="500" y="66" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="800" fill="#17323b">Verkeersbord F43 · plaatsnaambord</text>
+  <g font-family="Arial,sans-serif" text-anchor="middle" fill="#111">
+    <g transform="translate(70 110)">
+      <rect width="400" height="220" rx="8" fill="#fff" stroke="#dc2f2f" stroke-width="18"/>
+      <path d="M55 150V105l40-25 35 20 48-34 48 34 38-24 45 29v45z" fill="#151515"/>
+      <text x="200" y="58" font-size="48" font-weight="800">BORNEM</text>
+    </g>
+    <g transform="translate(530 110)">
+      <rect width="400" height="220" rx="8" fill="#fff" stroke="#dc2f2f" stroke-width="18"/>
+      <path d="M55 150V105l40-25 35 20 48-34 48 34 38-24 45 29v45z" fill="#151515"/>
+      <text x="200" y="58" font-size="45" font-weight="800">HINGENE</text>
+      <text x="200" y="198" font-size="28">BORNEM</text>
+    </g>
+    <g transform="translate(70 390)">
+      <rect width="400" height="220" rx="8" fill="#fff" stroke="#dc2f2f" stroke-width="18"/>
+      <path d="M55 150V105l40-25 35 20 48-34 48 34 38-24 45 29v45z" fill="#151515"/>
+      <text x="200" y="58" font-size="41" font-weight="800">MARIEKERKE</text>
+      <text x="200" y="198" font-size="28">BORNEM</text>
+    </g>
+    <g transform="translate(530 390)">
+      <rect width="400" height="220" rx="8" fill="#fff" stroke="#dc2f2f" stroke-width="18"/>
+      <path d="M55 150V105l40-25 35 20 48-34 48 34 38-24 45 29v45z" fill="#151515"/>
+      <text x="200" y="58" font-size="48" font-weight="800">WEERT</text>
+      <text x="200" y="198" font-size="28">BORNEM</text>
+    </g>
+  </g>
+  <text x="500" y="670" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#526a73">Een F43-bord duidt een plaats aan.</text>
+</svg>
