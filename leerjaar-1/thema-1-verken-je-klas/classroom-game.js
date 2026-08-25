@@ -1,7 +1,7 @@
 (() => {
   const findTasks = [
     { text: 'Klik op het schoolbord waarnaar de kinderen kijken.', x: 20, y: 46, rx: 7, ry: 25 },
-    { text: 'Klik op de kast bovenaan, naast het schoolbord.', x: 47, y: 9, rx: 6, ry: 10 },
+    { text: 'Klik op de rode kast naast het lange blauwe schoolbord.', x: 47, y: 9, rx: 6, ry: 10 },
     { text: 'Klik op een schoolbank in de eerste rij. Kijk naar de stoelen: de kinderen kijken naar het schoolbord voor hen.', x: 34, y: 45, rx: 7, ry: 29 },
     { text: 'Klik op de wastafel.', x: 94, y: 82, rx: 7, ry: 10 },
     { text: 'Klik op de kring.', x: 68, y: 14, rx: 23, ry: 14 }
