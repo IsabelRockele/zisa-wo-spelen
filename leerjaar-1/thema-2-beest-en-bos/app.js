@@ -8,15 +8,15 @@ vocab.find(v=>v.word==='uitbroeden').image='uitbroeden-realistisch.png';
 vocab.find(v=>v.word==='uitkomen').image='uitkomen-realistisch.png';
 
 const visualMap={
-'de biotoop':['vocab-sprite-1.png',0],'de fauna':['vocab-sprite-1.png',1],'de leefomgeving':['vocab-sprite-1.png',2],'de levende natuur':['vocab-sprite-1.png',3],
-'de niet-levende natuur':['vocab-sprite-2.png',0],'de proef':['vocab-sprite-2.png',1],'de vis':['vocab-sprite-2.png',2],'de zuurstof':['vocab-sprite-2.png',3],
-'eierleggend':['vocab-sprite-3.png',0],'de vogel':['vocab-sprite-3.png',1],'de flora':['vocab-sprite-3.png',2],'het kruid':['vocab-sprite-3.png',3],
-'de loofboom':['vocab-sprite-4.png',0],'de naaldboom':['vocab-sprite-4.png',1],'de struik':['vocab-sprite-4.png',2],'vast':['vocab-sprite-4.png',3],
-'de geboorte':['vocab-sprite-5.png',0],'het jong':['vocab-sprite-5.png',1],'levendbarend':['vocab-sprite-5.png',2],'zogen':['vocab-sprite-5.png',3],
-'het zoogdier':['vocab-sprite-6.png',0],'het huisdier':['vocab-sprite-6.png',1],'verzorgen':['vocab-sprite-6.png',2],'vloeibaar':['vocab-sprite-6.png',3],
-'het voedsel':['vocab-sprite-7.png',0],'het insect':['vocab-sprite-7.png',1],'het ongedierte':['vocab-sprite-7.png',2]
+'de biotoop':'woord-biotoop.png','de fauna':'woord-fauna.png','de leefomgeving':'woord-leefomgeving.png','de levende natuur':'woord-levende-natuur.png',
+'de niet-levende natuur':'woord-niet-levende-natuur.png','de proef':'woord-proef.png','de vis':'woord-vis.png','de zuurstof':'woord-zuurstof.png',
+'eierleggend':'woord-eierleggend.png','de vogel':'woord-vogel.png','de flora':'woord-flora.png','het kruid':'woord-kruid.png',
+'de loofboom':'woord-loofboom.png','de naaldboom':'woord-naaldboom.png','de struik':'woord-struik.png','vast':'woord-vast.png',
+'de geboorte':'woord-geboorte.png','het jong':'woord-jong.png','levendbarend':'woord-levendbarend.png','zogen':'woord-zogen.png',
+'het zoogdier':'woord-zoogdier.png','het huisdier':'woord-huisdier.png','verzorgen':'woord-verzorgen.png','vloeibaar':'woord-vloeibaar.png',
+'het voedsel':'woord-voedsel.png','het insect':'woord-insect.png','het ongedierte':'woord-ongedierte.png'
 };
-Object.entries(visualMap).forEach(([word,[image,panel]])=>Object.assign(vocab.find(v=>v.word===word),{image,panel}));
+Object.entries(visualMap).forEach(([word,image])=>{vocab.find(v=>v.word===word).image=image});
 
 const sets=[
 {title:'Levend of niet?',icon:'🌱',desc:'Duid aan wat leeft en wat niet leeft.',questions:[
@@ -41,7 +41,7 @@ function start(i){currentSet=i;currentQuestion=0;show('exercise');renderQuestion
 function renderQuestion(){answered=false;const s=sets[currentSet],q=s.questions[currentQuestion];$('#progress').textContent=`${currentQuestion+1} / ${s.questions.length}`;$('#questionText').textContent=q[0];$('#questionImage').src=ASSET+q[3].replace('.png','.webp');$('#questionImage').alt=q[0];$('#feedback').textContent='';$('#next').hidden=true;const a=$('#answers');a.innerHTML='';q[1].forEach((txt,i)=>{const row=document.createElement('div');row.className='answer-option';const b=document.createElement('button');b.className='answer-choice';b.textContent=txt;b.onclick=()=>answer(b,i===q[2],q[1][q[2]]);const listen=document.createElement('button');listen.className='answer-listen';listen.type='button';listen.textContent='🔊';listen.setAttribute('aria-label',`Lees antwoord voor: ${txt}`);listen.onclick=e=>{e.stopPropagation();speak(txt)};row.append(b,listen);a.append(row)})}
 function answer(btn,ok,correct){if(answered)return;answered=true;btn.classList.add(ok?'correct':'wrong');if(!ok)$$('#answers .answer-choice').find(x=>x.textContent===correct).classList.add('correct');$('#feedback').textContent=ok?'Goed zo!':'Kijk nog eens naar het groene antwoord.';speak(ok?'Goed zo!':`Het juiste antwoord is ${correct}.`);$('#next').hidden=false}
 function next(){speechSynthesis.cancel();if(currentQuestion<sets[currentSet].questions.length-1){currentQuestion++;renderQuestion()}else show('home')}
-function visualHtml(v){if(Number.isInteger(v.panel)){const pos=[0,33.333,66.666,100][v.panel];return `<div class="vocab-visual" style="background-image:url('${ASSET+v.image}');background-position:${pos}% 50%" role="img" aria-label="Beeld bij ${v.word}"></div>`}return `<img class="vocab-visual" src="${ASSET+v.image}" alt="Beeld bij ${v.word}">`}
+function visualHtml(v){return `<img class="vocab-visual" src="${ASSET+v.image}" alt="Beeld bij ${v.word}">`}
 function stripQuestion(v,i){const questions=v.kind==='verb'?[`Doe voor wat “${v.word}” betekent.`,`Gebruik “${v.word}” in een goede zin.`,`Geef een voorbeeld van “${v.word}”.`]:[`Wijs iets aan dat bij “${v.word}” past.`,`Gebruik “${v.word}” in een goede zin.`,`Leg in je eigen woorden uit wat “${v.word}” betekent.`,`Geef een voorbeeld van “${v.word}”.`];return questions[i%questions.length]}
 function renderMaterials(type){show('teacher');$$('[data-material]').forEach(b=>b.classList.toggle('active',b.dataset.material===type));$('#selectionTools').hidden=false;const root=$('#materials');root.className=`materials materials-${type}`;root.innerHTML='';vocab.forEach((v,i)=>{const el=document.createElement('article');el.className=`material ${type==='wall'?'wall':type==='strips'?'strip':'poster'} selected`;el.dataset.kind=v.kind;let content;if(type==='wall')content=`${visualHtml(v)}<div class="wall-description">${v.definition}</div>`;else if(type==='strips')content=`<b class="strip-word">${v.word}</b><span class="strip-question">${stripQuestion(v,i)}</span><small><strong>Houvast leerkracht:</strong> ${v.definition}</small>`;else content=`${visualHtml(v)}<h3>${v.word}</h3>`;el.innerHTML=`<input type="checkbox" checked aria-label="Kies ${v.word}">${content}`;el.querySelector('input').onchange=e=>el.classList.toggle('selected',e.target.checked);root.append(el)})}
 function toggleAll(on){$$('.material').forEach(x=>{x.classList.toggle('selected',on);x.querySelector('input').checked=on})}
