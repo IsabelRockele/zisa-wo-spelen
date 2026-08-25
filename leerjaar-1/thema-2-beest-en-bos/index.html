@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Beest en bos · 1ste leerjaar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="back" href="../">← 1ste leerjaar</a>
+    <div><small>WERELDKANJERS 1 · THEMA 2</small><h1>Beest en bos</h1></div>
+    <button class="icon" id="speakPage" aria-label="Lees de pagina voor">🔊</button>
+  </header>
+
+  <main id="app">
+    <section id="home" class="view active">
+      <div class="hero">
+        <img src="assets/biotoop.webp" alt="Dieren en planten in een bosbiotoop">
+        <div><span class="eyebrow">Ik oefen</span><h2>Beest en bos</h2><p>Oefen met planten, dieren, eieren, leefomgevingen en verzorgen.</p></div>
+      </div>
+      <div class="menu" id="exerciseMenu"></div>
+      <div class="home-actions">
+        <button class="teacher" data-open="teacher">👩‍🏫 Voor de leerkracht</button>
+        <button class="qr" data-open="qr">▦ QR-kaarten</button>
+      </div>
+    </section>
+
+    <section id="exercise" class="view">
+      <div class="exercise-head"><button class="back-home">← Oefeningen</button><strong id="progress"></strong><button class="icon" id="speakQuestion">🔊</button></div>
+      <div class="question-card">
+        <img id="questionImage" alt="">
+        <h2 id="questionText"></h2>
+        <div id="answers" class="answers"></div>
+        <p id="feedback" role="status"></p>
+        <button id="next" class="primary" hidden>Volgende →</button>
+      </div>
+    </section>
+
+    <section id="teacher" class="view teacher-view">
+      <div class="exercise-head"><button class="back-home">← Thema 2</button><h2>Voor de leerkracht</h2></div>
+      <p class="intro">Kies wat je wilt bekijken of afdrukken. De materialen openen niet via de QR voor kinderen.</p>
+      <div class="teacher-tabs">
+        <button data-material="posters">Wandplaten</button><button data-material="wall">Sprekende muur</button><button data-material="strips">Dagstroken</button><button data-open="qr">QR-kaarten</button>
+      </div>
+      <div id="selectionTools" hidden><button id="selectAll">Alles kiezen</button><button id="selectNone">Niets kiezen</button><button id="printSelected" class="primary">🖨 Druk gekozen kaarten af</button></div>
+      <div id="materials" class="materials"></div>
+    </section>
+
+    <section id="qr" class="view teacher-view">
+      <div class="exercise-head"><button class="back-home">← Thema 2</button><h2>QR-kaarten</h2></div>
+      <div class="qr-settings"><label>Aantal kinderen <input id="qrCount" type="number" min="1" max="36" value="24"></label><button id="makeQr" class="primary">Maak kaartjes</button><button id="makePoster">Maak klasposter</button><button id="printQr">🖨 Afdrukken</button></div>
+      <div id="qrOutput" class="qr-output"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
