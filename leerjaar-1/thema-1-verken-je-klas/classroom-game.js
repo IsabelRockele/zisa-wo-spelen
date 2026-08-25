@@ -81,17 +81,18 @@
 
   function openLayout() {
     let index=0, selected=false, ghost=null; const placed=[];
+    const instruction='Sleep het meubel naar ongeveer de juiste plaats op de lege plattegrond.';
     const render = () => {
       if (index >= furniture.length) return done();
       selected=false; const item=furniture[index], same=furniture.filter(p=>p.kind===item.kind), number=same.indexOf(item)+1;
-      const spoken=`Plaats ${item.label}${same.length>1?` ${number} van ${same.length}`:''}.`;
-      state.spoken=spoken;
+      const pieceLabel=`${item.label}${same.length>1?` ${number} van ${same.length}`:''}`;
+      state.spoken=instruction;
       app.innerHTML=head('Richt onze klas in',2)+`<section class="question classroom-layout-game">
-        <div class="listenline"><button class="listen" aria-label="Lees de opdracht voor">🔊</button><p class="prompt">${spoken}</p></div>
-        <div class="single-piece-tray"><button class="classroom-piece" aria-label="Sleep ${item.label}">${shape(item.kind,item.angle)}<b>${item.label}</b></button></div>
+        <div class="listenline"><button class="listen" aria-label="Lees de opdracht voor">🔊</button><p class="prompt">${instruction}</p></div>
+        <div class="single-piece-tray"><button class="classroom-piece" aria-label="Sleep ${item.label}">${shape(item.kind,item.angle)}<b>${pieceLabel}</b></button></div>
         <div class="real-classroom-plan layout-plan"><img src="assets/klasplattegrond-echt-leeg.png?v=3" alt="Lege klasplattegrond"><span class="placed-furniture">${placedHtml(placed)}</span></div>
         <p class="feedback">Nog ${furniture.length-index} meubelstukken.</p></section>`;
-      document.querySelector('.listen').onclick=()=>say(spoken);
+      document.querySelector('.listen').onclick=()=>say(instruction);
       const piece=document.querySelector('.classroom-piece'), plan=document.querySelector('.layout-plan');
       const choose=()=>{selected=true;piece.classList.add('selected')};
       const tryPlace=(clientX,clientY)=>{
@@ -100,7 +101,7 @@
           plan.classList.remove('wrong');void plan.offsetWidth;plan.classList.add('wrong');
           document.querySelector('.feedback').textContent='Bijna. Probeer in de juiste zone.';say('Bijna. Probeer in de juiste zone.');return;
         }
-        placed.push(item);index++;say('Goed geplaatst!');render();
+        placed.push(item);index++;render();
       };
       piece.onclick=choose;
       piece.onpointerdown=e=>{e.preventDefault();choose();piece.setPointerCapture(e.pointerId);ghost=piece.cloneNode(true);ghost.className='classroom-drag-ghost';document.body.append(ghost);ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'};
@@ -108,7 +109,6 @@
       piece.onpointerup=e=>{if(!ghost)return;ghost.remove();ghost=null;const el=document.elementFromPoint(e.clientX,e.clientY);if(el?.closest('.layout-plan'))tryPlace(e.clientX,e.clientY)};
       piece.onpointercancel=()=>{ghost?.remove();ghost=null};
       plan.onclick=e=>selected&&tryPlace(e.clientX,e.clientY);
-      setTimeout(()=>say(spoken),160);
     };
     const done=()=>{state.spoken='Knap gedaan. De hele klas is ingericht.';app.innerHTML=head('Richt onze klas in',2)+`<section class="result"><div class="trophy">🏆</div><h1>De hele klas is ingericht!</h1><p>Alle schoolbanken, kringbanken, borden, kasten, tafels en de wastafel staan terug.</p><button id="backGames">Kies een ander spel</button></section>`;document.querySelector('#backGames').onclick=menu;say(state.spoken)};
     render();
