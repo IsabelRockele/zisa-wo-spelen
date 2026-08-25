@@ -32,7 +32,7 @@
   const say = text => typeof speak === 'function' && speak(text);
   const head = (title, step) => `<div class="gamehead"><h1>${title}</h1><span class="counter">${step} / 2</span></div>`;
   function shape(kind, angle = 0) {
-    const amount = {bank:3,kring:2,bord:1,juf:2,kast:2,tafel:1,wastafel:2}[kind] || 1;
+    const amount = {bank:3,kring:1,bord:1,juf:2,kast:2,tafel:1,wastafel:2}[kind] || 1;
     return `<span class="furniture-shape shape-${kind}" style="--angle:${angle}deg">${'<i></i>'.repeat(amount)}</span>`;
   }
   function placedHtml(items) {
@@ -80,36 +80,36 @@
   }
 
   function openLayout() {
-    let index=0, selected=false, ghost=null; const placed=[];
-    const instruction='Sleep het meubel naar ongeveer de juiste plaats op de lege plattegrond.';
+    let selectedKind=null, ghost=null; const placed=[], remaining=[...furniture];
+    const instruction='Bouw de klas. Kies een meubel en plaats het op ongeveer de juiste plek.';
+    const names={bank:['schoolbank','schoolbanken'],kring:['kringbank','kringbanken'],bord:['schoolbord','schoolborden'],juf:['bureau van de juf','bureaus van de juf'],kast:['kast','kasten'],tafel:['tafel','tafels'],wastafel:['wastafel','wastafels']};
+    const kinds=['bank','kring','bord','juf','kast','tafel','wastafel'];
     const render = () => {
-      if (index >= furniture.length) return done();
-      selected=false; const item=furniture[index], same=furniture.filter(p=>p.kind===item.kind), number=same.indexOf(item)+1;
-      const pieceLabel=`${item.label}${same.length>1?` ${number} van ${same.length}`:''}`;
       state.spoken=instruction;
+      const tray=kinds.map(kind=>{const count=remaining.filter(p=>p.kind===kind).length;if(!count)return'';const sample=remaining.find(p=>p.kind===kind);return `<button class="classroom-piece${selectedKind===kind?' selected':''}" data-kind="${kind}" aria-label="Kies ${names[kind][count===1?0:1]}">${shape(kind,sample.angle)}<b>${names[kind][count===1?0:1]} <span>${count}</span></b></button>`}).join('');
       app.innerHTML=head('Richt onze klas in',2)+`<section class="question classroom-layout-game">
         <div class="listenline"><button class="listen" aria-label="Lees de opdracht voor">🔊</button><p class="prompt">${instruction}</p></div>
-        <div class="single-piece-tray"><button class="classroom-piece" aria-label="Sleep ${item.label}">${shape(item.kind,item.angle)}<b>${pieceLabel}</b></button></div>
+        <div class="classroom-piece-tray">${tray}</div>
         <div class="real-classroom-plan layout-plan"><img src="assets/klasplattegrond-echt-leeg.png?v=3" alt="Lege klasplattegrond"><span class="placed-furniture">${placedHtml(placed)}</span></div>
-        <p class="feedback">Nog ${furniture.length-index} meubelstukken.</p></section>`;
+        <div class="classroom-build-actions"><button class="primary" id="classReady">Klaar ✓</button><p class="feedback">Nog ${remaining.length} meubelstukken.</p></div></section>`;
       document.querySelector('.listen').onclick=()=>say(instruction);
-      const piece=document.querySelector('.classroom-piece'), plan=document.querySelector('.layout-plan');
-      const choose=()=>{selected=true;piece.classList.add('selected')};
+      const pieces=[...document.querySelectorAll('.classroom-piece')], plan=document.querySelector('.layout-plan');
+      const choose=kind=>{selectedKind=kind;pieces.forEach(p=>p.classList.toggle('selected',p.dataset.kind===kind))};
       const tryPlace=(clientX,clientY)=>{
+        if(!selectedKind)return;
+        const item=remaining.find(p=>p.kind===selectedKind);if(!item)return;
         const r=plan.getBoundingClientRect(),x=(clientX-r.left)/r.width*100,y=(clientY-r.top)/r.height*100;
         if (!validZone[item.kind](x,y)) {
           plan.classList.remove('wrong');void plan.offsetWidth;plan.classList.add('wrong');
-          document.querySelector('.feedback').textContent='Bijna. Probeer in de juiste zone.';say('Bijna. Probeer in de juiste zone.');return;
+          document.querySelector('.feedback').textContent='Bijna. Probeer in de juiste zone.';return;
         }
-        placed.push(item);index++;render();
+        placed.push(item);remaining.splice(remaining.indexOf(item),1);selectedKind=remaining.some(p=>p.kind===item.kind)?item.kind:null;render();
       };
-      piece.onclick=choose;
-      piece.onpointerdown=e=>{e.preventDefault();choose();piece.setPointerCapture(e.pointerId);ghost=piece.cloneNode(true);ghost.className='classroom-drag-ghost';document.body.append(ghost);ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'};
-      piece.onpointermove=e=>{if(ghost){ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'}};
-      piece.onpointerup=e=>{if(!ghost)return;ghost.remove();ghost=null;const el=document.elementFromPoint(e.clientX,e.clientY);if(el?.closest('.layout-plan'))tryPlace(e.clientX,e.clientY)};
-      piece.onpointercancel=()=>{ghost?.remove();ghost=null};
-      plan.onclick=e=>selected&&tryPlace(e.clientX,e.clientY);
+      pieces.forEach(piece=>{piece.onclick=()=>choose(piece.dataset.kind);piece.onpointerdown=e=>{e.preventDefault();choose(piece.dataset.kind);piece.setPointerCapture(e.pointerId);ghost=piece.cloneNode(true);ghost.className='classroom-drag-ghost';document.body.append(ghost);ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'};piece.onpointermove=e=>{if(ghost){ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'}};piece.onpointerup=e=>{if(!ghost)return;ghost.remove();ghost=null;const el=document.elementFromPoint(e.clientX,e.clientY);if(el?.closest('.layout-plan'))tryPlace(e.clientX,e.clientY)};piece.onpointercancel=()=>{ghost?.remove();ghost=null}});
+      plan.onclick=e=>selectedKind&&tryPlace(e.clientX,e.clientY);
+      document.querySelector('#classReady').onclick=checkReady;
     };
+    const checkReady=()=>{if(!remaining.length)return done();const missing=kinds.map(kind=>{const count=remaining.filter(p=>p.kind===kind).length;if(!count)return'';return `${count} ${names[kind][count===1?0:1]}`}).filter(Boolean);const text=`Nog niet klaar. Er ontbreken nog ${missing.slice(0,-1).join(', ')}${missing.length>1?' en ':''}${missing.at(-1)}.`;document.querySelector('.feedback').textContent=text;say(text)};
     const done=()=>{state.spoken='Knap gedaan. De hele klas is ingericht.';app.innerHTML=head('Richt onze klas in',2)+`<section class="result"><div class="trophy">🏆</div><h1>De hele klas is ingericht!</h1><p>Alle schoolbanken, kringbanken, borden, kasten, tafels en de wastafel staan terug.</p><button id="backGames">Kies een ander spel</button></section>`;document.querySelector('#backGames').onclick=menu;say(state.spoken)};
     render();
   }
