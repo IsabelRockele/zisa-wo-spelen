@@ -57,7 +57,7 @@ const picturePairs=[
  {w:'afval verbranden',img:'foto-afval-verbranden.webp'},{w:'afval voorkomen',img:'foto-afval-voorkomen-v2.png'},{w:'de akkerbouw',img:'landbouw-akkerbouw-foto.webp'},{w:'het bestuur',img:'foto-gemeentebestuur.webp'},
  {w:'de burgemeester',img:'burgemeester-greet-de-bruyn.png'},{w:'de cultuur',img:'ter-dilft.jpg'},{w:'de dienst',img:'brandweer-bornem.jpg'},{w:'het gemeentehuis',img:'gemeentehuis-bornem.jpg'},
  {w:'de gids',img:'foto-gids.webp'},{w:'de glastuinbouw',img:'landbouw-glastuinbouw-foto.webp'},{w:'de handel',img:'winkelstraat-bornem.jpg'},{w:'het industriegebied',img:'gebied-industriegebied-foto-v2.webp'},
- {w:'het landelijk landschap',img:'landschap-kasteel-bornem.webp'},{w:'de legende',img:'legende-kaart-uitgesneden.webp'},{w:'de luchtfoto',img:'luchtfoto-school-nieuw.png'},{w:'het natuurgebied',img:'gebied-natuurgebied-foto-v2.webp'},
+ {w:'het landelijk landschap',img:'landschap-kasteel-bornem.webp'},{w:'de legende',img:'legende-duidelijk.svg'},{w:'de luchtfoto',img:'luchtfoto-school-nieuw.png'},{w:'het natuurgebied',img:'gebied-natuurgebied-foto-v2.webp'},
  {w:'het recreatiegebied',img:'breeven.jpg'},{w:'het stedelijk landschap',img:'landschap-stad-stedelijk-2.webp'},{w:'het stratenplan',img:'stratenplan-school-wandplaat.png'},{w:'het openbaar vervoer',img:'station-bornem.jpg'}
 ];
 const homeOptions=[
@@ -211,7 +211,7 @@ const games=[
  {id:'beeldwoord',icon:'🖼️',title:'Verbind woord en beeld',text:'Bekijk de afbeelding en kies het woord dat erbij hoort.',img:'adres-illustratie.jpg'},
  {id:'betekenis',icon:'💡',title:'Kies de betekenis',text:'Kies bij ieder woord de juiste uitleg.',img:'bestuur-illustratie.jpg'},
  {id:'bornem',icon:'📍',title:'Waar in Bornem?',text:'Herken echte gebouwen en plaatsen uit onze gemeente.',img:'kasteel-bornem.jpg'},
- {id:'sorteren',icon:'🧺',title:'Sorteer het woord',text:'Hoort het bij kaart, landschap of bestuur?',img:'legende-kaart-uitgesneden.webp'},
+ {id:'sorteren',icon:'🧺',title:'Sorteer het woord',text:'Hoort het bij kaart, landschap of bestuur?',img:'legende-duidelijk.svg'},
  {id:'toets',icon:'⭐',title:'Toetstraining',text:'Tien vragen over dezelfde doelen als de toets.',img:'school-de-linde.png'},
  {id:'bord',icon:'🟥',title:'Klassikale kleurenquiz',text:'Kinderen steken rood, blauw of geel omhoog.',img:'breeven.jpg'},
  {id:'kaartvak',icon:'🗺️',title:'Zoek het vak op de kaart',text:'Gebruik kolomletters, rijnummers en de legende.',img:'stratenplan-school.png'},

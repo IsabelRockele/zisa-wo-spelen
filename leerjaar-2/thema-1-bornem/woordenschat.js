@@ -7,7 +7,8 @@ data.find(([word])=>word==='de vakcoördinaat')[1]='kaart-vakcoordinaat-bornem.s
 data.find(([word])=>word==='de landbouw')[1]='landbouw-overzicht.png';
 data.find(([word])=>word==='het adres')[1]='envelop-adres-school.svg';
 const THEME='Op stap in Bornem',HOME=new URL('./',location.href).href,tool=document.querySelector('#tool'),intro=document.querySelector('#intro');
-function cards(){const regular=data.map(([word,img])=>`<article class="card"><img class="photo" src="${base+img}" alt="${word}"><h2>${word}</h2></article>`).join('');const traffic=`<article class="card"><img class="photo" src="${base}verkeersborden-f43-bornem.svg" alt="F43-plaatsnaamborden van Bornem, Hingene, Mariekerke en Weert"><h2>het plaatsnaambord F43</h2></article>`;return `<section id="cards">${regular}${traffic}</section>`}
+data.find(item=>item[0]==='de legende')[1]='legende-duidelijk.svg';
+function cards(){const regular=data.map(([word,img])=>`<article class="card"><img class="photo" src="${base+img}" alt="${word}"><h2>${word}</h2></article>`).join('');const traffic=`<article class="card"><img class="photo" src="${base}verkeersborden-f43-bornem.svg" alt="Plaatsnaamborden van Bornem, Hingene, Mariekerke en Weert"><h2>het plaatsnaambord</h2></article>`;return `<section id="cards">${regular}${traffic}</section>`}
 const ACTIONS=new Set(['hergebruiken','recycleren','afval verbranden','afval voorkomen']);
 const POINTING=new Set(['het adres','het huisnummer','de straatnaam','de postcode','de legende','de luchtfoto','het stratenplan','de vakcoördinaat']);
 const HELP={
