@@ -16,6 +16,20 @@
 .answer-option{display:grid;grid-template-columns:1fr 64px;gap:8px;min-width:0}.answers .answer-option .answer-choice{width:100%;height:100%;min-height:82px}.answers .answer-option .answer-listen{min-height:82px;padding:10px;border-color:#e2b32d;background:#fff1bd;font-size:25px}.answers .answer-option .answer-listen:hover,.answers .answer-option .answer-listen:focus-visible{outline:3px solid #177269;outline-offset:2px}
 @media(max-width:760px){.answer-option{grid-template-columns:1fr 58px}.answers .answer-option .answer-listen{min-height:70px}}
 @media print{.topbar,.exercise-head,.teacher-tabs,.intro,#selectionTools,.qr-settings{display:none!important}.view{display:none!important;padding:0}.view.active{display:block!important}.materials,.qr-output{display:grid}.material:not(.selected){display:none}.material{break-inside:avoid}.qr-card{break-inside:avoid}body{background:white}}
+
+/* Leerkrachtmateriaal: dezelfde vaste opbouw als thema 1. */
+.vocab-visual{display:block;width:100%;height:230px;object-fit:contain;background-color:#f6f7f4;background-repeat:no-repeat;background-size:400% 100%}
+.material.poster{border:5px solid var(--blue);border-radius:0}
+.materials-strips{grid-template-columns:1fr;gap:12px}
+.material.strip{min-height:82px;border:2px dashed currentColor;border-radius:0;padding:13px 17px;display:grid;grid-template-columns:minmax(155px,25%) 1fr;gap:14px;align-items:center;color:var(--ink)}
+.material.strip .strip-word{font-size:19px}.material.strip .strip-question{font-size:16px;line-height:1.3}.material.strip small{grid-column:1/-1;border-top:1px dotted #9bb1aa;padding-top:7px;font-size:12px;line-height:1.25}
+.materials-wall{grid-template-columns:repeat(3,62mm);gap:5mm;justify-content:center}
+.material.wall{width:62mm;height:78mm;min-height:78mm;background:#fff;border:6px solid #8a583a;border-radius:0;padding:2.5mm;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:2mm;overflow:hidden}
+.material.wall .vocab-visual{width:100%;height:100%;min-height:0;object-fit:contain;background-color:#fff}
+.material.wall .wall-description{border-top:1px solid #b8c7c2;padding-top:2mm;text-align:center;font-size:11px;line-height:1.18;color:var(--ink)}
+.material.wall[data-kind=verb]{border-color:#d93232}.material.wall[data-kind=person]{border-color:#e3b416}.material.wall[data-kind=what]{border-color:#8a583a}.material.wall[data-kind=where]{border-color:#7744aa}.material.wall[data-kind=how]{border-color:#398b45}.material.wall[data-kind=when]{border-color:#ed8928}
+@media(max-width:760px){.materials-wall{grid-template-columns:repeat(2,62mm);justify-content:start;overflow-x:auto}.material.strip{grid-template-columns:1fr}.material.strip small{grid-column:1}}
+@media print{@page{size:A4 portrait;margin:8mm}.materials-posters{grid-template-columns:repeat(2,1fr);gap:5mm}.materials-strips{grid-template-columns:1fr;gap:3mm}.material.strip{min-height:25mm;padding:3mm 4mm}.materials-wall{grid-template-columns:repeat(3,62mm);gap:5mm;justify-content:center}.material.wall{width:62mm;height:78mm;min-height:78mm;padding:2.5mm}.material input{display:none!important}}
 .actions{display:flex;align-items:center;justify-content:flex-end;gap:8px}.actions button{white-space:nowrap}.teacher-shortcut{border:0;background:#6552b8;color:#fff;padding:14px 16px;border-radius:16px}.qr-shortcut{background:#eeeaff;color:#38278c;box-shadow:0 4px 0 #cfc6f3}
 @media(max-width:760px){.topbar{padding:10px}.topbar h1{font-size:20px}.topbar small{font-size:10px}.back{font-size:0}.back::first-letter{font-size:20px}.actions{gap:5px}.actions .teacher-shortcut{font-size:0;padding:12px}.actions .teacher-shortcut::first-letter{font-size:20px}.actions .icon{padding:12px}}
 
