@@ -10,7 +10,7 @@ const data=[
 ['het gebouw',l2+'school-de-linde.png','Iets wat gebouwd is en waarin plaats is voor mensen, dieren of spullen.','what'],
 ['de gemeente',l2+'kaart-bornem.png','Een dorp of stad waar mensen wonen en dat een eigen bestuur heeft.','place'],
 ['het gelijkvloers',local+'begrip-gelijkvloers.jpg','De verdieping waarvoor je geen trap op of af hoeft.','place'],
-['hergebruiken',local+'hergebruiken-met-picto.svg','Iets opnieuw gebruiken.','verb'],
+['hergebruiken',local+'hergebruiken-met-picto.png?v=20260825','Iets opnieuw gebruiken.','verb'],
 ['het huisnummer',local+'begrip-huisnummer.png','Het nummer op een gebouw.','what'],
 ['de kaart',l2+'kaart-deelgemeenten-buurgemeenten-bornem.png','Een tekening waarop je ziet waar plaatsen, wegen of water liggen.','what'],
 ['het koetswerk',local+'begrip-koetswerk.png','Het buitenste deel van een auto.','what'],
@@ -32,13 +32,13 @@ const data=[
 ['rechts',local+'begrip-rechts.png','De kant waar een zin eindigt.','place'],
 ['de schets',local+'begrip-schets.png','Een eenvoudige tekening van hoe iets eruitziet.','what'],
 ['de school',local+'school-de-linde-echt.png','De plaats waar kinderen samen leren en waar leerkrachten werken.','place'],
-['sorteren',local+'sorteren-met-picto.svg','Dingen per soort bij elkaar leggen, zoals afval in de juiste bak.','verb'],
+['sorteren',local+'sorteren-met-picto.png?v=20260825','Dingen per soort bij elkaar leggen, zoals afval in de juiste bak.','verb'],
 ['de stad',l2+'landschap-stad-stedelijk-2.webp','Een grote plaats met veel huizen, winkels en verkeer.','place'],
 ['stedelijk',local+'begrip-stedelijk.png','Met veel gebouwen, veel verkeer en weinig groen.','quality'],
 ['de straatnaam',local+'begrip-straatnaam.jpg','De naam van een straat.','what'],
 ['het stratenplan',l2+'stratenplan-school.png','Een kaart van de straten in een stad, dorp of wijk.','what'],
 ['de verdieping',local+'begrip-verdieping.jpg','Een deel van een gebouw waarvoor je een trap op of af moet.','place'],
-['afval voorkomen',local+'foto-afval-voorkomen.webp','Ervoor zorgen dat je geen afval maakt.','verb'],
+['afval voorkomen',local+'afval-voorkomen-met-picto.png?v=20260825','Ervoor zorgen dat je geen afval maakt.','verb'],
 ['het wiel',local+'begrip-wiel.png','Een ronde schijf die kan draaien en iets laat bewegen.','what']
 ];
 const THEME='Mijn klas, mijn school, mijn buurt',HOME=new URL('./',location.href).href,tool=document.querySelector('#tool'),intro=document.querySelector('#intro');
