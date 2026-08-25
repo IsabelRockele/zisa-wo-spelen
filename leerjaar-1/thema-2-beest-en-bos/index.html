@@ -41,15 +41,15 @@
       <div class="exercise-head"><button class="back-home">← Thema 2</button><h2>Voor de leerkracht</h2></div>
       <p class="intro">Kies wat je wilt bekijken of afdrukken. De materialen openen niet via de QR voor kinderen.</p>
       <div class="teacher-tabs">
-        <button data-material="posters">Wandplaten</button><button data-material="wall">Sprekende muur</button><button data-material="strips">Dagstroken</button><button data-open="qr">QR-kaarten</button>
+        <button data-material="posters">🖼️ Wandplaten</button><button data-material="strips">🎴 Dagstrookjes</button><button data-open="qr">▦ QR-kaartjes</button><button data-material="wall">🧱 Sprekende muur</button>
       </div>
-      <div id="selectionTools" hidden><button id="selectAll">Alles kiezen</button><button id="selectNone">Niets kiezen</button><button id="printSelected" class="primary">🖨 Druk gekozen kaarten af</button></div>
+      <div id="selectionTools" class="selection-tools" hidden><button id="selectAll">☑ Alles kiezen</button><button id="selectNone">☐ Niets kiezen</button><button id="printSelected" class="primary">🖨️ Print gekozen</button></div>
       <div id="materials" class="materials"></div>
     </section>
 
     <section id="qr" class="view teacher-view">
       <div class="exercise-head"><button class="back-home">← Thema 2</button><h2>QR-kaarten</h2></div>
-      <div class="qr-settings"><label>Aantal kinderen <input id="qrCount" type="number" min="1" max="36" value="24"></label><button id="makeQr" class="primary">Maak kaartjes</button><button id="makePoster">Maak klasposter</button><button id="printQr">🖨 Afdrukken</button></div>
+      <div class="qr-settings"><h2>QR-kaartjes voor de kinderen</h2><label>Aantal kinderen <input id="qrCount" type="number" min="1" max="40" value="24"></label><div><button id="makeQr">Maak kaartjes</button><button id="makePoster">Maak één klasposter</button><button id="printQr" class="primary">🖨️ Afdrukken</button></div></div>
       <div id="qrOutput" class="qr-output"></div>
     </section>
   </main>
