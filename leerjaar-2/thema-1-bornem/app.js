@@ -57,7 +57,7 @@ const picturePairs=[
  {w:'afval verbranden',img:'foto-afval-verbranden.webp'},{w:'afval voorkomen',img:'foto-afval-voorkomen-v2.png'},{w:'de akkerbouw',img:'landbouw-akkerbouw-foto.webp'},{w:'het bestuur',img:'foto-gemeentebestuur.webp'},
  {w:'de burgemeester',img:'burgemeester-greet-de-bruyn.png'},{w:'de cultuur',img:'ter-dilft.jpg'},{w:'de dienst',img:'brandweer-bornem.jpg'},{w:'het gemeentehuis',img:'gemeentehuis-bornem.jpg'},
  {w:'de gids',img:'foto-gids.webp'},{w:'de glastuinbouw',img:'landbouw-glastuinbouw-foto.webp'},{w:'de handel',img:'winkelstraat-bornem.jpg'},{w:'het industriegebied',img:'gebied-industriegebied-foto-v2.webp'},
- {w:'het landelijk landschap',img:'landschap-kasteel-bornem.webp'},{w:'de legende',img:'legende-duidelijk.svg'},{w:'de luchtfoto',img:'luchtfoto-school-nieuw.png'},{w:'het natuurgebied',img:'gebied-natuurgebied-foto-v2.webp'},
+ {w:'het landelijk landschap',img:'landschap-kasteel-bornem.webp'},{w:'de legende',img:'legende-duidelijk-v2.svg'},{w:'de luchtfoto',img:'luchtfoto-school-nieuw.png'},{w:'het natuurgebied',img:'gebied-natuurgebied-foto-v2.webp'},
  {w:'het recreatiegebied',img:'breeven.jpg'},{w:'het stedelijk landschap',img:'landschap-stad-stedelijk-2.webp'},{w:'het stratenplan',img:'stratenplan-school-wandplaat.png'},{w:'het openbaar vervoer',img:'station-bornem.jpg'}
 ];
 const homeOptions=[

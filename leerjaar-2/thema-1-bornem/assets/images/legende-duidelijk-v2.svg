@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-label="Legende met kleuren en symbolen van een gemeentekaart">
+  <rect width="1000" height="700" fill="#f7fbf8"/>
+  <rect x="70" y="35" width="860" height="630" fill="#fff" stroke="#14766f" stroke-width="10"/>
+  <text x="500" y="92" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#40575e">Zo begrijp je de kleuren en symbolen op de kaart.</text>
+  <g font-family="Arial" font-size="38" font-weight="800" fill="#17313a">
+    <rect x="180" y="140" width="130" height="65" fill="#f2d06b" stroke="#9c7a17" stroke-width="5"/><text x="370" y="187">= landbouwgebied</text>
+    <rect x="180" y="240" width="130" height="65" fill="#7fc98d" stroke="#26733b" stroke-width="5"/><text x="370" y="287">= natuurgebied</text>
+    <rect x="180" y="340" width="130" height="65" fill="#ef9b91" stroke="#a53c34" stroke-width="5"/><text x="370" y="387">= woongebied</text>
+    <circle cx="245" cy="490" r="32" fill="#2779b8" stroke="#164f7b" stroke-width="6"/><text x="370" y="503">= school</text>
+    <path d="M180 590h130" stroke="#d43c32" stroke-width="14"/><text x="370" y="603">= gemeentegrens</text>
+  </g>
+</svg>
