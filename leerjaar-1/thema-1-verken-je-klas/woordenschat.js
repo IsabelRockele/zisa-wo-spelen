@@ -1,7 +1,7 @@
 const local='assets/woordenschat-l1/',theme='assets/',l2='../../leerjaar-2/thema-1-bornem/assets/images/';
 const data=[
 ['de klas',local+'klas-juf-foto.png?v=20260825b','Een lokaal in de school waar kinderen samen leren en werken.','place'],
-['het adres',local+'adres-zelfde-als-l2.webp?v=20260825b','De plaats waar iemand woont: straatnaam, huisnummer, postcode en gemeente.','what'],
+['het adres',local+'adres-school-l1.svg?v=20260825c','De plaats waar iemand woont: straatnaam, huisnummer, postcode en gemeente.','what'],
 ['het afval',l2+'foto-afval.webp','Alles wat we niet meer nodig hebben en weggooien.','what'],
 ['de as',local+'begrip-as.png','Een lijn waar iets rond draait.','what'],
 ['de buurt',local+'buurt-school-echt.png','De omgeving dicht bij onze school waar mensen wonen, werken en langskomen.','place'],
@@ -16,7 +16,7 @@ const data=[
 ['het koetswerk',local+'begrip-koetswerk.png','Het buitenste deel van een auto.','what'],
 ['landelijk',theme+'landelijk.webp','Met veel velden, weinig huizen en veel groen.','quality'],
 ['het landschap',l2+'landschap-kasteel-bornem.webp','Hoe een plaats eruitziet: de natuur en de gebouwen samen.','what'],
-['de legende','assets/woordenschat-l1/legende-duidelijk-l1.svg','De uitleg van kleuren en tekens op een kaart.','what'],
+['de legende','assets/woordenschat-l1/legende-duidelijk-l1.svg?v=20260825c','De uitleg van kleuren en tekens op een kaart.','what'],
 ['links',local+'begrip-links.png','De kant waar een zin begint.','place'],
 ['de luchtfoto',l2+'luchtfoto-school-nieuw.png','Een foto die vanuit de lucht is genomen.','what'],
 ['de maquette',local+'maquette-echte-foto.png?v=20260825b','Een gebouw of omgeving die in het klein is nagemaakt.','what'],
@@ -27,7 +27,7 @@ const data=[
 ['het pictogram',local+'begrip-pictogram.png','Een eenvoudige tekening of een symbool dat iets duidelijk maakt.','what'],
 ['de plattegrond',theme+'plattegrond.webp','Een tekening van een plaats of ruimte van bovenaf.','what'],
 ['de postbode',local+'begrip-postbode.png','Iemand die brieven en pakjes rondbrengt.','person'],
-['de postcode',local+'postcode-op-adres.svg?v=20260825b','Een nummer bij een gemeente dat helpt om post juist te bezorgen.','what'],
+['de postcode',local+'postcode-school-l1.svg?v=20260825c','Een nummer bij een gemeente dat helpt om post juist te bezorgen.','what'],
 ['recycleren',l2+'foto-recycleren.webp','Uit afval iets nieuws maken.','verb'],
 ['rechts',local+'begrip-rechts.png','De kant waar een zin eindigt.','place'],
 ['de schets',local+'begrip-schets.png','Een eenvoudige tekening van hoe iets eruitziet.','what'],
