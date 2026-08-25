@@ -1,7 +1,7 @@
 const objects=[['stoel','stoel'],['lessenaar','lessenaar'],['bureau-juf','bureau van de juf'],['bord','bord'],['boekenkast','boekenkast'],['kast','kast'],['vuilnisbak','vuilnisbak'],['penselen','penselen'],['plakband','plakband']];
 const maps=[['schatkaart','schatkaart'],['plattegrond','plattegrond'],['maquette','maquette']];
-const pictos=[['toilet','toilet'],['uitgang','uitgang'],['vuilnisbak','vuilnisbak']];
-const articles={'stoel':'de stoel','lessenaar':'de lessenaar','bureau van de juf':'het bureau van de juf','bord':'het bord','boekenkast':'de boekenkast','kast':'de kast','vuilnisbak':'de vuilnisbak','penselen':'de penselen','plakband':'de plakband','toilet':'het toilet','uitgang':'de uitgang','schatkaart':'de schatkaart','plattegrond':'de plattegrond','maquette':'de maquette'};
+const pictos=[['toilet','toilet'],['uitgang','nooduitgang'],['vuilnisbak','vuilnisbak']];
+const articles={'stoel':'de stoel','lessenaar':'de lessenaar','bureau van de juf':'het bureau van de juf','bord':'het bord','boekenkast':'de boekenkast','kast':'de kast','vuilnisbak':'de vuilnisbak','penselen':'de penselen','plakband':'de plakband','toilet':'het toilet','nooduitgang':'de nooduitgang','schatkaart':'de schatkaart','plattegrond':'de plattegrond','maquette':'de maquette'};
 const timePairs=[['klas-vroeger-realistisch','klas-nu-realistisch'],['bord-vroeger','bord-nu'],['schrijven-vroeger','schrijven-nu'],['schooltas-vroeger','schooltas-nu'],['rekenen-vroeger','rekenen-nu']];
 const placeTasks=[
  {answer:'links',subject:'het meisje',img:'plaats-links',choices:['links','rechts','tussen']},
@@ -39,8 +39,8 @@ const gridTasks=[
 const boardQuestions=[
  {kind:'In onze klas',q:'Wat gebruikt de juf om iets voor de hele klas te schrijven?',img:'bord.webp',a:['het bord','de boekenkast','de vuilnisbak'],right:0,why:'Op het bord kan de juf iets voor de hele klas schrijven.'},
  {kind:'In onze klas',q:'Waar bewaart de klas boeken?',img:'boekenkast.webp',a:['in de boekenkast','in de vuilnisbak','op het bord'],right:0,why:'Boeken worden in de boekenkast bewaard.'},
- {kind:'Pictogrammen',q:'Welk pictogram wijst de weg naar buiten?',img:'uitgang.webp',a:['de uitgang','het toilet','de vuilnisbak'],right:0,why:'Het pictogram van de uitgang toont waar je naar buiten kunt.'},
- {kind:'Pictogrammen',q:'Welk pictogram hoort bij het toilet?',img:'toilet.webp',a:['het toilet','de uitgang','de vuilnisbak'],right:0,why:'Dit pictogram helpt je het toilet te vinden.'},
+ {kind:'Pictogrammen',q:'Wat betekent dit pictogram?',img:'uitgang.webp',a:['de nooduitgang','het toilet','de vuilnisbak'],right:0,why:'Het pictogram van de nooduitgang toont waar je bij nood veilig naar buiten kunt.'},
+ {kind:'Pictogrammen',q:'Wat betekent dit pictogram?',img:'toilet.webp',a:['het toilet','de nooduitgang','de vuilnisbak'],right:0,why:'Dit pictogram helpt je het toilet te vinden.'},
  {kind:'Kaart en ruimte',q:'Wat is een klas in het klein die je van alle kanten kunt bekijken?',img:'maquette.webp',a:['een maquette','een plattegrond','een schatkaart'],right:0,why:'Een maquette is een plaats of gebouw in het klein.'},
  {kind:'Kaart en ruimte',q:'Wat toont een kamer of plaats alsof je er van boven naar kijkt?',img:'plattegrond.webp',a:['een plattegrond','een maquette','een pictogram'],right:0,why:'Een plattegrond toont een plaats van bovenaf.'},
  {kind:'Plaatsbegrippen',q:'Waar staat het meisje op de prent?',img:'plaats-links.webp',a:['links','rechts','tussen'],right:0,why:'Het meisje staat links.'},
@@ -51,9 +51,9 @@ const boardQuestions=[
  {kind:'Wonen',q:'Welk soort woning staat helemaal los?',img:'vrijstaande-woning.webp',a:['een vrijstaande woning','een flat','een rijhuis'],right:0,why:'Een vrijstaande woning zit niet vast aan een ander huis.'},
  {kind:'Landschap',q:'Welk landschap zie je?',img:'landelijk.webp',a:['een landelijk landschap','een stedelijk landschap','een klas'],right:0,why:'Een landelijk landschap heeft veel groen, velden en weinig gebouwen.'},
  {kind:'Landschap',q:'Welk landschap zie je?',img:'stedelijk.webp',a:['een stedelijk landschap','een landelijk landschap','een bos'],right:0,why:'Een stedelijk landschap heeft veel straten en gebouwen.'},
- {kind:'Afval',q:'In welke vuilnisbak hoort een glazen fles?',icon:'🍾',a:['glas','PMD','restafval'],right:0,why:'Een lege glazen fles hoort bij glas.'},
- {kind:'Afval',q:'In welke vuilnisbak hoort een kartonnen doos?',icon:'📦',a:['papier en karton','GFT','glas'],right:0,why:'Een kartonnen doos hoort bij papier en karton.'},
- {kind:'Afval',q:'In welke vuilnisbak hoort een bananenschil?',icon:'🍌',a:['GFT','glas','PMD'],right:0,why:'Een bananenschil is keukenafval en hoort bij GFT.'}
+ {kind:'Afval',q:'In welke vuilnisbak hoort een glazen fles?',icon:'🍾',a:['glas','PMD','restafval'],binMap:{'glas':'glas','PMD':'pmd','restafval':'rest'},right:0,why:'Een lege glazen fles hoort in de rode vuilbak voor glas.'},
+ {kind:'Afval',q:'In welke vuilnisbak hoort een kartonnen doos?',icon:'📦',a:['papier en karton','GFT','glas'],binMap:{'papier en karton':'papier','GFT':'gft','glas':'glas'},right:0,why:'Een kartonnen doos hoort in de gele vuilbak voor papier en karton.'},
+ {kind:'Afval',q:'In welke vuilnisbak hoort een bananenschil?',icon:'🍌',a:['GFT','glas','PMD'],binMap:{'GFT':'gft','glas':'glas','PMD':'pmd'},right:0,why:'Een bananenschil hoort in de groene vuilbak voor GFT.'}
 ];
 const app=document.querySelector('#app'),speakButton=document.querySelector('#speak'),allThemes=document.querySelector('#allThemes'),gameMenu=document.querySelector('#gameMenu');
 let state={game:null,index:0,score:0,items:[],spoken:'',mistakes:[],reviewMode:false,reviewItems:[],reviewMistakes:[],reviewCorrect:0,roundTotal:0,teams:[0,0],boardIntro:false};
