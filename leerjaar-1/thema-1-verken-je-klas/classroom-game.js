@@ -1,10 +1,10 @@
 (()=>{
 const findTasks=[
+ {text:'Klik op het schoolbord waarnaar de kinderen kijken.',x:20,y:46,rx:6,ry:25},
+ {text:'Klik op de kast bovenaan, naast het schoolbord.',x:47,y:9,rx:5,ry:9},
+ {text:'Klik op een schoolbank in de eerste rij. Kijk naar de stoelen: de kinderen kijken naar het schoolbord voor hen.',x:34,y:45,rx:6,ry:28},
  {text:'Klik op de wastafel.',x:94,y:82,rx:6,ry:9},
- {text:'Klik op de kring.',x:68,y:14,rx:22,ry:13},
- {text:'Klik op de middelste schoolbank in de eerste rij. De eerste rij staat het dichtst bij het schoolbord.',x:44.5,y:25,rx:7,ry:8},
- {text:'Klik op het schoolbord vooraan.',x:31,y:5,rx:20,ry:6},
- {text:'Klik op het bureau van de juf.',x:16,y:17,rx:12,ry:13}
+ {text:'Klik op de kring.',x:68,y:14,rx:22,ry:13}
 ];
 const targets=[];
 const add=(kind,label,points)=>points.forEach((p,i)=>targets.push({id:`${kind}-${i}`,kind,label,x:p[0]/8.42,y:p[1]/5.95,angle:p[2]||0}));
