@@ -1,23 +1,117 @@
-(()=>{
-const findTasks=[
- {text:'Klik op het schoolbord waarnaar de kinderen kijken.',x:20,y:46,rx:6,ry:25},
- {text:'Klik op de kast bovenaan, naast het schoolbord.',x:47,y:9,rx:5,ry:9},
- {text:'Klik op een schoolbank in de eerste rij. Kijk naar de stoelen: de kinderen kijken naar het schoolbord voor hen.',x:34,y:45,rx:6,ry:28},
- {text:'Klik op de wastafel.',x:94,y:82,rx:6,ry:9},
- {text:'Klik op de kring.',x:68,y:14,rx:22,ry:13}
-];
-const targets=[];
-const add=(kind,label,points)=>points.forEach((p,i)=>targets.push({id:`${kind}-${i}`,kind,label,x:p[0]/8.42,y:p[1]/5.95,angle:p[2]||0}));
-add('bank','schoolbank',[[289.74,361.57],[289.10,305.64],[289.56,200.90],[288.92,141.72],[374.72,198.12],[374.08,140.02],[453.36,198.59],[452.73,141.58],[371.28,359.60],[371.74,302.59],[455.35,360.08],[454.72,303.06],[532.90,304.16],[533.36,363.20]]);
-add('kring','deel van de kring',[[456.06,19.71,0],[564.06,20.60,0],[431.44,70.75,20],[530.75,106.62,0],[636.12,93.22,-49]]);
-add('bord','schoolbord',[[183.66,21.80,0]]);add('juf','bureau van de juf',[[134.10,82.88,59]]);
-add('kast','kast',[[397.19,17.62,90],[162.01,157.47,90],[162.46,320.65,90],[647.97,263.01,90],[646.25,186.47,90],[725.73,553.83,0]]);
-add('tafel','tafel',[[228.56,540.82,90],[50.32,468.05,0],[352.82,541.29,90],[494.44,540.68,90],[643.67,537.90,90]]);add('wastafel','wastafel',[[790.40,463.22,0]]);
-function say(text){if(typeof speak==='function')speak(text)}
-function shape(kind,angle=0){const n={bank:3,kring:2,bord:1,juf:2,kast:2,tafel:1,wastafel:2}[kind]||1;return `<span class="furniture-shape shape-${kind}" style="--angle:${angle}deg">${'<i></i>'.repeat(n)}</span>`}
-function addMenuButton(){const games=document.querySelector('.games');if(!games||document.querySelector('[data-classroom-game]'))return;const b=document.createElement('button');b.className='game';b.dataset.classroomGame='1';b.innerHTML='<span class="emoji">🏫</span><strong>Onze klas op de plattegrond</strong><small>Zoek de meubels en richt daarna de klas in.</small>';b.onclick=openFind;games.append(b)}
-function head(title,step){return `<div class="gamehead"><h1>${title}</h1><span class="counter">${step} / 2</span></div>`}
-function openFind(){allThemes.hidden=true;gameMenu.hidden=false;let index=0;const draw=()=>{const task=findTasks[index];state.spoken=task.text;app.innerHTML=head('Onze klas op de plattegrond',1)+`<section class="question classroom-find-game"><div class="listenline"><button class="listen" aria-label="Lees de opdracht voor">🔊</button><p class="prompt">${task.text}</p></div><p class="classroom-find-progress">Vraag ${index+1} van ${findTasks.length}</p><div class="real-classroom-plan classroom-find-plan" role="button" tabindex="0" aria-label="Gevulde plattegrond van de klas"><img src="assets/klasplattegrond-meubels-kleur.png?v=3" alt="Gevulde plattegrond met alle meubels"><span class="placed-furniture"></span></div><p class="feedback"></p></section>`;document.querySelector('.listen').onclick=()=>say(task.text);const plan=document.querySelector('.classroom-find-plan');plan.onclick=e=>{const r=plan.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*100,y=(e.clientY-r.top)/r.height*100;const right=Math.abs(x-task.x)<=task.rx&&Math.abs(y-task.y)<=task.ry;if(!right){plan.classList.remove('wrong');void plan.offsetWidth;plan.classList.add('wrong');document.querySelector('.feedback').textContent='Probeer nog eens.';say('Probeer nog eens.');return}plan.querySelector('.placed-furniture').innerHTML=`<b class="find-marker" style="--x:${x}%;--y:${y}%">✓</b>`;document.querySelector('.feedback').textContent='Goed gevonden!';say('Goed gevonden!');setTimeout(()=>{index++;if(index<findTasks.length)draw();else finishFind()},650)};setTimeout(()=>say(task.text),180)};const finishFind=()=>{state.spoken='Alle meubels gevonden. Richt nu de lege klas in.';app.innerHTML=head('Onze klas op de plattegrond',1)+`<section class="result"><div class="trophy">⭐</div><h1>Goed gezocht!</h1><p>Nu mag je de lege klas inrichten.</p><button id="startLayout">Richt de klas in →</button></section>`;document.querySelector('#startLayout').onclick=openLayout;say(state.spoken)};draw()}
-function openLayout(){let index=0,selected=false;state.spoken='Sleep elk meubel apart naar de juiste plaats. Je mag het meubel ook aantikken en daarna op de plattegrond tikken.';const render=()=>{if(index>=targets.length)return done();const t=targets[index],same=targets.filter(x=>x.kind===t.kind),number=same.indexOf(t)+1;app.innerHTML=head('Richt onze klas in',2)+`<section class="question classroom-layout-game"><div class="listenline"><button class="listen" aria-label="Lees de opdracht voor">🔊</button><p class="prompt">Plaats ${t.label}${same.length>1?` ${number} van ${same.length}`:''}.</p></div><div class="single-piece-tray"><button class="classroom-piece" draggable="true" aria-label="Sleep ${t.label}">${shape(t.kind,t.angle)}<b>${t.label}</b></button></div><div class="real-classroom-plan layout-plan"><img src="assets/klasplattegrond-echt-leeg.png?v=3" alt="Lege plattegrond van de klas"><span class="placed-furniture"></span></div><p class="feedback">Nog ${targets.length-index} meubelstukken.</p></section>`;document.querySelector('.listen').onclick=()=>say(state.spoken);const piece=document.querySelector('.classroom-piece'),plan=document.querySelector('.layout-plan');piece.onclick=()=>{selected=!selected;piece.classList.toggle('selected',selected)};piece.ondragstart=e=>{selected=true;e.dataTransfer.setData('text/plain',t.id)};plan.ondragover=e=>{e.preventDefault();plan.classList.add('over')};plan.ondragleave=()=>plan.classList.remove('over');plan.ondrop=e=>{e.preventDefault();plan.classList.remove('over');place(e.clientX,e.clientY)};plan.onclick=e=>{if(selected)place(e.clientX,e.clientY)};function place(cx,cy){const r=plan.getBoundingClientRect(),x=(cx-r.left)/r.width*100,y=(cy-r.top)/r.height*100,tolerance=t.kind==='bank'?7:t.kind==='kring'?10:12;if(Math.hypot(x-t.x,y-t.y)>tolerance){plan.classList.remove('wrong');void plan.offsetWidth;plan.classList.add('wrong');document.querySelector('.feedback').textContent='Probeer deze plaats nog eens.';say('Probeer deze plaats nog eens.');return}index++;say('Goed geplaatst!');render()}setTimeout(()=>say(`Plaats ${t.label}.`),160)};const done=()=>{state.spoken='Knap gedaan. Alle meubels staan terug in de klas.';app.innerHTML=head('Richt onze klas in',2)+`<section class="result"><div class="trophy">🏆</div><h1>De klas is ingericht!</h1><p>Je plaatste elk meubel afzonderlijk.</p><button id="backGames">Kies een ander spel</button></section>`;document.querySelector('#backGames').onclick=menu;say(state.spoken)};render()}
-new MutationObserver(addMenuButton).observe(app,{childList:true,subtree:true});addMenuButton();
+(() => {
+  const findTasks = [
+    { text: 'Klik op het schoolbord waarnaar de kinderen kijken.', x: 20, y: 46, rx: 7, ry: 25 },
+    { text: 'Klik op de kast bovenaan, naast het schoolbord.', x: 47, y: 9, rx: 6, ry: 10 },
+    { text: 'Klik op een schoolbank in de eerste rij. Kijk naar de stoelen: de kinderen kijken naar het schoolbord voor hen.', x: 34, y: 45, rx: 7, ry: 29 },
+    { text: 'Klik op de wastafel.', x: 94, y: 82, rx: 7, ry: 10 },
+    { text: 'Klik op de kring.', x: 68, y: 14, rx: 23, ry: 14 }
+  ];
+
+  const furniture = [];
+  const add = (kind, label, points) => points.forEach((p, i) => furniture.push({
+    id: `${kind}-${i}`, kind, label, x: p[0] / 8.42, y: p[1] / 5.95, angle: p[2] || 0
+  }));
+  add('bank', 'schoolbank', [[289,362],[289,306],[290,201],[289,142],[375,198],[374,140],[453,199],[453,142],[371,360],[372,303],[455,360],[455,303],[533,304],[533,363]]);
+  add('kring', 'deel van de kring', [[456,20,0],[564,21,0],[431,71,20],[531,107,0],[636,93,-49]]);
+  add('bord', 'schoolbord', [[184,22,0],[162,346,90]]);
+  add('juf', 'bureau van de juf', [[134,83,59]]);
+  add('kast', 'kast', [[397,18,90],[162,157,90],[162,321,90],[648,263,90],[646,186,90],[726,554,0],[4,561,0],[54,561,0],[103,561,0],[154,436,124]]);
+  add('tafel', 'tafel', [[229,541,90],[50,468,0],[353,541,90],[494,541,90],[644,538,90]]);
+  add('wastafel', 'wastafel', [[790,463,0]]);
+
+  const validZone = {
+    bank: (x,y) => x > 25 && x < 68 && y > 17 && y < 70,
+    kring: (x,y) => x > 45 && x < 84 && y < 29,
+    bord: (x,y) => (y < 16 && x < 55) || (x < 30 && y > 18 && y < 75),
+    juf: (x,y) => x < 31 && y < 34,
+    kast: (x,y) => x < 27 || x > 70 || y < 19 || y > 79,
+    tafel: (x,y) => y > 70,
+    wastafel: (x,y) => x > 82 && y > 66
+  };
+
+  const say = text => typeof speak === 'function' && speak(text);
+  const head = (title, step) => `<div class="gamehead"><h1>${title}</h1><span class="counter">${step} / 2</span></div>`;
+  function shape(kind, angle = 0) {
+    const amount = {bank:3,kring:2,bord:1,juf:2,kast:2,tafel:1,wastafel:2}[kind] || 1;
+    return `<span class="furniture-shape shape-${kind}" style="--angle:${angle}deg">${'<i></i>'.repeat(amount)}</span>`;
+  }
+  function placedHtml(items) {
+    return items.map(p => `<span class="classroom-placed" style="--x:${p.x}%;--y:${p.y}%">${shape(p.kind,p.angle)}</span>`).join('');
+  }
+
+  function addMenuButton() {
+    const games = document.querySelector('.games');
+    if (!games || document.querySelector('[data-classroom-game]')) return;
+    const button = document.createElement('button');
+    button.className = 'game'; button.dataset.classroomGame = '1';
+    button.innerHTML = '<span class="emoji">🏫</span><strong>Onze klas op de plattegrond</strong><small>Zoek de meubels en richt daarna de hele klas in.</small>';
+    button.onclick = openFind; games.append(button);
+  }
+
+  function openFind() {
+    allThemes.hidden = true; gameMenu.hidden = false; let index = 0;
+    const draw = () => {
+      const task = findTasks[index]; state.spoken = task.text;
+      app.innerHTML = head('Onze klas op de plattegrond',1) + `<section class="question classroom-find-game">
+        <div class="listenline"><button class="listen" aria-label="Lees de opdracht voor">🔊</button><p class="prompt">${task.text}</p></div>
+        <p class="classroom-find-progress">Vraag ${index+1} van ${findTasks.length}</p>
+        <div class="real-classroom-plan classroom-find-plan"><img src="assets/klasplattegrond-meubels-kleur.png?v=3" alt="Gevulde klasplattegrond met alle meubels"><span class="placed-furniture"></span></div>
+        <p class="feedback"></p></section>`;
+      document.querySelector('.listen').onclick = () => say(task.text);
+      const plan = document.querySelector('.classroom-find-plan');
+      plan.onclick = event => {
+        const r = plan.getBoundingClientRect(), x = (event.clientX-r.left)/r.width*100, y = (event.clientY-r.top)/r.height*100;
+        if (Math.abs(x-task.x)>task.rx || Math.abs(y-task.y)>task.ry) {
+          plan.classList.remove('wrong'); void plan.offsetWidth; plan.classList.add('wrong');
+          document.querySelector('.feedback').textContent='Probeer nog eens.'; say('Probeer nog eens.'); return;
+        }
+        plan.querySelector('.placed-furniture').innerHTML=`<b class="find-marker" style="--x:${x}%;--y:${y}%">✓</b>`;
+        document.querySelector('.feedback').textContent='Goed gevonden!'; say('Goed gevonden!');
+        setTimeout(() => { index++; index < findTasks.length ? draw() : finish(); }, 650);
+      };
+      setTimeout(() => say(task.text), 160);
+    };
+    const finish = () => {
+      state.spoken='Alle meubels gevonden. Richt nu de hele lege klas in.';
+      app.innerHTML=head('Onze klas op de plattegrond',1)+`<section class="result"><div class="trophy">⭐</div><h1>Goed gezocht!</h1><p>Nu mag je de hele klas inrichten.</p><button id="startLayout">Richt de klas in →</button></section>`;
+      document.querySelector('#startLayout').onclick=openLayout; say(state.spoken);
+    };
+    draw();
+  }
+
+  function openLayout() {
+    let index=0, selected=false, ghost=null; const placed=[];
+    const render = () => {
+      if (index >= furniture.length) return done();
+      selected=false; const item=furniture[index], same=furniture.filter(p=>p.kind===item.kind), number=same.indexOf(item)+1;
+      const spoken=`Plaats ${item.label}${same.length>1?` ${number} van ${same.length}`:''}.`;
+      state.spoken=spoken;
+      app.innerHTML=head('Richt onze klas in',2)+`<section class="question classroom-layout-game">
+        <div class="listenline"><button class="listen" aria-label="Lees de opdracht voor">🔊</button><p class="prompt">${spoken}</p></div>
+        <div class="single-piece-tray"><button class="classroom-piece" aria-label="Sleep ${item.label}">${shape(item.kind,item.angle)}<b>${item.label}</b></button></div>
+        <div class="real-classroom-plan layout-plan"><img src="assets/klasplattegrond-echt-leeg.png?v=3" alt="Lege klasplattegrond"><span class="placed-furniture">${placedHtml(placed)}</span></div>
+        <p class="feedback">Nog ${furniture.length-index} meubelstukken.</p></section>`;
+      document.querySelector('.listen').onclick=()=>say(spoken);
+      const piece=document.querySelector('.classroom-piece'), plan=document.querySelector('.layout-plan');
+      const choose=()=>{selected=true;piece.classList.add('selected')};
+      const tryPlace=(clientX,clientY)=>{
+        const r=plan.getBoundingClientRect(),x=(clientX-r.left)/r.width*100,y=(clientY-r.top)/r.height*100;
+        if (!validZone[item.kind](x,y)) {
+          plan.classList.remove('wrong');void plan.offsetWidth;plan.classList.add('wrong');
+          document.querySelector('.feedback').textContent='Bijna. Probeer in de juiste zone.';say('Bijna. Probeer in de juiste zone.');return;
+        }
+        placed.push(item);index++;say('Goed geplaatst!');render();
+      };
+      piece.onclick=choose;
+      piece.onpointerdown=e=>{e.preventDefault();choose();piece.setPointerCapture(e.pointerId);ghost=piece.cloneNode(true);ghost.className='classroom-drag-ghost';document.body.append(ghost);ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'};
+      piece.onpointermove=e=>{if(ghost){ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'}};
+      piece.onpointerup=e=>{if(!ghost)return;ghost.remove();ghost=null;const el=document.elementFromPoint(e.clientX,e.clientY);if(el?.closest('.layout-plan'))tryPlace(e.clientX,e.clientY)};
+      piece.onpointercancel=()=>{ghost?.remove();ghost=null};
+      plan.onclick=e=>selected&&tryPlace(e.clientX,e.clientY);
+      setTimeout(()=>say(spoken),160);
+    };
+    const done=()=>{state.spoken='Knap gedaan. De hele klas is ingericht.';app.innerHTML=head('Richt onze klas in',2)+`<section class="result"><div class="trophy">🏆</div><h1>De hele klas is ingericht!</h1><p>Alle schoolbanken, kringbanken, borden, kasten, tafels en de wastafel staan terug.</p><button id="backGames">Kies een ander spel</button></section>`;document.querySelector('#backGames').onclick=menu;say(state.spoken)};
+    render();
+  }
+  new MutationObserver(addMenuButton).observe(app,{childList:true,subtree:true}); addMenuButton();
 })();
