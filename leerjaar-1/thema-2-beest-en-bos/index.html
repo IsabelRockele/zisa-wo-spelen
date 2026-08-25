@@ -10,7 +10,11 @@
   <header class="topbar">
     <a class="back" href="../">← 1ste leerjaar</a>
     <div><small>WERELDKANJERS 1 · THEMA 2</small><h1>Beest en bos</h1></div>
-    <button class="icon" id="speakPage" aria-label="Lees de pagina voor">🔊</button>
+    <div class="actions">
+      <button class="teacher-shortcut" data-open="teacher">👩‍🏫 <span>Voor de juf</span></button>
+      <button class="icon" id="speakPage" aria-label="Lees de pagina voor">🔊</button>
+      <button class="icon qr-shortcut" data-open="qr" aria-label="Open QR-kaartjes">QR</button>
+    </div>
   </header>
 
   <main id="app">
@@ -20,10 +24,6 @@
         <div><span class="eyebrow">Ik oefen</span><h2>Beest en bos</h2><p>Oefen met planten, dieren, eieren, leefomgevingen en verzorgen.</p></div>
       </div>
       <div class="menu" id="exerciseMenu"></div>
-      <div class="home-actions">
-        <button class="teacher" data-open="teacher">👩‍🏫 Voor de leerkracht</button>
-        <button class="qr" data-open="qr">▦ QR-kaarten</button>
-      </div>
     </section>
 
     <section id="exercise" class="view">
