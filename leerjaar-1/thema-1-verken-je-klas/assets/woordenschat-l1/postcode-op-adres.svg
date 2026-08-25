@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Adres met opvallende postcode</title>
+  <desc id="desc">Dezelfde woning als bij het woord adres, met de postcode 2880 extra groot en gekleurd aangeduid.</desc>
+  <image href="adres-zelfde-als-l2.webp" width="1200" height="800" preserveAspectRatio="xMidYMid slice"/>
+  <rect x="785" y="590" width="330" height="130" fill="#fff" fill-opacity=".95" stroke="#e54b4b" stroke-width="12"/>
+  <text x="950" y="650" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="800" fill="#17313a">POSTCODE</text>
+  <text x="950" y="705" text-anchor="middle" font-family="Arial,sans-serif" font-size="58" font-weight="900" fill="#d92f49">2880</text>
+</svg>
