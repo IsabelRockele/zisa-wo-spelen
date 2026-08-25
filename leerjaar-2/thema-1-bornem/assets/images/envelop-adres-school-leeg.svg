@@ -9,11 +9,6 @@
     <rect x="70" y="70" width="860" height="18" rx="9" fill="url(#edge)"/>
     <rect x="70" y="562" width="860" height="18" rx="9" fill="url(#edge)"/>
   </g>
-  <g font-family="Arial,sans-serif" fill="#526a73" font-size="21">
-    <text x="115" y="145">AFZENDER</text>
-    <line x1="115" y1="168" x2="340" y2="168" stroke="#b8c7c5" stroke-width="3"/>
-    <line x1="115" y1="203" x2="340" y2="203" stroke="#b8c7c5" stroke-width="3"/>
-  </g>
   <g transform="translate(790 115)">
     <rect width="92" height="112" rx="5" fill="#fff" stroke="#d83b38" stroke-width="5"/>
     <path d="M18 24h56v64H18z" fill="#d9edf8"/><circle cx="46" cy="51" r="18" fill="#2774c8" opacity=".8"/>
