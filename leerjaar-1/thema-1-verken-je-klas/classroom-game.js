@@ -149,8 +149,9 @@
     const names={bank:['schoolbank','schoolbanken'],kring:['kringbank','kringbanken'],bord:['schoolbord','schoolborden'],juf:['bureau van de juf','bureaus van de juf'],kast:['kast','kasten'],tafel:['tafel','tafels'],wastafel:['wastafel','wastafels']};
     const kinds=['bank','kring','bord','juf','kast','tafel','wastafel'];
     const render = () => {
+      const savedScrollX=window.scrollX,savedScrollY=window.scrollY;
       state.spoken=instruction;
-      const tray=kinds.map(kind=>{const count=remaining.filter(p=>p.kind===kind).length;if(!count)return'';const sample=remaining.find(p=>p.kind===kind);return `<button class="classroom-piece${selectedKind===kind?' selected':''}" data-kind="${kind}" aria-label="Kies ${names[kind][count===1?0:1]}">${shape(kind,sample.angle)}<b>${names[kind][count===1?0:1]} <span>${count}</span></b></button>`}).join('');
+      const tray=kinds.map(kind=>{const count=remaining.filter(p=>p.kind===kind).length;const sample=remaining.find(p=>p.kind===kind)||furniture.find(p=>p.kind===kind);return `<button class="classroom-piece${selectedKind===kind?' selected':''}${count?'':' is-empty'}" data-kind="${kind}" aria-label="${count?`Kies ${names[kind][count===1?0:1]}`:''}" ${count?'':'disabled'}>${shape(kind,sample.angle)}<b>${names[kind][count===1?0:1]} <span>${count}</span></b></button>`}).join('');
       app.innerHTML=head('Richt onze klas in',2)+`<section class="question classroom-layout-game">
         <div class="listenline"><button class="listen" aria-label="Lees de opdracht voor">🔊</button><p class="prompt">${instruction}</p></div>
         <div class="classroom-piece-tray">${tray}</div>
@@ -178,6 +179,7 @@
       pieces.forEach(piece=>{piece.onclick=()=>choose(piece.dataset.kind);piece.onpointerdown=e=>{e.preventDefault();choose(piece.dataset.kind);piece.setPointerCapture(e.pointerId);ghost=piece.cloneNode(true);ghost.className='classroom-drag-ghost';document.body.append(ghost);ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'};piece.onpointermove=e=>{if(ghost){ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'}};piece.onpointerup=e=>{if(!ghost)return;ghost.remove();ghost=null;const el=document.elementFromPoint(e.clientX,e.clientY);if(el?.closest('.layout-plan'))tryPlace(e.clientX,e.clientY)};piece.onpointercancel=()=>{ghost?.remove();ghost=null}});
       plan.onclick=e=>selectedKind&&tryPlace(e.clientX,e.clientY);
       document.querySelector('#classReady').onclick=checkReady;
+      requestAnimationFrame(()=>window.scrollTo(savedScrollX,savedScrollY));
     };
     const checkReady=()=>{if(!remaining.length)return done();const missing=kinds.map(kind=>{const count=remaining.filter(p=>p.kind===kind).length;if(!count)return'';return `${count} ${names[kind][count===1?0:1]}`}).filter(Boolean);const text=`Nog niet klaar. Er ontbreken nog ${missing.slice(0,-1).join(', ')}${missing.length>1?' en ':''}${missing.at(-1)}.`;document.querySelector('.feedback').textContent=text;say(text)};
     const done=()=>{document.body.classList.remove('classroom-building');state.spoken='Knap gedaan. De hele klas is ingericht.';app.innerHTML=head('Richt onze klas in',2)+`<section class="result"><div class="trophy">🏆</div><h1>De hele klas is ingericht!</h1><p>Alle schoolbanken, kringbanken, borden, kasten, tafels en de wastafel staan terug.</p><button id="backGames">Kies een ander spel</button></section>`;document.querySelector('#backGames').onclick=menu;say(state.spoken)};
