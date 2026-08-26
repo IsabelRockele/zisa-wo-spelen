@@ -81,7 +81,7 @@
 
   function openLayout() {
     let selectedKind=null, ghost=null; const placed=[], remaining=[...furniture];
-    const instruction='Bouw de klas. Kies een meubel en plaats het op ongeveer de juiste plek.';
+    const instruction='Bouw de klas. Sleep elk meubel ongeveer naar de juiste plek. De magneet zet het daarna precies goed.';
     const names={bank:['schoolbank','schoolbanken'],kring:['kringbank','kringbanken'],bord:['schoolbord','schoolborden'],juf:['bureau van de juf','bureaus van de juf'],kast:['kast','kasten'],tafel:['tafel','tafels'],wastafel:['wastafel','wastafels']};
     const kinds=['bank','kring','bord','juf','kast','tafel','wastafel'];
     const render = () => {
@@ -90,19 +90,25 @@
       app.innerHTML=head('Richt onze klas in',2)+`<section class="question classroom-layout-game">
         <div class="listenline"><button class="listen" aria-label="Lees de opdracht voor">🔊</button><p class="prompt">${instruction}</p></div>
         <div class="classroom-piece-tray">${tray}</div>
-        <div class="real-classroom-plan layout-plan"><img src="assets/klasplattegrond-echt-leeg.png?v=3" alt="Lege klasplattegrond"><span class="placed-furniture">${placedHtml(placed)}</span></div>
+        <div class="real-classroom-plan layout-plan">
+          <img class="classroom-reference-plan" src="assets/klasplattegrond-meubels-kleur.png?v=3" alt="" aria-hidden="true">
+          <img class="classroom-empty-plan" src="assets/klasplattegrond-echt-leeg.png?v=3" alt="Lege klasplattegrond">
+          <span class="placed-furniture">${placedHtml(placed)}</span>
+        </div>
         <div class="classroom-build-actions"><button class="primary" id="classReady">Klaar ✓</button><p class="feedback">Nog ${remaining.length} meubelstukken.</p></div></section>`;
       document.querySelector('.listen').onclick=()=>say(instruction);
       const pieces=[...document.querySelectorAll('.classroom-piece')], plan=document.querySelector('.layout-plan');
       const choose=kind=>{selectedKind=kind;pieces.forEach(p=>p.classList.toggle('selected',p.dataset.kind===kind))};
       const tryPlace=(clientX,clientY)=>{
         if(!selectedKind)return;
-        const item=remaining.find(p=>p.kind===selectedKind);if(!item)return;
         const r=plan.getBoundingClientRect(),x=(clientX-r.left)/r.width*100,y=(clientY-r.top)/r.height*100;
-        if (!validZone[item.kind](x,y)) {
+        const candidates=remaining.filter(p=>p.kind===selectedKind);
+        const nearest=candidates.map(item=>({item,distance:Math.hypot((x-item.x)/12,(y-item.y)/12)})).sort((a,b)=>a.distance-b.distance)[0];
+        if(!nearest||nearest.distance>1){
           plan.classList.remove('wrong');void plan.offsetWidth;plan.classList.add('wrong');
-          document.querySelector('.feedback').textContent='Bijna. Probeer in de juiste zone.';return;
+          document.querySelector('.feedback').textContent='Bijna. Sleep het meubel wat dichter bij de juiste plek.';return;
         }
+        const item=nearest.item;
         placed.push(item);remaining.splice(remaining.indexOf(item),1);selectedKind=remaining.some(p=>p.kind===item.kind)?item.kind:null;render();
       };
       pieces.forEach(piece=>{piece.onclick=()=>choose(piece.dataset.kind);piece.onpointerdown=e=>{e.preventDefault();choose(piece.dataset.kind);piece.setPointerCapture(e.pointerId);ghost=piece.cloneNode(true);ghost.className='classroom-drag-ghost';document.body.append(ghost);ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'};piece.onpointermove=e=>{if(ghost){ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'}};piece.onpointerup=e=>{if(!ghost)return;ghost.remove();ghost=null;const el=document.elementFromPoint(e.clientX,e.clientY);if(el?.closest('.layout-plan'))tryPlace(e.clientX,e.clientY)};piece.onpointercancel=()=>{ghost?.remove();ghost=null}});
