@@ -7,7 +7,7 @@
     {text:'Klik op de leraarskamer.',emoji:'👩‍🏫',zones:[{x:49,y:68,rx:4,ry:5}]},
     {text:'Klik op het secretariaat van juf Ilse.',emoji:'🗂️',zones:[{x:49,y:72,rx:18,ry:17}]},
     {text:'Klik op het bureau van directeur juf Elien.',emoji:'🧑‍💼',zones:[{x:50,y:73,rx:18,ry:17}]},
-    {text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',zones:[{x:49,y:62,rx:16,ry:15}]},
+    {text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',zones:[{x:52,y:48,rx:7,ry:10}]},
     {text:'Klik op de klas van juf Lara, het derde leerjaar.',emoji:'3️⃣',zones:[{x:49,y:56,rx:4,ry:4}]},
     {text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',zones:[{x:49,y:44,rx:4,ry:4}]},
     {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',zones:[{x:66,y:23,rx:7,ry:5}]},
