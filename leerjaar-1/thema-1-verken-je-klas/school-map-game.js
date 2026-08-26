@@ -13,7 +13,7 @@
     {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',zones:[{x:66,y:23,rx:7,ry:5}]},
     {text:'Klik op de meisjestoiletten.',emoji:'🚺',zones:[{x:43,y:33,rx:8,ry:10}]},
     {text:'Klik op de jongenstoiletten.',emoji:'🚹',zones:[{x:77,y:23,rx:8,ry:7}]},
-    {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',zones:[{x:77,y:44,rx:7,ry:10}]},
+    {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',zones:[{x:86,y:36,rx:5,ry:10}]},
     {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',zones:[{x:86,y:49,rx:5,ry:10}]}
   ];
   let index=0,score=0,locked=false;
