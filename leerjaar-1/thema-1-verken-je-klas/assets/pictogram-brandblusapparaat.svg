@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title id="title">Brandblusapparaat</title>
+  <rect x="4" y="4" width="232" height="232" rx="18" fill="#d9272e" stroke="#fff" stroke-width="8"/>
+  <g fill="#fff">
+    <path d="M89 70h66v18H89zm14-35h40v17h-40zm8 16h24v23h-24zM88 91h68c10 0 18 8 18 18v88H70v-88c0-10 8-18 18-18zm7 27v53h54v-53z"/>
+    <path d="M142 48c31 0 51 20 51 48v18h-16V97c0-20-13-33-35-33zM174 109h31v16h-31z"/>
+  </g>
+</svg>

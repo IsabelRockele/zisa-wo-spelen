@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title id="title">Verzamelplaats bij nood</title>
+  <rect x="4" y="4" width="232" height="232" rx="18" fill="#159447" stroke="#fff" stroke-width="8"/>
+  <g fill="#fff">
+    <circle cx="120" cy="120" r="27"/>
+    <path d="M24 49h53V26l35 35-35 35V73H24zm192 0h-53V26l-35 35 35 35V73h53zM24 191h53v23l35-35-35-35v23H24zm192 0h-53v23l-35-35 35-35v23h53z"/>
+  </g>
+</svg>
