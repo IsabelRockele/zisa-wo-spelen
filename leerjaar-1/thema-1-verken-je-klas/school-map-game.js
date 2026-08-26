@@ -2,8 +2,8 @@
   const tasks=[
     {text:'Klik op de giraffenklas.',icon:'picto-giraffenklas.png',zones:[{x:49,y:73,rx:4,ry:5}]},
     {text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',zones:[{x:51,y:51,rx:4,ry:6}]},
-    {text:'Klik op de refter.',icon:'picto-refter.png',polygons:[[[25,80],[34,75],[39,79],[29,87]],[[34,75],[43,71],[47,77],[39,82]]]},
-    {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',polygons:[[[29,87],[45,79],[49,85],[32,96]]]}
+    {text:'Klik op de refter.',icon:'picto-refter.png',zones:[{x:32,y:82,rx:10,ry:8},{x:40,y:78,rx:10,ry:8}]},
+    {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',zones:[{x:36,y:87,rx:16,ry:11}]}
   ];
   let index=0,score=0,locked=false;
   const say=text=>{
