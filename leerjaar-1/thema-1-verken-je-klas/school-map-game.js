@@ -1,9 +1,9 @@
 (()=>{
   const tasks=[
     {text:'Klik op de giraffenklas.',icon:'picto-giraffenklas.png',x:48,y:65,rx:5,ry:6},
-    {text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',x:49,y:47,rx:5,ry:6},
-    {text:'Klik op de refter.',icon:'picto-refter.png',x:35,y:84,rx:15,ry:5},
-    {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',x:35,y:92,rx:15,ry:5}
+    {text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',zones:[{x:49,y:55,rx:7,ry:11}]},
+    {text:'Klik op de refter.',icon:'picto-refter.png',zones:[{x:29,y:78,rx:12,ry:4},{x:42,y:78,rx:7,ry:4}]},
+    {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',zones:[{x:35,y:89,rx:17,ry:5}]}
   ];
   let index=0,score=0,locked=false;
   const say=text=>{
@@ -56,7 +56,8 @@
     const task=tasks[index],plan=event.currentTarget.getBoundingClientRect();
     const x=(event.clientX-plan.left)/plan.width*100;
     const y=(event.clientY-plan.top)/plan.height*100;
-    const right=Math.abs(x-task.x)<=task.rx&&Math.abs(y-task.y)<=task.ry;
+    const zones=task.zones||[task];
+    const right=zones.some(zone=>Math.abs(x-zone.x)<=zone.rx&&Math.abs(y-zone.y)<=zone.ry);
     const marker=document.querySelector('.school-plan-marker');
     marker.style.left=x+'%'; marker.style.top=y+'%'; marker.hidden=false;
     const feedback=document.querySelector('.feedback');
