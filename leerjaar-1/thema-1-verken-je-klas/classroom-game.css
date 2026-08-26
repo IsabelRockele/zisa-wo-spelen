@@ -11,3 +11,4 @@
 .classroom-building .classroom-piece.is-empty{visibility:hidden;pointer-events:none}
 .classroom-building .layout-plan{aspect-ratio:885/650}
 .layout-plan .classroom-placed{pointer-events:auto;cursor:grab;touch-action:none}.layout-plan .classroom-placed:active{cursor:grabbing}.classroom-placed-drag-ghost{width:76px;height:58px;min-width:0;padding:0;background:transparent;border:0;box-shadow:none}.classroom-placed-drag-ghost img{display:block;width:100%;height:100%;object-fit:contain}
+.classroom-sink-wall{position:absolute;z-index:2;left:91.86%;top:81.54%;width:5.65%;height:1.08%;background:#111;pointer-events:none}

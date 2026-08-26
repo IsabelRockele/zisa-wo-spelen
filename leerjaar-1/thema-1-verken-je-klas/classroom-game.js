@@ -160,17 +160,22 @@
         <div class="real-classroom-plan layout-plan">
           <img class="classroom-reference-plan" src="assets/klasplattegrond-meubels-kleur.png?v=3" alt="" aria-hidden="true">
           <img class="classroom-empty-plan" src="assets/klasplattegrond-echt-leeg-v2.png?v=1" alt="Lege klasplattegrond">
+          <span class="classroom-sink-wall" aria-hidden="true"></span>
           <span class="placed-furniture">${placedHtml(placed)}</span>
         </div>
         <div class="classroom-build-actions"><button class="primary" id="classReady">Klaar ✓</button><p class="feedback">Nog ${remaining.length} meubelstukken.</p></div></section>`;
       document.querySelector('.listen').onclick=()=>say(instruction);
       const pieces=[...document.querySelectorAll('.classroom-piece')], plan=document.querySelector('.layout-plan');
       const choose=kind=>{selectedKind=kind;pieces.forEach(p=>p.classList.toggle('selected',p.dataset.kind===kind))};
+      const nearestTarget=(items,x,y,kind)=>items.map(item=>{
+        const xScale=kind==='bank'?8:12;
+        return {item,distance:Math.hypot((x-item.x)/xScale,(y-item.y)/12)};
+      }).sort((a,b)=>a.distance-b.distance)[0];
       const tryPlace=(clientX,clientY)=>{
         if(!selectedKind)return;
         const r=plan.getBoundingClientRect(),x=(clientX-r.left)/r.width*100,y=(clientY-r.top)/r.height*100;
         const candidates=remaining.filter(p=>p.kind===selectedKind);
-        const nearest=candidates.map(item=>({item,distance:Math.hypot((x-item.x)/12,(y-item.y)/12)})).sort((a,b)=>a.distance-b.distance)[0];
+        const nearest=nearestTarget(candidates,x,y,selectedKind);
         if(!nearest||nearest.distance>1){
           plan.classList.remove('wrong');void plan.offsetWidth;plan.classList.add('wrong');
           document.querySelector('.feedback').textContent='Bijna. Sleep het meubel wat dichter bij de juiste plek.';return;
@@ -180,11 +185,11 @@
       };
       const movePlaced=(id,clientX,clientY)=>{
         const index=placed.findIndex(item=>item.id===id);if(index<0)return;
-        const old=placed.splice(index,1)[0];remaining.push(old);
+        const old=placed.splice(index,1)[0];
         const r=plan.getBoundingClientRect(),x=(clientX-r.left)/r.width*100,y=(clientY-r.top)/r.height*100;
-        const nearest=remaining.filter(item=>item.kind===old.kind).map(item=>({item,distance:Math.hypot((x-item.x)/12,(y-item.y)/12)})).sort((a,b)=>a.distance-b.distance)[0];
-        if(!nearest||nearest.distance>1.15){remaining.splice(remaining.indexOf(old),1);placed.push(old);render();return}
-        remaining.splice(remaining.indexOf(nearest.item),1);placed.push(nearest.item);selectedKind=null;render();
+        const nearest=nearestTarget(remaining.filter(item=>item.kind===old.kind),x,y,old.kind);
+        if(!nearest||nearest.distance>1.15){placed.push(old);render();return}
+        remaining.splice(remaining.indexOf(nearest.item),1);remaining.push(old);placed.push(nearest.item);selectedKind=null;render();
       };
       pieces.forEach(piece=>{piece.onclick=()=>choose(piece.dataset.kind);piece.onpointerdown=e=>{e.preventDefault();choose(piece.dataset.kind);piece.setPointerCapture(e.pointerId);ghost=piece.cloneNode(true);ghost.className='classroom-drag-ghost';document.body.append(ghost);ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'};piece.onpointermove=e=>{if(ghost){ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'}};piece.onpointerup=e=>{if(!ghost)return;ghost.remove();ghost=null;const el=document.elementFromPoint(e.clientX,e.clientY);if(el?.closest('.layout-plan'))tryPlace(e.clientX,e.clientY)};piece.onpointercancel=()=>{ghost?.remove();ghost=null}});
       document.querySelectorAll('.classroom-placed').forEach(piece=>{piece.onpointerdown=e=>{e.preventDefault();e.stopPropagation();piece.setPointerCapture(e.pointerId);ghost=piece.cloneNode(true);ghost.className='classroom-drag-ghost classroom-placed-drag-ghost';document.body.append(ghost);ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'};piece.onpointermove=e=>{if(ghost){ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'}};piece.onpointerup=e=>{e.stopPropagation();if(!ghost)return;ghost.remove();ghost=null;const el=document.elementFromPoint(e.clientX,e.clientY);if(el?.closest('.layout-plan'))movePlaced(piece.dataset.placedId,e.clientX,e.clientY)};piece.onpointercancel=()=>{ghost?.remove();ghost=null}});
