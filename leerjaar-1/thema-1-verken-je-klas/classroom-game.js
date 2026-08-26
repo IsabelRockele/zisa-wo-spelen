@@ -70,7 +70,7 @@
         w:(sourceRight - sourceLeft) / referenceImage.width * 100,
         h:(sourceBottom - sourceTop) / referenceImage.height * 100,
         angle:0,
-        sprite:`assets/classroom-pieces/${kind}-${index}.png?v=1`
+        sprite:`assets/classroom-pieces/${kind}-${index}.png?v=2`
       });
     });
   });
@@ -92,7 +92,7 @@
     return `<span class="furniture-shape shape-${kind}" style="--angle:${angle}deg">${'<i></i>'.repeat(amount)}</span>`;
   }
   function placedHtml(items) {
-    return items.map(p => `<span class="classroom-placed" style="--x:${p.x}%;--y:${p.y}%;--w:${p.w}%;--h:${p.h}%;--angle:${p.angle}deg"><img src="${p.sprite}" alt=""></span>`).join('');
+    return items.map(p => `<span class="classroom-placed" data-placed-id="${p.id}" role="button" tabindex="0" aria-label="Verplaats ${p.label}" style="--x:${p.x}%;--y:${p.y}%;--w:${p.w}%;--h:${p.h}%;--angle:${p.angle}deg"><img src="${p.sprite}" alt=""></span>`).join('');
   }
 
   function addMenuButton() {
@@ -178,7 +178,16 @@
         const item=nearest.item;
         placed.push(item);remaining.splice(remaining.indexOf(item),1);selectedKind=remaining.some(p=>p.kind===item.kind)?item.kind:null;render();
       };
+      const movePlaced=(id,clientX,clientY)=>{
+        const index=placed.findIndex(item=>item.id===id);if(index<0)return;
+        const old=placed.splice(index,1)[0];remaining.push(old);
+        const r=plan.getBoundingClientRect(),x=(clientX-r.left)/r.width*100,y=(clientY-r.top)/r.height*100;
+        const nearest=remaining.filter(item=>item.kind===old.kind).map(item=>({item,distance:Math.hypot((x-item.x)/12,(y-item.y)/12)})).sort((a,b)=>a.distance-b.distance)[0];
+        if(!nearest||nearest.distance>1.15){remaining.splice(remaining.indexOf(old),1);placed.push(old);render();return}
+        remaining.splice(remaining.indexOf(nearest.item),1);placed.push(nearest.item);selectedKind=null;render();
+      };
       pieces.forEach(piece=>{piece.onclick=()=>choose(piece.dataset.kind);piece.onpointerdown=e=>{e.preventDefault();choose(piece.dataset.kind);piece.setPointerCapture(e.pointerId);ghost=piece.cloneNode(true);ghost.className='classroom-drag-ghost';document.body.append(ghost);ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'};piece.onpointermove=e=>{if(ghost){ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'}};piece.onpointerup=e=>{if(!ghost)return;ghost.remove();ghost=null;const el=document.elementFromPoint(e.clientX,e.clientY);if(el?.closest('.layout-plan'))tryPlace(e.clientX,e.clientY)};piece.onpointercancel=()=>{ghost?.remove();ghost=null}});
+      document.querySelectorAll('.classroom-placed').forEach(piece=>{piece.onpointerdown=e=>{e.preventDefault();e.stopPropagation();piece.setPointerCapture(e.pointerId);ghost=piece.cloneNode(true);ghost.className='classroom-drag-ghost classroom-placed-drag-ghost';document.body.append(ghost);ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'};piece.onpointermove=e=>{if(ghost){ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px'}};piece.onpointerup=e=>{e.stopPropagation();if(!ghost)return;ghost.remove();ghost=null;const el=document.elementFromPoint(e.clientX,e.clientY);if(el?.closest('.layout-plan'))movePlaced(piece.dataset.placedId,e.clientX,e.clientY)};piece.onpointercancel=()=>{ghost?.remove();ghost=null}});
       plan.onclick=e=>selectedKind&&tryPlace(e.clientX,e.clientY);
       document.querySelector('#classReady').onclick=checkReady;
       requestAnimationFrame(()=>window.scrollTo(savedScrollX,savedScrollY));
