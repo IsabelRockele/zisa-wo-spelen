@@ -102,12 +102,6 @@
     button.className = 'game'; button.dataset.classroomGame = '1';
     button.innerHTML = '<span class="emoji">🏫</span><strong>Onze klas op de plattegrond</strong><small>Zoek de meubels en richt daarna de hele klas in.</small>';
     button.onclick = openFind; games.append(button);
-    const testButton = document.createElement('button');
-    testButton.className = 'game classroom-build-test';
-    testButton.dataset.classroomBuildTest = '1';
-    testButton.innerHTML = '<span class="emoji">🧲</span><strong>Test meteen: richt onze klas in</strong><small>Sla de vorige oefening voorlopig over.</small>';
-    testButton.onclick = openLayout;
-    games.append(testButton);
   }
 
   function openFind() {
