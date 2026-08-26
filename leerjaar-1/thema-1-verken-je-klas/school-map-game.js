@@ -14,9 +14,19 @@
     {text:'Klik op de meisjestoiletten.',emoji:'🚺',zones:[{x:43,y:33,rx:8,ry:10}]},
     {text:'Klik op de jongenstoiletten.',emoji:'🚹',zones:[{x:77,y:23,rx:8,ry:7}]},
     {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',zones:[{x:77,y:44,rx:7,ry:10}]},
-    {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',zones:[{x:77,y:45,rx:4,ry:6}]}
+    {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',zones:[{x:77,y:54,rx:7,ry:8}]}
   ];
   let index=0,score=0,locked=false;
+  function shuffleTasks(){
+    const previousFirst=tasks[0];
+    for(let i=tasks.length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [tasks[i],tasks[j]]=[tasks[j],tasks[i]];
+    }
+    if(tasks.length>1&&tasks[0]===previousFirst){
+      [tasks[0],tasks[1]]=[tasks[1],tasks[0]];
+    }
+  }
   const say=text=>{
     if(typeof speak==='function') return speak(text);
     if(!('speechSynthesis' in window)) return;
@@ -35,6 +45,7 @@
     games.append(button);
   }
   function start(){
+    shuffleTasks();
     index=0; score=0; locked=false;
     allThemes.hidden=true;
     gameMenu.hidden=false;
