@@ -58,15 +58,21 @@
     tafel:[[214,570,254,621],[68,497,128,539],[339,570,380,621],[482,570,522,621],[632,567,672,618]],
     wastafel:[[812,491,863,535]]
   };
+  const filledCanvas = {left:22, top:30, width:842, height:595};
+  const emptyCanvas = {left:17, top:20, width:951, height:674, imageWidth:977, imageHeight:707};
   Object.entries(spriteBoxes).forEach(([kind, boxes]) => {
     const items = furniture.filter(item => item.kind === kind);
     boxes.forEach((box, index) => {
-      const item = items[index], [left, top, right, bottom] = box;
+      const item = items[index], [sourceLeft, sourceTop, sourceRight, sourceBottom] = box;
+      const left = emptyCanvas.left + (sourceLeft - filledCanvas.left) * emptyCanvas.width / filledCanvas.width;
+      const top = emptyCanvas.top + (sourceTop - filledCanvas.top) * emptyCanvas.height / filledCanvas.height;
+      const right = emptyCanvas.left + (sourceRight - filledCanvas.left) * emptyCanvas.width / filledCanvas.width;
+      const bottom = emptyCanvas.top + (sourceBottom - filledCanvas.top) * emptyCanvas.height / filledCanvas.height;
       Object.assign(item, {
-        x:(left + right) / 2 / reference.width * 100,
-        y:(top + bottom) / 2 / reference.height * 100,
-        w:(right - left) / reference.width * 100,
-        h:(bottom - top) / reference.height * 100,
+        x:(left + right) / 2 / emptyCanvas.imageWidth * 100,
+        y:(top + bottom) / 2 / emptyCanvas.imageHeight * 100,
+        w:(right - left) / emptyCanvas.imageWidth * 100,
+        h:(bottom - top) / emptyCanvas.imageHeight * 100,
         angle:0,
         sprite:`assets/classroom-pieces/${kind}-${index}.png?v=1`
       });
