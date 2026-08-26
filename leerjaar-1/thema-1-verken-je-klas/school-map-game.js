@@ -2,7 +2,7 @@
   const tasks=[
     {text:'Klik op de giraffenklas.',icon:'picto-giraffenklas.png',zones:[{x:49,y:73,rx:4,ry:5}]},
     {text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',zones:[{x:51,y:51,rx:4,ry:6}]},
-    {text:'Klik op de refter.',icon:'picto-refter.png',zones:[{x:32,y:82,rx:10,ry:8},{x:40,y:78,rx:10,ry:8}]},
+    {text:'Klik op de refter.',icon:'picto-refter.png',zones:[{x:32,y:80,rx:10,ry:4},{x:40,y:78,rx:9,ry:4}]},
     {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',zones:[{x:36,y:87,rx:16,ry:11}]},
     {text:'Klik op de leraarskamer.',emoji:'👩‍🏫',zones:[{x:49,y:68,rx:4,ry:5}]},
     {text:'Klik op het secretariaat van juf Ilse.',emoji:'🗂️',zones:[{x:49,y:72,rx:18,ry:17}]},
