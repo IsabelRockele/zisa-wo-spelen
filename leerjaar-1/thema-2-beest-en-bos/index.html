@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Beest en bos · 1ste leerjaar</title>
   <link rel="stylesheet" href="styles.css?v=20260826-kaarten-lager">
+  <style>.child-nav-slot{display:flex;align-items:center}.child-nav-button{display:inline-flex!important;align-items:center;justify-content:center;gap:.35rem;min-width:9.6rem;min-height:3rem;padding:.65rem 1rem;border:0;border-radius:1rem;background:#6552b8!important;color:#fff!important;text-decoration:none;font:900 1rem/1.1 inherit;box-shadow:0 4px 0 #3f317f;cursor:pointer}.child-nav-button[hidden]{display:none!important}.exercise-head .back-home{display:none!important}@media(max-width:700px){.child-nav-button{min-width:auto;padding:.65rem .8rem}.child-nav-button span{display:none}}</style>
 </head>
 <body>
   <header class="topbar">
-    <a class="back" href="../">← 1ste leerjaar</a>
+    <div class="child-nav-slot"><a id="allThemes" class="back child-nav-button" href="../">← <span>Alle thema’s</span></a><button id="exerciseMenuButton" class="child-nav-button" type="button" hidden><span aria-hidden="true">←</span> <span>Oefeningen</span></button></div>
     <div><small>WERELDKANJERS 1 · THEMA 2</small><h1>Beest en bos</h1></div>
     <div class="actions">
       <a class="teacher-shortcut" href="woordenschat.html">👩‍🏫 <span>Voor de juf</span></a>
@@ -58,7 +59,7 @@
       <div id="qrOutput" class="qr-output"></div>
     </section>
   </main>
-  <script src="app.js"></script>
+  <script src="app.js?v=20260826-nav"></script>
   <script src="activities.js"></script>
 </body>
 </html>

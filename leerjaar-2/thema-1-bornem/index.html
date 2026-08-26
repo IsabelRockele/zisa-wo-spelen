@@ -16,13 +16,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
   <script src="app.js?v=24" defer></script>
   <script src="municipality-real.js?v=1" defer></script>
-  <style>.teacher-shortcut{display:inline-flex;align-items:center;justify-content:center;gap:.35rem;padding:.72rem .9rem;border-radius:1rem;background:#145c57;color:#fff;text-decoration:none;font-weight:900;white-space:nowrap}@media(max-width:760px){.teacher-shortcut{font-size:0;padding:.7rem}.teacher-shortcut::first-letter{font-size:1.35rem}}</style>
+  <style>.teacher-shortcut{display:inline-flex;align-items:center;justify-content:center;gap:.35rem;padding:.72rem .9rem;border-radius:1rem;background:#145c57;color:#fff;text-decoration:none;font-weight:900;white-space:nowrap}.child-nav-slot{display:flex;align-items:center}.child-nav-button{display:inline-flex!important;align-items:center;justify-content:center;gap:.35rem;min-width:9.6rem;min-height:3rem;padding:.65rem 1rem;border:0;border-radius:1rem;background:#6552b8!important;color:#fff!important;text-decoration:none;font:900 1rem/1.1 inherit;box-shadow:0 4px 0 #3f317f;cursor:pointer}.child-nav-button[hidden]{display:none!important}@media(max-width:760px){.teacher-shortcut{font-size:0;padding:.7rem}.teacher-shortcut::first-letter{font-size:1.35rem}.child-nav-button{min-width:auto;padding:.65rem .8rem}.child-nav-button span:not([aria-hidden]){display:none}}</style>
 </head>
 <body>
   <header class="topbar">
-    <div class="nav-buttons">
-      <a class="hub-button" id="hubButton" href="../" aria-label="Terug naar de thema's van het tweede leerjaar"><span aria-hidden="true">←</span> Alle thema’s</a>
-      <button class="hub-button game-menu-button" id="homeButton" type="button" aria-label="Terug naar de oefeningen van Bornem" hidden><span aria-hidden="true">←</span> Oefeningen</button>
+    <div class="nav-buttons child-nav-slot">
+      <a class="hub-button child-nav-button" id="hubButton" href="../" aria-label="Terug naar de thema's van het tweede leerjaar"><span aria-hidden="true">←</span> <span>Alle thema’s</span></a>
+      <button class="hub-button game-menu-button child-nav-button" id="homeButton" type="button" aria-label="Terug naar de oefeningen van Bornem" hidden><span aria-hidden="true">←</span> <span>Oefeningen</span></button>
     </div>
     <div class="brand"><span class="brand-dot">Z</span><div><small>ZISA WO SPELEN</small><strong>Op stap in Bornem</strong></div></div>
     <div class="top-actions"><a class="teacher-shortcut" href="woordenschat.html">👩‍🏫 Voor de juf</a><button class="icon-button" id="readButton" type="button" aria-label="Lees de opdracht en antwoorden voor">🔊</button><button class="icon-button" id="teacherButton" type="button" aria-label="Leerkrachtenvenster">QR</button></div>
