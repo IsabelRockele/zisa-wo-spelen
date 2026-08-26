@@ -58,21 +58,17 @@
     tafel:[[214,570,254,621],[68,497,128,539],[339,570,380,621],[482,570,522,621],[632,567,672,618]],
     wastafel:[[812,491,863,535]]
   };
-  const filledCanvas = {left:22, top:30, width:842, height:595};
-  const emptyCanvas = {left:17, top:20, width:951, height:674, imageWidth:977, imageHeight:707};
+  // Deze lege achtergrond heeft exact dezelfde uitsnede als de gevulde referentie.
+  const referenceImage = {width:885, height:650};
   Object.entries(spriteBoxes).forEach(([kind, boxes]) => {
     const items = furniture.filter(item => item.kind === kind);
     boxes.forEach((box, index) => {
       const item = items[index], [sourceLeft, sourceTop, sourceRight, sourceBottom] = box;
-      const left = emptyCanvas.left + (sourceLeft - filledCanvas.left) * emptyCanvas.width / filledCanvas.width;
-      const top = emptyCanvas.top + (sourceTop - filledCanvas.top) * emptyCanvas.height / filledCanvas.height;
-      const right = emptyCanvas.left + (sourceRight - filledCanvas.left) * emptyCanvas.width / filledCanvas.width;
-      const bottom = emptyCanvas.top + (sourceBottom - filledCanvas.top) * emptyCanvas.height / filledCanvas.height;
       Object.assign(item, {
-        x:(left + right) / 2 / emptyCanvas.imageWidth * 100,
-        y:(top + bottom) / 2 / emptyCanvas.imageHeight * 100,
-        w:(right - left) / emptyCanvas.imageWidth * 100,
-        h:(bottom - top) / emptyCanvas.imageHeight * 100,
+        x:(sourceLeft + sourceRight) / 2 / referenceImage.width * 100,
+        y:(sourceTop + sourceBottom) / 2 / referenceImage.height * 100,
+        w:(sourceRight - sourceLeft) / referenceImage.width * 100,
+        h:(sourceBottom - sourceTop) / referenceImage.height * 100,
         angle:0,
         sprite:`assets/classroom-pieces/${kind}-${index}.png?v=1`
       });
@@ -106,6 +102,12 @@
     button.className = 'game'; button.dataset.classroomGame = '1';
     button.innerHTML = '<span class="emoji">🏫</span><strong>Onze klas op de plattegrond</strong><small>Zoek de meubels en richt daarna de hele klas in.</small>';
     button.onclick = openFind; games.append(button);
+    const testButton = document.createElement('button');
+    testButton.className = 'game classroom-build-test';
+    testButton.dataset.classroomBuildTest = '1';
+    testButton.innerHTML = '<span class="emoji">🧲</span><strong>Test meteen: richt onze klas in</strong><small>Sla de vorige oefening voorlopig over.</small>';
+    testButton.onclick = openLayout;
+    games.append(testButton);
   }
 
   function openFind() {
@@ -157,7 +159,7 @@
         <div class="classroom-piece-tray">${tray}</div>
         <div class="real-classroom-plan layout-plan">
           <img class="classroom-reference-plan" src="assets/klasplattegrond-meubels-kleur.png?v=3" alt="" aria-hidden="true">
-          <img class="classroom-empty-plan" src="assets/klasplattegrond-echt-leeg.png?v=3" alt="Lege klasplattegrond">
+          <img class="classroom-empty-plan" src="assets/klasplattegrond-echt-leeg-v2.png?v=1" alt="Lege klasplattegrond">
           <span class="placed-furniture">${placedHtml(placed)}</span>
         </div>
         <div class="classroom-build-actions"><button class="primary" id="classReady">Klaar ✓</button><p class="feedback">Nog ${remaining.length} meubelstukken.</p></div></section>`;
