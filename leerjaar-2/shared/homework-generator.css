@@ -81,3 +81,25 @@
 .t2-rule-picto{display:block;width:20mm;height:20mm;background:none}.t2-rule-picto img{display:block;width:100%;height:100%;object-fit:contain}
 .tree-crown-bracket{position:absolute;z-index:2;left:23%;top:5%;width:11mm;height:39%;border-top:1.2mm solid #0877bd;border-bottom:1.2mm solid #0877bd;border-left:1.2mm solid #0877bd}.tree-crown-bracket .connect-dot{position:absolute;left:-3.1mm;top:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 1.2mm #fff}
 .t2-resident-grid{display:grid;grid-template-columns:1fr 1fr;gap:3mm}.t2-resident-card{display:grid;grid-template-columns:29mm 1fr;gap:3mm;align-items:center;min-height:36mm;padding:2.5mm;border:1px solid #b8cad1}.t2-resident-card img{display:block;width:29mm;height:29mm;object-fit:contain}.t2-resident-card p{display:grid;align-content:space-between;gap:5mm;min-height:28mm;margin:0}.t2-resident-card span{display:block;width:100%;min-height:9mm;padding-top:2mm;text-align:center;border-bottom:1px solid #263238}
+/* Geconsolideerde correcties voor de huistaken van thema 2. */
+.t2-answer-grid span{display:block;min-width:38mm;min-height:8mm;text-align:center;border-bottom:1px solid #263238}
+.t2-writing-prompts i{height:10mm;margin:0 0 9mm}
+.t2-picto-match{grid-template-columns:62mm 58mm;column-gap:42mm}
+.t2-picto-match>div:last-child p{justify-content:flex-start;gap:4mm}
+.t2-rule-picto{display:block;width:20mm;height:20mm;background:none}
+.t2-rule-picto img{display:block;width:20mm;height:20mm;object-fit:contain}
+.t2-text-match{grid-template-columns:58mm 1fr;gap:40mm}
+.t2-spider-part-match{display:grid;grid-template-columns:52mm 92mm;gap:8mm;align-items:center;justify-content:center}
+.t2-spider-part-match .t2-overlay-labels{display:grid;align-content:space-around;height:88mm}
+.t2-spider-part-match .t2-overlay-labels p{display:flex;align-items:center;justify-content:flex-end;gap:3mm;margin:0}
+.t2-spider-picture{position:relative;width:92mm;height:88mm}
+.t2-spider-picture img{display:block;width:100%;height:100%;object-fit:contain}
+.spider-target{position:absolute;z-index:2;outline:1.5mm solid #fff}
+.spider-head{left:53%;top:48%}.spider-body{left:58%;top:38%}.spider-legs{left:68%;top:55%}
+.t2-reading-text{display:grid;grid-template-columns:40mm 1fr;gap:6mm;align-items:center;margin-bottom:4mm;padding:3mm;border:1px solid #b8cad1}
+.t2-reading-text img{display:block;width:40mm;height:32mm;object-fit:contain}
+.t2-reading-text p{margin:0;line-height:1.45}
+.t2-animal-sheet-reading{grid-template-columns:0 1fr;gap:0}
+.t2-animal-sheet-reading p{display:grid;grid-template-columns:43mm 1fr;gap:3mm;margin-bottom:4mm}
+.t2-animal-sheet-reading p span{display:block;min-height:7mm;border-bottom:1px solid #263238}
+.t2-page-filler{margin-top:7mm;padding:4mm 5mm;border:1px solid #9eb7c3;background:#f7fbfc}.t2-page-filler h4{margin:0 0 3mm;font-size:11pt}.t2-page-filler p{margin:2.5mm 0;padding-bottom:2.5mm;border-bottom:1px solid #82959d}.t2-review-filler{display:grid;grid-template-columns:1fr 1fr;column-gap:6mm}.t2-review-filler h4{grid-column:1/-1}.t2-review-filler p{display:grid;grid-template-columns:1fr 34mm;gap:3mm}.t2-review-filler p span{border-bottom:1px solid #263238;text-align:center}
