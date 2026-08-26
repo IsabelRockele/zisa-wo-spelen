@@ -46,6 +46,33 @@
   ]);
   add('wastafel', 'wastafel', [[837,514,40,34,0]]);
 
+  // De zichtbare stukken zijn exacte uitsneden uit de echte, gevulde
+  // plattegrond. Daardoor komen niet alleen hun plaats, maar ook hun omtrek,
+  // stoel, scheidingslijn en verhouding exact overeen met het voorbeeld.
+  const spriteBoxes = {
+    bank:[[278,168,317,230],[278,228,317,289],[278,333,317,395],[278,389,317,451],[361,167,402,229],[361,227,402,289],[442,168,481,229],[442,227,481,289],[359,331,400,393],[359,388,400,451],[442,331,482,393],[442,388,482,451],[522,332,561,394],[522,392,561,454]],
+    kring:[[477,46,587,80],[586,47,696,81],[443,98,554,165],[552,132,662,169],[657,43,753,143]],
+    bord:[[203,48,362,66],[179,220,202,381]],
+    juf:[[124,111,185,186]],
+    kast:[[395,44,426,116],[158,184,189,258],[158,348,189,423],[641,289,679,374],[641,211,678,294],[747,582,859,620],[22,591,75,624],[73,591,125,624],[122,591,161,624],[121,452,181,522]],
+    tafel:[[214,570,254,621],[68,497,128,539],[339,570,380,621],[482,570,522,621],[632,567,672,618]],
+    wastafel:[[812,491,863,535]]
+  };
+  Object.entries(spriteBoxes).forEach(([kind, boxes]) => {
+    const items = furniture.filter(item => item.kind === kind);
+    boxes.forEach((box, index) => {
+      const item = items[index], [left, top, right, bottom] = box;
+      Object.assign(item, {
+        x:(left + right) / 2 / reference.width * 100,
+        y:(top + bottom) / 2 / reference.height * 100,
+        w:(right - left) / reference.width * 100,
+        h:(bottom - top) / reference.height * 100,
+        angle:0,
+        sprite:`assets/classroom-pieces/${kind}-${index}.png?v=1`
+      });
+    });
+  });
+
   const validZone = {
     bank: (x,y) => x > 25 && x < 68 && y > 17 && y < 70,
     kring: (x,y) => x > 45 && x < 84 && y < 29,
@@ -63,7 +90,7 @@
     return `<span class="furniture-shape shape-${kind}" style="--angle:${angle}deg">${'<i></i>'.repeat(amount)}</span>`;
   }
   function placedHtml(items) {
-    return items.map(p => `<span class="classroom-placed" style="--x:${p.x}%;--y:${p.y}%;--w:${p.w}%;--h:${p.h}%;--angle:${p.angle}deg">${shape(p.kind,p.angle)}</span>`).join('');
+    return items.map(p => `<span class="classroom-placed" style="--x:${p.x}%;--y:${p.y}%;--w:${p.w}%;--h:${p.h}%;--angle:${p.angle}deg"><img src="${p.sprite}" alt=""></span>`).join('');
   }
 
   function addMenuButton() {
