@@ -9,9 +9,11 @@
 
   const furniture = [];
   const realSizes={bank:[53.76,30.72],kring:[102.48,27.72],bord:[150,10],juf:[61.06,30.96],kast:[64,25],tafel:[44,32],wastafel:[40.3,33.8]};
+  const blankMap={width:977,height:707,left:17,top:20,contentWidth:951,contentHeight:674,sourceWidth:842,sourceHeight:595};
   const add = (kind, label, points) => points.forEach((p, i) => {
     const size=realSizes[kind];
-    furniture.push({id:`${kind}-${i}`,kind,label,x:(p[0]+size[0]/2)/8.42,y:(p[1]+size[1]/2)/5.95,w:size[0]/8.42,h:size[1]/5.95,angle:p[2]||0});
+    const scaleX=blankMap.contentWidth/blankMap.sourceWidth,scaleY=blankMap.contentHeight/blankMap.sourceHeight;
+    furniture.push({id:`${kind}-${i}`,kind,label,x:(blankMap.left+(p[0]+size[0]/2)*scaleX)/blankMap.width*100,y:(blankMap.top+(p[1]+size[1]/2)*scaleY)/blankMap.height*100,w:size[0]*scaleX/blankMap.width*100,h:size[1]*scaleY/blankMap.height*100,angle:p[2]||0});
   });
   add('bank', 'schoolbank', [[289,362],[289,306],[290,201],[289,142],[375,198],[374,140],[453,199],[453,142],[371,360],[372,303],[455,360],[455,303],[533,304],[533,363]]);
   add('kring', 'deel van de kring', [[456,20,0],[564,21,0],[431,71,20],[531,107,0],[636,93,-49]]);
@@ -51,6 +53,7 @@
   }
 
   function openFind() {
+    document.body.classList.remove('classroom-building');
     allThemes.hidden = true; gameMenu.hidden = false; let index = 0;
     const activeTasks=[...findTasks];
     for(let i=activeTasks.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[activeTasks[i],activeTasks[j]]=[activeTasks[j],activeTasks[i]]}
@@ -84,6 +87,7 @@
   }
 
   function openLayout() {
+    document.body.classList.add('classroom-building');
     let selectedKind=null, ghost=null; const placed=[], remaining=[...furniture];
     const instruction='Bouw de klas. Sleep elk meubel ongeveer naar de juiste plek. De magneet zet het daarna precies goed.';
     const names={bank:['schoolbank','schoolbanken'],kring:['kringbank','kringbanken'],bord:['schoolbord','schoolborden'],juf:['bureau van de juf','bureaus van de juf'],kast:['kast','kasten'],tafel:['tafel','tafels'],wastafel:['wastafel','wastafels']};
@@ -120,7 +124,7 @@
       document.querySelector('#classReady').onclick=checkReady;
     };
     const checkReady=()=>{if(!remaining.length)return done();const missing=kinds.map(kind=>{const count=remaining.filter(p=>p.kind===kind).length;if(!count)return'';return `${count} ${names[kind][count===1?0:1]}`}).filter(Boolean);const text=`Nog niet klaar. Er ontbreken nog ${missing.slice(0,-1).join(', ')}${missing.length>1?' en ':''}${missing.at(-1)}.`;document.querySelector('.feedback').textContent=text;say(text)};
-    const done=()=>{state.spoken='Knap gedaan. De hele klas is ingericht.';app.innerHTML=head('Richt onze klas in',2)+`<section class="result"><div class="trophy">🏆</div><h1>De hele klas is ingericht!</h1><p>Alle schoolbanken, kringbanken, borden, kasten, tafels en de wastafel staan terug.</p><button id="backGames">Kies een ander spel</button></section>`;document.querySelector('#backGames').onclick=menu;say(state.spoken)};
+    const done=()=>{document.body.classList.remove('classroom-building');state.spoken='Knap gedaan. De hele klas is ingericht.';app.innerHTML=head('Richt onze klas in',2)+`<section class="result"><div class="trophy">🏆</div><h1>De hele klas is ingericht!</h1><p>Alle schoolbanken, kringbanken, borden, kasten, tafels en de wastafel staan terug.</p><button id="backGames">Kies een ander spel</button></section>`;document.querySelector('#backGames').onclick=menu;say(state.spoken)};
     render();
   }
   new MutationObserver(addMenuButton).observe(app,{childList:true,subtree:true}); addMenuButton();
