@@ -5,7 +5,7 @@ const data=[
 ['het afval',l2+'foto-afval.webp','Alles wat we niet meer nodig hebben en weggooien.','what'],
 ['de as',local+'begrip-as.png','Een lijn waar iets rond draait.','what'],
 ['de buurt',local+'buurt-school-echt.png','De omgeving dicht bij onze school waar mensen wonen, werken en langskomen.','place'],
-['dichtbij',local+'begrip-dichtbij.png','Niet ver weg.','quality'],
+['dichtbij',local+'begrip-dichtbij.png','Niet ver weg.','place'],
 ['het dorp',local+'dorp-echte-foto.png?v=20260825b','Een kleine plaats met weinig huizen en veel groen.','place'],
 ['het gebouw',l2+'school-de-linde.png','Iets wat gebouwd is en waarin plaats is voor mensen, dieren of spullen.','what'],
 ['de gemeente',l2+'kaart-bornem.png','Een dorp of stad waar mensen wonen en dat een eigen bestuur heeft.','place'],
