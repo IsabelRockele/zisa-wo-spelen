@@ -1,9 +1,9 @@
 (()=>{
   const tasks=[
-    {text:'Klik op de giraffenklas.',icon:'picto-giraffenklas.png',x:48,y:65,rx:5,ry:6},
-    {text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',zones:[{x:49,y:55,rx:7,ry:11}]},
-    {text:'Klik op de refter.',icon:'picto-refter.png',zones:[{x:29,y:78,rx:12,ry:4},{x:42,y:78,rx:7,ry:4}]},
-    {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',zones:[{x:35,y:89,rx:17,ry:5}]}
+    {text:'Klik op de giraffenklas.',icon:'picto-giraffenklas.png',zones:[{x:49,y:73,rx:4,ry:5}]},
+    {text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',zones:[{x:51,y:51,rx:4,ry:6}]},
+    {text:'Klik op de refter.',icon:'picto-refter.png',polygons:[[[25,80],[34,75],[39,79],[29,87]],[[34,75],[43,71],[47,77],[39,82]]]},
+    {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',polygons:[[[29,87],[45,79],[49,85],[32,96]]]}
   ];
   let index=0,score=0,locked=false;
   const say=text=>{
@@ -56,8 +56,18 @@
     const task=tasks[index],plan=event.currentTarget.getBoundingClientRect();
     const x=(event.clientX-plan.left)/plan.width*100;
     const y=(event.clientY-plan.top)/plan.height*100;
+    const pointInPolygon=(px,py,polygon)=>{
+      let inside=false;
+      for(let i=0,j=polygon.length-1;i<polygon.length;j=i++){
+        const [xi,yi]=polygon[i],[xj,yj]=polygon[j];
+        if(((yi>py)!==(yj>py))&&(px<(xj-xi)*(py-yi)/(yj-yi)+xi)) inside=!inside;
+      }
+      return inside;
+    };
     const zones=task.zones||[task];
-    const right=zones.some(zone=>Math.abs(x-zone.x)<=zone.rx&&Math.abs(y-zone.y)<=zone.ry);
+    const right=task.polygons
+      ?task.polygons.some(polygon=>pointInPolygon(x,y,polygon))
+      :zones.some(zone=>Math.abs(x-zone.x)<=zone.rx&&Math.abs(y-zone.y)<=zone.ry);
     const marker=document.querySelector('.school-plan-marker');
     marker.style.left=x+'%'; marker.style.top=y+'%'; marker.hidden=false;
     const feedback=document.querySelector('.feedback');
