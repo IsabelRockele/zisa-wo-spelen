@@ -1,6 +1,7 @@
 .school-map-question{max-width:1120px;margin-inline:auto}
 .school-map-prompt{display:grid;grid-template-columns:auto 72px 1fr;align-items:center;gap:1rem;margin-bottom:1rem}
 .school-map-prompt>img{width:68px;height:68px;object-fit:contain;border:2px solid #d8cef7;border-radius:18px;background:#fff;padding:4px}
+.school-place-emoji{display:grid;place-items:center;width:68px;height:68px;border:2px solid #d8cef7;border-radius:18px;background:#fff;font-size:2.25rem;line-height:1}
 .school-map-prompt .prompt{margin:0;text-align:left}
 .school-plan{position:relative;width:min(100%,980px);margin:auto;border:5px solid #315d67;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 8px 24px #315d6724}
 .school-plan>img{display:block;width:100%;height:auto}
@@ -10,4 +11,4 @@
 .school-plan-marker.correct{border-color:#27a844;background:#b8f7c5aa}
 .school-plan-marker.wrong{animation:school-map-shake .35s}
 @keyframes school-map-shake{25%{transform:translate(-58%,-50%)}75%{transform:translate(-42%,-50%)}}
-@media(max-width:650px){.school-map-prompt{grid-template-columns:auto 56px 1fr;gap:.55rem}.school-map-prompt>img{width:52px;height:52px;border-radius:13px}.school-map-prompt .prompt{font-size:1.15rem}.school-plan{border-width:3px;border-radius:14px}}
+@media(max-width:650px){.school-map-prompt{grid-template-columns:auto 56px 1fr;gap:.55rem}.school-map-prompt>img,.school-place-emoji{width:52px;height:52px;border-radius:13px}.school-place-emoji{font-size:1.7rem}.school-map-prompt .prompt{font-size:1.15rem}.school-plan{border-width:3px;border-radius:14px}}

@@ -3,7 +3,18 @@
     {text:'Klik op de giraffenklas.',icon:'picto-giraffenklas.png',zones:[{x:49,y:73,rx:4,ry:5}]},
     {text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',zones:[{x:51,y:51,rx:4,ry:6}]},
     {text:'Klik op de refter.',icon:'picto-refter.png',zones:[{x:32,y:82,rx:10,ry:8},{x:40,y:78,rx:10,ry:8}]},
-    {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',zones:[{x:36,y:87,rx:16,ry:11}]}
+    {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',zones:[{x:36,y:87,rx:16,ry:11}]},
+    {text:'Klik op de leraarskamer.',emoji:'👩‍🏫',zones:[{x:49,y:68,rx:4,ry:5}]},
+    {text:'Klik op het secretariaat van juf Ilse.',emoji:'🗂️',zones:[{x:50,y:74,rx:3,ry:4}]},
+    {text:'Klik op het bureau van directeur juf Elien.',emoji:'🧑‍💼',zones:[{x:52,y:74,rx:3,ry:4}]},
+    {text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',zones:[{x:49,y:62,rx:4,ry:4}]},
+    {text:'Klik op de klas van juf Lara, het derde leerjaar.',emoji:'3️⃣',zones:[{x:49,y:56,rx:4,ry:4}]},
+    {text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',zones:[{x:49,y:44,rx:4,ry:4}]},
+    {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',zones:[{x:66,y:23,rx:7,ry:5}]},
+    {text:'Klik op de meisjestoiletten.',emoji:'🚺',zones:[{x:77,y:32,rx:4,ry:6}]},
+    {text:'Klik op de jongenstoiletten.',emoji:'🚹',zones:[{x:72,y:18,rx:7,ry:5}]},
+    {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',zones:[{x:46,y:35,rx:4,ry:7}]},
+    {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',zones:[{x:77,y:45,rx:4,ry:6}]}
   ];
   let index=0,score=0,locked=false;
   const say=text=>{
@@ -37,7 +48,7 @@
       <section class="question school-map-question">
         <div class="school-map-prompt">
           <button class="listen" type="button" aria-label="Lees de opdracht voor">🔊</button>
-          <img src="assets/${task.icon}" alt="" aria-hidden="true">
+          ${task.icon?`<img src="assets/${task.icon}" alt="" aria-hidden="true">`:`<span class="school-place-emoji" aria-hidden="true">${task.emoji}</span>`}
           <p class="prompt">${task.text}</p>
         </div>
         <div class="school-plan" role="img" aria-label="De plattegrond van onze school">
