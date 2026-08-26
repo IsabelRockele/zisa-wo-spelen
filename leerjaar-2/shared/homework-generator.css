@@ -79,3 +79,4 @@
 .t2-profile img{height:72mm}.t2-profile p{align-items:end;min-height:14mm;margin:0}.t2-profile p span{display:block;min-height:9mm;padding-bottom:1.5mm}.t2-picture-choice{padding:3mm 2mm}.t2-picture-choice img{display:block;width:100%;height:58mm;object-fit:contain}
 .t2-writing-prompts i{height:9mm;margin-bottom:8mm}
 .t2-rule-picto{position:relative;overflow:hidden;background-image:none}.t2-rule-picto img{position:absolute;top:0;width:60mm;max-width:none;height:20mm;object-fit:fill}.t2-rule-picto-0 img{left:2.5mm}.t2-rule-picto-1 img{left:-12.5mm}.t2-rule-picto-2 img{left:-27.5mm}.t2-rule-picto-3 img{left:-42.5mm}
+.tree-crown-bracket{position:absolute;z-index:2;left:23%;top:5%;width:11mm;height:39%;border-top:1.2mm solid #0877bd;border-bottom:1.2mm solid #0877bd;border-left:1.2mm solid #0877bd}.tree-crown-bracket .connect-dot{position:absolute;left:-3.1mm;top:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 1.2mm #fff}
