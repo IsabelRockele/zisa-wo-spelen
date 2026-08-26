@@ -29,7 +29,7 @@
 .material.wall .wall-description{border-top:1px solid #b8c7c2;padding-top:2mm;text-align:center;font-size:11px;line-height:1.18;color:var(--ink)}
 .material.wall[data-kind=verb]{border-color:#d93232}.material.wall[data-kind=person]{border-color:#e3b416}.material.wall[data-kind=what]{border-color:#8a583a}.material.wall[data-kind=where]{border-color:#7744aa}.material.wall[data-kind=how]{border-color:#398b45}.material.wall[data-kind=when]{border-color:#ed8928}
 @media(max-width:760px){.materials-wall{grid-template-columns:repeat(2,62mm);justify-content:start;overflow-x:auto}.material.strip{grid-template-columns:1fr}.material.strip small{grid-column:1}}
-@media print{@page{size:A4 portrait;margin:8mm}.materials-posters{grid-template-columns:repeat(2,1fr);gap:5mm}.materials-strips{grid-template-columns:1fr;gap:3mm}.material.strip{min-height:25mm;padding:3mm 4mm}.materials-wall{grid-template-columns:repeat(3,62mm);gap:5mm;justify-content:center;padding-top:5mm}.material.wall{width:62mm;height:78mm;min-height:78mm;padding:2.5mm}.material input{display:none!important}}
+@media print{@page{size:A4 portrait;margin:8mm}.materials-posters{grid-template-columns:repeat(2,1fr);gap:5mm}.materials-strips{grid-template-columns:1fr;gap:3mm}.material.strip{min-height:25mm;padding:3mm 4mm}.materials-wall{grid-template-columns:repeat(3,62mm);gap:5mm;justify-content:center;padding-top:12mm}.material.wall{width:62mm;height:78mm;min-height:78mm;padding:2.5mm}.material input{display:none!important}}
 
 /* Voorleesknop links in het antwoord, zoals in thema 1. */
 .answer-option{display:grid!important;grid-template-columns:58px minmax(0,1fr)!important;gap:0!important;min-height:82px;border:3px solid #bdd3cd;border-radius:18px;background:#fff;overflow:hidden}
