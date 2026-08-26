@@ -8,20 +8,43 @@
   ];
 
   const furniture = [];
-  const realSizes={bank:[53.76,30.72],kring:[102.48,27.72],bord:[150,10],juf:[61.06,30.96],kast:[64,25],tafel:[44,32],wastafel:[40.3,33.8]};
-  const blankMap={width:977,height:707,left:17,top:20,contentWidth:951,contentHeight:674,sourceWidth:842,sourceHeight:595};
+  // De coördinaten hieronder zijn rechtstreeks op de ingekleurde referentie-
+  // plattegrond gemeten. De lege en de gevulde plattegrond krijgen exact
+  // dezelfde beeldverhouding, zodat elk meubel als een magneet op dezelfde
+  // zichtbare plaats terechtkomt.
+  const reference = { width: 885, height: 650 };
   const add = (kind, label, points) => points.forEach((p, i) => {
-    const size=realSizes[kind];
-    const scaleX=blankMap.contentWidth/blankMap.sourceWidth,scaleY=blankMap.contentHeight/blankMap.sourceHeight;
-    furniture.push({id:`${kind}-${i}`,kind,label,x:(blankMap.left+(p[0]+size[0]/2)*scaleX)/blankMap.width*100,y:(blankMap.top+(p[1]+size[1]/2)*scaleY)/blankMap.height*100,w:size[0]*scaleX/blankMap.width*100,h:size[1]*scaleY/blankMap.height*100,angle:p[2]||0});
+    furniture.push({
+      id: `${kind}-${i}`, kind, label,
+      x: p[0] / reference.width * 100,
+      y: p[1] / reference.height * 100,
+      w: p[2] / reference.width * 100,
+      h: p[3] / reference.height * 100,
+      angle: p[4] || 0
+    });
   });
-  add('bank', 'schoolbank', [[289,362],[289,306],[290,201],[289,142],[375,198],[374,140],[453,199],[453,142],[371,360],[372,303],[455,360],[455,303],[533,304],[533,363]]);
-  add('kring', 'deel van de kring', [[456,20,0],[564,21,0],[431,71,20],[531,107,0],[636,93,-49]]);
-  add('bord', 'schoolbord', [[184,22,0],[162,346,90]]);
-  add('juf', 'bureau van de juf', [[134,83,59]]);
-  add('kast', 'kast', [[397,52,90],[162,157,90],[162,321,90],[648,263,90],[646,186,90],[726,554,0],[4,561,0],[54,561,0],[103,561,0],[154,436,124]]);
-  add('tafel', 'tafel', [[229,541,90],[50,468,0],[353,541,90],[494,541,90],[644,538,90]]);
-  add('wastafel', 'wastafel', [[790,463,0]]);
+  add('bank', 'schoolbank', [
+    [291,199,48,14,90],[291,258,48,14,90],[291,364,48,14,90],[291,421,48,14,90],
+    [377,198,48,14,90],[377,257,48,14,90],[456,199,48,14,90],[457,257,48,14,90],
+    [375,362,48,14,90],[374,419,48,14,90],[459,361,48,14,90],[459,420,48,14,90],
+    [537,363,48,14,90],[537,423,48,14,90]
+  ]);
+  add('kring', 'deel van de kring', [
+    [531,63,102,28,0],[640,64,102,28,0],[499,123,102,28,20],
+    [607,150,102,28,0],[705,92,102,28,-49]
+  ]);
+  add('bord', 'schoolbord', [[283,57,150,10,0],[189,300,150,10,90]]);
+  add('juf', 'bureau van de juf', [[153,147,58,26,59]]);
+  add('kast', 'kast', [
+    [411,81,66,22,90],[174,221,66,22,90],[174,385,66,22,90],
+    [660,333,72,23,90],[659,254,72,23,90],[803,601,102,24,0],
+    [52,608,47,20,0],[100,608,46,20,0],[143,608,34,20,0],[151,478,58,22,124]
+  ]);
+  add('tafel', 'tafel', [
+    [234,595,35,27,90],[98,518,50,32,0],[360,596,35,27,90],
+    [503,595,35,27,90],[653,592,35,27,90]
+  ]);
+  add('wastafel', 'wastafel', [[837,514,40,34,0]]);
 
   const validZone = {
     bank: (x,y) => x > 25 && x < 68 && y > 17 && y < 70,
@@ -40,7 +63,7 @@
     return `<span class="furniture-shape shape-${kind}" style="--angle:${angle}deg">${'<i></i>'.repeat(amount)}</span>`;
   }
   function placedHtml(items) {
-    return items.map(p => `<span class="classroom-placed" style="--x:${p.x}%;--y:${p.y}%;--w:${p.w}%;--h:${p.h}%">${shape(p.kind,p.angle)}</span>`).join('');
+    return items.map(p => `<span class="classroom-placed" style="--x:${p.x}%;--y:${p.y}%;--w:${p.w}%;--h:${p.h}%;--angle:${p.angle}deg">${shape(p.kind,p.angle)}</span>`).join('');
   }
 
   function addMenuButton() {
