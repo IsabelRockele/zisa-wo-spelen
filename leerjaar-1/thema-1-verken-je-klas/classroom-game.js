@@ -8,9 +8,11 @@
   ];
 
   const furniture = [];
-  const add = (kind, label, points) => points.forEach((p, i) => furniture.push({
-    id: `${kind}-${i}`, kind, label, x: p[0] / 8.42, y: p[1] / 5.95, angle: p[2] || 0
-  }));
+  const realSizes={bank:[53.76,30.72],kring:[102.48,27.72],bord:[150,10],juf:[61.06,30.96],kast:[64,25],tafel:[44,32],wastafel:[40.3,33.8]};
+  const add = (kind, label, points) => points.forEach((p, i) => {
+    const size=realSizes[kind];
+    furniture.push({id:`${kind}-${i}`,kind,label,x:(p[0]+size[0]/2)/8.42,y:(p[1]+size[1]/2)/5.95,w:size[0]/8.42,h:size[1]/5.95,angle:p[2]||0});
+  });
   add('bank', 'schoolbank', [[289,362],[289,306],[290,201],[289,142],[375,198],[374,140],[453,199],[453,142],[371,360],[372,303],[455,360],[455,303],[533,304],[533,363]]);
   add('kring', 'deel van de kring', [[456,20,0],[564,21,0],[431,71,20],[531,107,0],[636,93,-49]]);
   add('bord', 'schoolbord', [[184,22,0],[162,346,90]]);
@@ -36,7 +38,7 @@
     return `<span class="furniture-shape shape-${kind}" style="--angle:${angle}deg">${'<i></i>'.repeat(amount)}</span>`;
   }
   function placedHtml(items) {
-    return items.map(p => `<span class="classroom-placed" style="--x:${p.x}%;--y:${p.y}%">${shape(p.kind,p.angle)}</span>`).join('');
+    return items.map(p => `<span class="classroom-placed" style="--x:${p.x}%;--y:${p.y}%;--w:${p.w}%;--h:${p.h}%">${shape(p.kind,p.angle)}</span>`).join('');
   }
 
   function addMenuButton() {
@@ -50,11 +52,13 @@
 
   function openFind() {
     allThemes.hidden = true; gameMenu.hidden = false; let index = 0;
+    const activeTasks=[...findTasks];
+    for(let i=activeTasks.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[activeTasks[i],activeTasks[j]]=[activeTasks[j],activeTasks[i]]}
     const draw = () => {
-      const task = findTasks[index]; state.spoken = task.text;
+      const task = activeTasks[index]; state.spoken = task.text;
       app.innerHTML = head('Onze klas op de plattegrond',1) + `<section class="question classroom-find-game">
         <div class="listenline"><button class="listen" aria-label="Lees de opdracht voor">🔊</button><p class="prompt">${task.text}</p></div>
-        <p class="classroom-find-progress">Vraag ${index+1} van ${findTasks.length}</p>
+        <p class="classroom-find-progress">Vraag ${index+1} van ${activeTasks.length}</p>
         <div class="real-classroom-plan classroom-find-plan"><img src="assets/klasplattegrond-meubels-kleur.png?v=3" alt="Gevulde klasplattegrond met alle meubels"><span class="placed-furniture"></span></div>
         <p class="feedback"></p></section>`;
       document.querySelector('.listen').onclick = () => say(task.text);
@@ -67,7 +71,7 @@
         }
         plan.querySelector('.placed-furniture').innerHTML=`<b class="find-marker" style="--x:${x}%;--y:${y}%">✓</b>`;
         document.querySelector('.feedback').textContent='Goed gevonden!'; say('Goed gevonden!');
-        setTimeout(() => { index++; index < findTasks.length ? draw() : finish(); }, 650);
+        setTimeout(() => { index++; index < activeTasks.length ? draw() : finish(); }, 650);
       };
       setTimeout(() => say(task.text), 160);
     };
