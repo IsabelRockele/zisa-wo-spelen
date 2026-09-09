@@ -2,8 +2,8 @@
   const baseTasks=[
     {text:'Klik op de giraffenklas.',icon:'picto-giraffenklas.png',zones:[[49,73,4,5]]},{text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',zones:[[51,51,4,6]]},
     {text:'Klik op de refter.',icon:'picto-refter.png',polygons:[[[25,78],[44.5,64.5],[45.8,69.2],[26.4,82.8],[25.3,82],[24.8,79.5]]]},{text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',polygons:[[[26.4,82.8],[45.8,69.2],[48.8,77.8],[47.9,79],[28,89.4],[27.1,88.8]]]},
-    {text:'Klik op de leraarskamer.',emoji:'👩‍🏫',zones:[[49,68,4,5]]},{text:'Klik op het secretariaat van juf Ilse.',emoji:'🗂️',polygons:[[[53,64.2],[57.1,64.2],[57.1,70.3],[53,70.3]]]},
-    {text:'Klik op het bureau van directeur juf Elien.',emoji:'🧑‍💼',polygons:[[[54.5,70.3],[57.2,70.3],[57.2,74],[54.5,74]]]},{text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',zones:[[52,48,7,10]]},
+    {text:'Klik op de leraarskamer.',emoji:'👩‍🏫',zones:[[49,68,4,5]]},{text:'Klik op het secretariaat van juf Ilse.',emoji:'🗂️',zones:[[55,66.5,2.5,3]]},
+    {text:'Klik op het bureau van directeur juf Elien.',emoji:'🧑‍💼',zones:[[55,72.6,2.5,3]]},{text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',zones:[[52,48,7,10]]},
     {text:'Klik op de klas van juf Lara, het derde leerjaar.',emoji:'3️⃣',zones:[[52,57,7,9]]},{text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',zones:[[53,67,7,9]]},
     {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',polygons:[[[56,17],[76,17],[76,31],[57,31]]]},{text:'Klik op de meisjestoiletten.',emoji:'🚺',zones:[[43,33,8,10]]},
     {text:'Klik op de jongenstoiletten.',emoji:'🚹',zones:[[77,23,8,7]]},{text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',zones:[[86,36,5,10]]},
