@@ -3,7 +3,7 @@
     {text:'Klik op de giraffenklas.',icon:'picto-giraffenklas.png',zones:[{x:49,y:73,rx:4,ry:5}]},
     {text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',zones:[{x:51,y:51,rx:4,ry:6}]},
     {text:'Klik op de refter.',icon:'picto-refter.png',polygons:[[[23,76],[31,72],[41,75],[40,81],[29,85],[22,82]],[[31,75],[43,72],[49,77],[46,82],[39,83],[40,79]]]},
-    {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',zones:[{x:36,y:87,rx:16,ry:11}]},
+    {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',polygons:[[[25,78],[44.5,64.5],[45.8,65.1],[48.8,77.8],[47.9,79],[28,89.4],[27.1,88.8],[24.8,79.6]]]},
     {text:'Klik op de leraarskamer.',emoji:'👩‍🏫',zones:[{x:49,y:68,rx:4,ry:5}]},
     {text:'Klik op het secretariaat van juf Ilse.',emoji:'🗂️',zones:[{x:49,y:72,rx:18,ry:17}]},
     {text:'Klik op het bureau van directeur juf Elien.',emoji:'🧑‍💼',zones:[{x:50,y:73,rx:18,ry:17}]},
