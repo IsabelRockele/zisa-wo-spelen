@@ -6,7 +6,7 @@
     {text:'Klik op het bureau van directeur juf Elien.',emoji:'🧑‍💼',zones:[[55,72.6,2.5,3]]},{text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',zones:[[52,48,7,10]]},
     {text:'Klik op de klas van juf Lara, het derde leerjaar.',emoji:'3️⃣',zones:[[52,57,7,9]]},{text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',zones:[[53,67,7,9]]},
     {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',polygons:[[[56,17],[76,17],[76,31],[57,31]]]},{text:'Klik op de meisjestoiletten.',emoji:'🚺',zones:[[43,33,8,10]]},
-    {text:'Klik op de jongenstoiletten.',emoji:'🚹',zones:[[77,23,8,7]]},{text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',zones:[[86,36,5,10]]},
+    {text:'Klik op de jongenstoiletten.',emoji:'🚹',polygons:[[[77,15],[86.5,15],[86.5,18.5],[77,18.5]]]},{text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',zones:[[86,36,5,10]]},
     {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',zones:[[86,49,5,10]]}
   ];
   let tasks=[],index=0,score=0,locked=false;

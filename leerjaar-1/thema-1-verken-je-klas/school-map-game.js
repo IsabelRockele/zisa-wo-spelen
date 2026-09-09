@@ -12,7 +12,7 @@
     {text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',zones:[{x:53,y:67,rx:7,ry:9}]},
     {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',polygons:[[[56,17],[76,17],[76,31],[57,31]]]},
     {text:'Klik op de meisjestoiletten.',emoji:'🚺',zones:[{x:43,y:33,rx:8,ry:10}]},
-    {text:'Klik op de jongenstoiletten.',emoji:'🚹',zones:[{x:77,y:23,rx:8,ry:7}]},
+    {text:'Klik op de jongenstoiletten.',emoji:'🚹',polygons:[[[77,15],[86.5,15],[86.5,18.5],[77,18.5]]]},
     {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',zones:[{x:86,y:36,rx:5,ry:10}]},
     {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',zones:[{x:86,y:49,rx:5,ry:10}]}
   ];
