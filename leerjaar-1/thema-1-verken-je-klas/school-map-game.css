@@ -7,7 +7,8 @@
 .school-plan>img{display:block;width:100%;height:auto}
 .school-plan-answer{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:crosshair}
 .school-plan-highlight{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0;transition:opacity .18s ease}.school-plan-highlight.visible{opacity:1}.school-plan-highlight polygon,.school-plan-highlight rect{fill:#55d87899;stroke:#168b3d;stroke-width:.45;vector-effect:non-scaling-stroke}
-.school-plan-marker{position:absolute;width:34px;height:34px;border-radius:50%;transform:translate(-50%,-50%);border:6px solid #ef4444;background:#fff8;pointer-events:none}
+.school-plan-marker{display:none;position:absolute;width:34px;height:34px;border-radius:50%;transform:translate(-50%,-50%);border:6px solid #ef4444;background:#fff8;pointer-events:none}
+.school-plan-marker.visible{display:block}
 .school-plan-marker[hidden]{display:none}
 .school-plan-marker.correct{border-color:#27a844;background:#b8f7c5aa}
 .school-plan-marker.wrong{animation:school-map-shake .35s}

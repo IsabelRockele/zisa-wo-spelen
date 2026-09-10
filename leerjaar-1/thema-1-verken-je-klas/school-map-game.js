@@ -95,13 +95,13 @@
     marker.style.left=x+'%'; marker.style.top=y+'%'; marker.hidden=false;
     const feedback=document.querySelector('.feedback');
     if(!right){
-      marker.className='school-plan-marker wrong';
+      marker.className='school-plan-marker visible wrong';
       feedback.textContent='Kijk nog eens goed.';
       say('Kijk nog eens goed.');
       return;
     }
     locked=true; score++;
-    marker.className='school-plan-marker correct';
+    marker.className='school-plan-marker visible correct';
     const highlight=document.querySelector('.school-plan-highlight');
     if(task.polygons){
       highlight.innerHTML=task.polygons.map(polygon=>`<polygon points="${polygon.map(point=>point.join(',')).join(' ')}"></polygon>`).join('');
