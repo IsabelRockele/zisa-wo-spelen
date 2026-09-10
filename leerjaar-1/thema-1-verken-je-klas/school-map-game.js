@@ -64,6 +64,7 @@
         </div>
         <div class="school-plan" role="img" aria-label="De plattegrond van onze school">
           <img src="assets/schoolplattegrond-echt-les4.png" alt="Plattegrond van onze school">
+          <svg class="school-plan-highlight" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
           <button class="school-plan-answer" type="button" aria-label="Kies deze plaats"></button>
           <span class="school-plan-marker" aria-hidden="true"></span>
         </div>
@@ -101,9 +102,16 @@
     }
     locked=true; score++;
     marker.className='school-plan-marker correct';
+    const highlight=document.querySelector('.school-plan-highlight');
+    if(task.polygons){
+      highlight.innerHTML=task.polygons.map(polygon=>`<polygon points="${polygon.map(point=>point.join(',')).join(' ')}"></polygon>`).join('');
+    }else{
+      highlight.innerHTML=zones.map(zone=>`<rect x="${zone.x-zone.rx}" y="${zone.y-zone.ry}" width="${zone.rx*2}" height="${zone.ry*2}" rx="1"></rect>`).join('');
+    }
+    highlight.classList.add('visible');
     feedback.textContent='Goed gevonden!';
     say('Goed gevonden!');
-    setTimeout(()=>{ index++; index<tasks.length?render():finish(); },700);
+    setTimeout(()=>{ index++; index<tasks.length?render():finish(); },1100);
   }
   function finish(){
     state.spoken='Klaar. Je vond alle plaatsen in onze school.';
