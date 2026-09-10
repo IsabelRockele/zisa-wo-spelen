@@ -1,20 +1,20 @@
 (()=>{
   const tasks=[
-    {text:'Klik op de giraffenklas.',icon:'picto-giraffenklas.png',zones:[{x:49,y:73,rx:4,ry:5}]},
-    {text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',zones:[{x:51,y:51,rx:4,ry:6}]},
+    {text:'Klik op de giraffenklas.',icon:'picto-giraffenklas.png',polygons:[[[49.7,59.5],[53.8,59.5],[53.8,71.1],[49.7,71.1]]]},
+    {text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',polygons:[[[50.9,45.2],[53.8,45.2],[53.8,51.1],[50.9,51.1]]]},
     {text:'Klik op de refter.',icon:'picto-refter.png',polygons:[[[25,78],[44.5,64.5],[45.8,69.2],[26.4,82.8],[25.3,82],[24.8,79.5]]]},
     {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',polygons:[[[26.4,82.8],[45.8,69.2],[48.8,77.8],[47.9,79],[28,89.4],[27.1,88.8]]]},
     {text:'Klik op de leraarskamer.',emoji:'👩‍🏫',zones:[{x:49,y:68,rx:4,ry:5}]},
     {text:'Klik op het secretariaat van juf Ilse.',emoji:'🗂️',zones:[{x:55,y:66.5,rx:2.5,ry:3}]},
     {text:'Klik op het bureau van directeur juf Elien.',emoji:'🧑‍💼',zones:[{x:55,y:72.6,rx:2.5,ry:3}]},
-    {text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',zones:[{x:52,y:48,rx:3.5,ry:4}]},
-    {text:'Klik op de klas van juf Lara, het derde leerjaar.',emoji:'3️⃣',zones:[{x:52,y:57,rx:3.5,ry:4}]},
-    {text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',zones:[{x:53,y:67,rx:3.5,ry:4}]},
-    {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',polygons:[[[56,17],[76,17],[76,31],[57,31]]]},
+    {text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',polygons:[[[50.9,45.2],[53.8,45.2],[53.8,51.1],[50.9,51.1]]]},
+    {text:'Klik op de klas van juf Lara, het derde leerjaar.',emoji:'3️⃣',polygons:[[[50.9,51.4],[53.8,51.4],[53.8,57.1],[50.9,57.1]]]},
+    {text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',polygons:[[[49.7,59.5],[53.8,59.5],[53.8,71.1],[49.7,71.1]]]},
+    {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',polygons:[[[56.1,18.6],[75.4,18.6],[75.4,25.8],[56.1,25.8]]]},
     {text:'Klik op de meisjestoiletten.',emoji:'🚺',zones:[{x:43,y:33,rx:8,ry:10}]},
     {text:'Klik op de jongenstoiletten.',emoji:'🚹',polygons:[[[77,15],[86.5,15],[86.5,18.5],[77,18.5]]]},
-    {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',zones:[{x:86,y:36,rx:2.5,ry:5.5}]},
-    {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',zones:[{x:86,y:49,rx:2.5,ry:5.5}]}
+    {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',polygons:[[[83.2,29],[86.7,29],[86.7,42.6],[83.2,42.6]]]},
+    {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',polygons:[[[83.2,43],[86.7,43],[86.7,55.7],[83.2,55.7]]]}
   ];
   let index=0,score=0,locked=false;
   function shuffleTasks(){
