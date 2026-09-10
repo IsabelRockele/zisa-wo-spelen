@@ -11,8 +11,8 @@
     {text:'Klik op de klas van juf Lara, het derde leerjaar.',emoji:'3️⃣',polygons:[[[51.07,45.43],[53.67,45.43],[53.67,50.76],[51.07,50.76]]]},
     {text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',polygons:[[[51.07,57.52],[53.67,57.52],[53.67,62.86],[51.07,62.86]]]},
     {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',polygons:[[[69.36,18.38],[75.10,18.38],[75.10,25.81],[69.36,25.81]]]},
-    {text:'Klik op de meisjestoiletten.',emoji:'🚺',zones:[{x:43,y:33,rx:8,ry:10}]},
-    {text:'Klik op de jongenstoiletten.',emoji:'🚹',polygons:[[[77,15],[86.5,15],[86.5,18.5],[77,18.5]]]},
+    {text:'Klik op de meisjestoiletten.',emoji:'🚺',polygons:[[[47.90,28.60],[49.30,28.60],[49.30,38.45],[47.90,38.45]]]},
+    {text:'Klik op de jongenstoiletten.',emoji:'🚹',polygons:[[[76.75,14.65],[85.78,14.65],[85.78,17.47],[76.75,17.47]]]},
     {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',polygons:[[[84.58,29.24],[86.65,29.24],[86.65,34.38],[84.58,34.38]]]},
     {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',polygons:[[[84.38,41.14],[86.78,41.14],[86.78,46.67],[84.38,46.67]]]}
   ];
