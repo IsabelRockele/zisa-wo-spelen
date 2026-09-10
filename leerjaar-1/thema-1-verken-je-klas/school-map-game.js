@@ -7,14 +7,14 @@
     {text:'Klik op de leraarskamer.',emoji:'👩‍🏫',zones:[{x:49,y:68,rx:4,ry:5}]},
     {text:'Klik op het secretariaat van juf Ilse.',emoji:'🗂️',zones:[{x:55,y:66.5,rx:2.5,ry:3}]},
     {text:'Klik op het bureau van directeur juf Elien.',emoji:'🧑‍💼',zones:[{x:55,y:72.6,rx:2.5,ry:3}]},
-    {text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',zones:[{x:52,y:48,rx:7,ry:10}]},
-    {text:'Klik op de klas van juf Lara, het derde leerjaar.',emoji:'3️⃣',zones:[{x:52,y:57,rx:7,ry:9}]},
-    {text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',zones:[{x:53,y:67,rx:7,ry:9}]},
+    {text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',zones:[{x:52,y:48,rx:3.5,ry:4}]},
+    {text:'Klik op de klas van juf Lara, het derde leerjaar.',emoji:'3️⃣',zones:[{x:52,y:57,rx:3.5,ry:4}]},
+    {text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',zones:[{x:53,y:67,rx:3.5,ry:4}]},
     {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',polygons:[[[56,17],[76,17],[76,31],[57,31]]]},
     {text:'Klik op de meisjestoiletten.',emoji:'🚺',zones:[{x:43,y:33,rx:8,ry:10}]},
     {text:'Klik op de jongenstoiletten.',emoji:'🚹',polygons:[[[77,15],[86.5,15],[86.5,18.5],[77,18.5]]]},
-    {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',zones:[{x:86,y:36,rx:5,ry:10}]},
-    {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',zones:[{x:86,y:49,rx:5,ry:10}]}
+    {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',zones:[{x:86,y:36,rx:2.5,ry:5.5}]},
+    {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',zones:[{x:86,y:49,rx:2.5,ry:5.5}]}
   ];
   let index=0,score=0,locked=false;
   function shuffleTasks(){
