@@ -1,20 +1,20 @@
 (()=>{
   const tasks=[
-    {text:'Klik op de giraffenklas.',icon:'picto-giraffenklas.png',polygons:[[[50.0,59.9],[53.5,59.9],[53.5,70.7],[50.0,70.7]]]},
-    {text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',polygons:[[[51.2,51.8],[53.5,51.8],[53.5,56.7],[51.2,56.7]]]},
-    {text:'Klik op de refter.',icon:'picto-refter.png',polygons:[[[25,78],[44.5,64.5],[45.8,69.2],[26.4,82.8],[25.3,82],[24.8,79.5]]]},
-    {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',polygons:[[[26.4,82.8],[45.8,69.2],[48.8,77.8],[47.9,79],[28,89.4],[27.1,88.8]]]},
-    {text:'Klik op de leraarskamer.',emoji:'👩‍🏫',zones:[{x:49,y:68,rx:4,ry:5}]},
+    {text:'Klik op de giraffenklas.',icon:'picto-giraffenklas.png',polygons:[[[49.93,67.05],[51.47,67.05],[51.47,71.33],[49.93,71.33]]]},
+    {text:'Klik op de octopusklas.',icon:'picto-octopusklas.png',polygons:[[[51.07,51.43],[53.67,51.43],[53.67,56.86],[51.07,56.86]]]},
+    {text:'Klik op de refter.',icon:'picto-refter.png',polygons:[[[25.03,78.00],[39.92,67.71],[40.99,71.14],[26.44,81.24],[25.30,82.00],[24.77,79.52]]]},
+    {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',polygons:[[[26.70,81.71],[41.39,71.43],[45.73,70.10],[47.80,77.24],[47.00,77.81],[28.17,88.95],[27.44,88.38]]]},
+    {text:'Klik op de leraarskamer.',emoji:'👩‍🏫',polygons:[[[46.46,67.43],[48.73,65.71],[49.67,66.29],[49.67,71.43],[46.46,71.43]]]},
     {text:'Klik op het secretariaat van juf Ilse.',emoji:'🗂️',zones:[{x:55,y:66.5,rx:2.5,ry:3}]},
     {text:'Klik op het bureau van directeur juf Elien.',emoji:'🧑‍💼',zones:[{x:55,y:72.6,rx:2.5,ry:3}]},
-    {text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',polygons:[[[51.2,39.8],[53.5,39.8],[53.5,44.4],[51.2,44.4]]]},
-    {text:'Klik op de klas van juf Lara, het derde leerjaar.',emoji:'3️⃣',polygons:[[[51.2,45.6],[53.5,45.6],[53.5,50.7],[51.2,50.7]]]},
-    {text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',polygons:[[[51.2,57.8],[53.5,57.8],[53.5,62.6],[51.2,62.6]]]},
-    {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',polygons:[[[56.5,19.0],[75.0,19.0],[75.0,25.4],[56.5,25.4]]]},
+    {text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',polygons:[[[51.07,39.43],[53.67,39.43],[53.67,44.76],[51.07,44.76]]]},
+    {text:'Klik op de klas van juf Lara, het derde leerjaar.',emoji:'3️⃣',polygons:[[[51.07,45.43],[53.67,45.43],[53.67,50.76],[51.07,50.76]]]},
+    {text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',polygons:[[[51.07,57.52],[53.67,57.52],[53.67,62.86],[51.07,62.86]]]},
+    {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',polygons:[[[69.36,18.38],[75.10,18.38],[75.10,25.81],[69.36,25.81]]]},
     {text:'Klik op de meisjestoiletten.',emoji:'🚺',zones:[{x:43,y:33,rx:8,ry:10}]},
     {text:'Klik op de jongenstoiletten.',emoji:'🚹',polygons:[[[77,15],[86.5,15],[86.5,18.5],[77,18.5]]]},
-    {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',polygons:[[[83.9,29.2],[86.0,29.2],[86.0,34.3],[83.9,34.3]]]},
-    {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',polygons:[[[83.6,43.4],[86.3,43.4],[86.3,55.3],[83.6,55.3]]]}
+    {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',polygons:[[[84.58,29.24],[86.65,29.24],[86.65,34.38],[84.58,34.38]]]},
+    {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',polygons:[[[84.38,41.14],[86.78,41.14],[86.78,46.67],[84.38,46.67]]]}
   ];
   let index=0,score=0,locked=false;
   function shuffleTasks(){
@@ -66,7 +66,7 @@
           <img src="assets/schoolplattegrond-echt-les4.png" alt="Plattegrond van onze school">
           <svg class="school-plan-highlight" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
           <button class="school-plan-answer" type="button" aria-label="Kies deze plaats"></button>
-          <span class="school-plan-marker" aria-hidden="true"></span>
+          <span class="school-plan-marker" aria-hidden="true" hidden></span>
         </div>
         <p class="feedback" aria-live="polite"></p>
       </section>`;
