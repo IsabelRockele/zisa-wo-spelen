@@ -13,7 +13,7 @@
     {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',polygons:[[[56.1,18.6],[75.4,18.6],[75.4,25.8],[56.1,25.8]]]},
     {text:'Klik op de meisjestoiletten.',emoji:'🚺',zones:[{x:43,y:33,rx:8,ry:10}]},
     {text:'Klik op de jongenstoiletten.',emoji:'🚹',polygons:[[[77,15],[86.5,15],[86.5,18.5],[77,18.5]]]},
-    {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',polygons:[[[83.6,28.8],[86.4,28.8],[86.4,34.7],[83.6,34.7]]]},
+    {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',polygons:[[[83.9,29.2],[86.0,29.2],[86.0,34.3],[83.9,34.3]]]},
     {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',polygons:[[[83.2,43],[86.7,43],[86.7,55.7],[83.2,55.7]]]}
   ];
   let index=0,score=0,locked=false;
