@@ -6,13 +6,13 @@
     {text:'Klik op de turnzaal.',icon:'picto-turnzaal.png',polygons:[[[26.70,81.71],[41.39,71.43],[45.73,70.10],[47.80,77.24],[47.00,77.81],[28.17,88.95],[27.44,88.38]]]},
     {text:'Klik op de leraarskamer.',emoji:'👩‍🏫',polygons:[[[46.46,67.43],[48.73,65.71],[49.67,66.29],[49.67,71.43],[46.46,71.43]]]},
     {text:'Klik op het secretariaat van juf Ilse.',emoji:'🗂️',polygons:[[[55.27,64.86],[56.92,64.86],[56.92,68.04],[55.27,68.04]]]},
-    {text:'Klik op het bureau van directeur juf Elien.',emoji:'🧑‍💼',polygons:[[[54.86,68.16],[56.92,68.16],[56.92,72.15],[54.86,72.15]]]},
+    {text:'Klik op het bureau van directeur juf Elien.',emoji:'🧑‍💼',polygons:[[[55.05,68.45],[56.95,68.45],[56.95,71.85],[55.05,71.85]]]},
     {text:'Klik op de klas van juf Anuschka, het vierde leerjaar.',emoji:'4️⃣',polygons:[[[51.07,39.43],[53.67,39.43],[53.67,44.76],[51.07,44.76]]]},
     {text:'Klik op de klas van juf Lara, het derde leerjaar.',emoji:'3️⃣',polygons:[[[51.07,45.43],[53.67,45.43],[53.67,50.76],[51.07,50.76]]]},
     {text:'Klik op de klas van juf Isabel, het tweede leerjaar.',emoji:'2️⃣',polygons:[[[51.07,57.52],[53.67,57.52],[53.67,62.86],[51.07,62.86]]]},
     {text:'Klik op de klas van juf Hanne, het eerste leerjaar.',emoji:'1️⃣',polygons:[[[69.36,18.38],[75.10,18.38],[75.10,25.81],[69.36,25.81]]]},
     {text:'Klik op de meisjestoiletten.',emoji:'🚺',polygons:[[[47.90,28.60],[49.30,28.60],[49.30,38.45],[47.90,38.45]]]},
-    {text:'Klik op de jongenstoiletten.',emoji:'🚹',polygons:[[[76.75,14.65],[85.78,14.65],[85.78,17.47],[76.75,17.47]]]},
+    {text:'Klik op de jongenstoiletten.',emoji:'🚹',polygons:[[[77.00,15.20],[86.20,15.20],[86.20,18.10],[77.00,18.10]]]},
     {text:'Klik op de klas van meester Davy, het zesde leerjaar.',emoji:'6️⃣',polygons:[[[84.58,29.24],[86.65,29.24],[86.65,34.38],[84.58,34.38]]]},
     {text:'Klik op de klas van juf Laura, het vijfde leerjaar.',emoji:'5️⃣',polygons:[[[84.38,41.14],[86.78,41.14],[86.78,46.67],[84.38,46.67]]]}
   ];
