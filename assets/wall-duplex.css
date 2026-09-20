@@ -1,0 +1,19 @@
+.wall-print-settings{max-width:850px;margin:0 auto 24px;padding:18px 24px;background:white;border:2px solid #acc9bd;border-radius:14px;line-height:1.5}
+.wall-print-settings label{font-weight:700;cursor:pointer}.wall-print-settings input{width:20px;height:20px;vertical-align:middle;margin-right:8px}
+.wall-pages{overflow-x:auto;padding:0 0 12px}
+.wall-sheet{box-sizing:border-box;display:grid;grid-template-columns:repeat(3,62mm);grid-template-rows:repeat(3,78mm);gap:5mm 2mm;width:190mm;margin:0 auto 28px;break-inside:avoid}
+.wall-back-card,.wall-empty{box-sizing:border-box;width:62mm;height:78mm}
+.wall-back-card{display:flex;align-items:center;justify-content:center;background:white;border:1px dashed #ddd;padding:5mm;text-align:center;color:#b5b5b5;font-size:23px;font-weight:400;overflow-wrap:anywhere}
+.wall-fronts-only .wall-back-sheet{display:none}
+@media screen{.wall-back-sheet{position:relative;margin-top:40px}.wall-back-sheet::before{content:attr(aria-label) ' · woorden in lichtgrijs';position:absolute;top:-27px;left:0;font-size:16px;color:#52665e}}
+@media print{
+  @page{size:A4 portrait;margin:12mm 10mm}
+  body[data-view="wall"]{margin:0!important;padding:0!important;background:white}
+  body[data-view="wall"] main,body[data-view="wall"] #tool{margin:0!important;padding:0!important;width:auto!important;max-width:none!important}
+  .wall-print-settings{display:none!important}
+  .wall-pages{overflow:visible;padding:0;margin:0}
+  .wall-sheet{width:190mm;height:260mm;margin:0;padding:0;break-after:page;page-break-after:always;break-inside:avoid;page-break-inside:avoid}
+  .wall-sheet:last-child,.wall-fronts-only .wall-front-sheet:nth-last-child(2){break-after:auto;page-break-after:auto}
+  .wall-sheet .wall-card{margin:0;box-sizing:border-box;width:62mm;height:78mm;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  .wall-back-card{border:0;color:#b5b5b5!important;print-color-adjust:exact;-webkit-print-color-adjust:exact;font-size:18pt}
+}
