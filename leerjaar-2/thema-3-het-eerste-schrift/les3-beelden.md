@@ -1,0 +1,8 @@
+# Eigen standenpiramide voor les 3
+
+Bestand: assets/context/standenpiramide.png
+
+Gemaakt met ImageGen op 24 september 2026 voor het spel en de huistaak. Geen namen of oplossingen in de afbeelding.
+
+## Beeldopdracht
+Create a clean classroom illustration of the social hierarchy in ancient Egypt for children age 7-8, like a textbook social pyramid. A single large equilateral-looking TRIANGLE on plain white background, entire triangle fully visible with small margins, square canvas. Exactly FIVE horizontal tiers, divided by thin dark lines, pale sand coloured backgrounds. Triangle apex at x50% y5%, base from x5% to95% at y95%. Dividing horizontal lines at y23%,41%,59%,77%. No text, no letters, no numbers, no labels, no connecting answer lines, no symbols outside the triangle. Flat coloured clear educational figures with fine outlines, full bodies, simple and recognizable. TOP TIER: one Egyptian pharaoh with royal crown and staff. SECOND TIER: a priest and a seated scribe writing on a scroll, inside the same tier. THIRD TIER: four Egyptian soldiers with spears and shields. FOURTH TIER: several ordinary people, a farmer tending wheat, a merchant with goods, and a potter making a pot. BOTTOM TIER: people performing forced heavy labour hauling stone blocks with ropes, with an overseer standing at a distance, no violence, no wounds. All figures strictly inside their own tier. Balanced legibility, no decorative background outside triangle, no 3D perspective, no stepped pyramid: a flat triangular diagram. The children must infer which group belongs to each tier from pictures only.
