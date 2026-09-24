@@ -3,3 +3,5 @@
 .egypt-connect>.egypt-picture{position:static;width:100%;height:100%;min-height:0;pointer-events:auto}.egypt-picture-tier{fill:transparent;stroke:none;cursor:pointer}.egypt-picture-tier.selected,.egypt-picture-tier:focus-visible{fill:#6552b822;stroke:#6552b8;stroke-width:5;outline:none}.egypt-picture-tier.matched{fill:#23834c22;stroke:#23834c;stroke-width:5}.pyramid-number{font-size:35px;fill:#193344;stroke:white;stroke-width:7;paint-order:stroke;pointer-events:none}.t3-page>.egypt-picture{display:block;width:100%;height:100mm;margin:4mm auto}.egypt-connect>.connection-lines{pointer-events:none}
 
 .nile-icon{width:16mm;height:16mm;object-fit:contain;flex-shrink:0}.nile-river{width:10mm;height:10mm;object-fit:contain}.nile-game-icon{width:52px;height:52px;object-fit:contain}@media(max-height:500px){.nile-game-icon{width:30px;height:30px}}
+
+.t3-page .nile-clear-map{display:block;width:100%;height:auto;margin:7mm 0 9mm;font-family:Arial,sans-serif}
