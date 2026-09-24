@@ -1,0 +1,15 @@
+const root=document.querySelector('#lesson');let round=0,spoken='';
+function say(text=spoken){if(!window.speechSynthesis)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='nl-BE';u.rate=.85;speechSynthesis.speak(u)}
+document.querySelector('#sound').onclick=()=>say();
+function frame(title,instruction){window.speechSynthesis?.cancel();spoken=instruction;root.innerHTML=`<div class="top"><h1>${title}</h1><button id="back">← Les 5</button></div><p id="instruction">${instruction}</p>`;root.querySelector('#back').onclick=menu}
+function menu(){frame('De stadstaat','Kies een oefening bij les 5.');root.insertAdjacentHTML('beforeend','<div class="menu"><button id="search">🖼️ Zoek de stadsmuur en de kanalen</button><button id="quiz">💬 Vragen over les 5</button></div>');root.querySelector('#search').onclick=()=>{round=0;render()};root.querySelector('#quiz').onclick=()=>location.href='./?les=5'}
+function render(){if(round===4){frame('Knap gewerkt!','Je hebt de stadsmuur en de kanalen gevonden en over hun functie nagedacht.');root.insertAdjacentHTML('beforeend','<div class="menu"><button id="done">🌟 Oefen nog eens</button></div>');root.querySelector('#done').onclick=menu;return}
+const search=round<2;frame('De stadsmuur en de kanalen',`Opdracht ${round+1} van 4. `+(search?['Klik op de stadsmuur.','Klik op een kanaal dat water naar de akkers brengt.'][round]:CITY_QUESTIONS[round-2][0]));
+root.insertAdjacentHTML('beforeend',search?`<div class="city-space">${cityPicture(true)}</div>`:`<div class="city-question"><img src="assets/context/stadstaat-zoekplaat.png" alt="Een stad bij een rivier en akkers"><div class="city-choices">${CITY_QUESTIONS[round-2].slice(1).map((text,i)=>({text,i})).sort(()=>Math.random()-.5).map(a=>`<button class="card" data-answer="${a.i}">${a.text}</button>`).join('')}</div></div>`);
+root.insertAdjacentHTML('beforeend','<div class="bottom"><p id="feedback" role="status"></p><button id="next" hidden>Volgende →</button></div>');let answered=false;
+function choose(el,right){if(answered)return;const fb=root.querySelector('#feedback');if(!right){fb.textContent='Nog niet. Kijk goed en probeer opnieuw.';return}answered=true;el.classList.add('found');fb.textContent=search?['Juist! Dit is de stadsmuur.','Juist! Dit kanaal brengt water naar de akkers.'][round]:'Juist!';root.querySelector('#next').hidden=false;root.querySelector('#next').textContent=round===3?'Klaar!':'Volgende →'}
+root.querySelectorAll('[data-part]').forEach(el=>{el.onclick=()=>choose(el,el.dataset.part===(round===0?'wall':'canal'));el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose(el,el.dataset.part===(round===0?'wall':'canal'))}}});
+root.querySelector('.city-picture')?.addEventListener('click',e=>{if(!e.target.dataset.part&&!answered)root.querySelector('#feedback').textContent='Nog niet. Kijk goed en probeer opnieuw.'});
+root.querySelectorAll('[data-answer]').forEach(el=>el.onclick=()=>choose(el,el.dataset.answer==='0'));
+root.querySelector('#next').onclick=()=>{round++;render()}}
+menu();
