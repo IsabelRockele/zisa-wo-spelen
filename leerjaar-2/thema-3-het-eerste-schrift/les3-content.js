@@ -1,0 +1,18 @@
+// Les 3: dezelfde inhoud voor spel en huistaak.
+const EGYPT_GROUPS=[['de farao','de leider'],['de priesters en de schrijvers','de belangrijke mensen'],['de soldaten','de soldaten'],['de boeren, handelaars en ambachtslieden','de gewone mensen'],['de slaven en slaafgemaakten','de onvrije mensen']];
+const NILE_USES=[['🥤','drinken','drinkwater'],['🍲','koken','water om te koken'],['🌱','grond','vruchtbare grond'],['🐟','voedsel','vis om te eten'],['⛵','reizen','vervoer per boot'],['🐄','dieren','water voor de dieren']];
+const EGYPT_FACTS=[
+{text:'De boeren konden ook op overstroomde akkers werken.',right:false,correction:'Bij een overstroming werkten boeren aan bouwwerken.',wrong:'Bij een overstroming had niemand ander werk.'},
+{text:'De meeste mensen in het oude Egypte leefden van de jacht.',right:false,correction:'De meeste mensen waren boeren.',wrong:'De meeste mensen waren farao.'},
+{text:'Schrijvers schreven hiërogliefen vaak op papyrus.',right:true},
+{text:'Iedereen in het oude Egypte kon schrijven.',right:false,correction:'Slechts een kleine groep kon schrijven.',wrong:'Niemand in het oude Egypte kon schrijven.'},
+{text:'Priesters hadden alleen de taak om te bidden.',right:false,correction:'Ze begeleidden ook offers en gaven de farao raad.',wrong:'Ze waren alleen bezig met kopen en verkopen.'}
+];
+function egyptPyramid(interactive=false){return `<div class="egypt-pyramid">${EGYPT_GROUPS.map((g,i)=>`<${interactive?'button':'div'} class="egypt-tier" ${interactive?`data-tier="${i}"`:''} style="--tier-width:${[38,54,70,86,100][i]}%"><span>${i+1}. ${g[0]}</span></${interactive?'button':'div'}>`).join('')}</div>`}
+function nileMindmap(solution=false){const positions=['1/1','2/1','3/1','1/3','2/3','3/3'];return `<div class="nile-map"><div class="nile-center">≋<br>de Nijl</div>${NILE_USES.map((u,i)=>`<div class="nile-branch" style="grid-area:${positions[i]}"><span class="nile-icon" role="img" aria-label="${u[1]}">${u[0]}</span><span class="nile-write">${solution?String.fromCharCode(65+i):'___'}</span></div>`).join('')}</div>`}
+function egyptHomework(type,sol){
+if(type==='egyptGroups'){const order=[3,0,4,1,2];return '<h3>Verbind de standen met de juiste groep.</h3><p>Kijk naar de piramide. Verbind elk nummer met de passende groep.</p>'+egyptPyramid()+`<div class="egypt-paper-match"><div>${EGYPT_GROUPS.map((g,i)=>`<p>${i+1} <span>●</span>${sol?` <small>→ ${g[1]}</small>`:''}</p>`).join('')}</div><div>${order.map(i=>`<p>● ${EGYPT_GROUPS[i][1]}</p>`).join('')}</div></div>`}
+if(type==='nileMap')return '<h3>Waarom was de Nijl belangrijk?</h3><p>Bekijk de prentjes. Schrijf bij elk prentje de juiste letter.</p><div class="nile-bank">'+NILE_USES.map((u,i)=>`<p><b>${String.fromCharCode(65+i)}.</b> ${u[2]}</p>`).join('')+'</div>'+nileMindmap(sol)+'<h3>Denk even na.</h3><p>Noem één reden waarom jij water nodig hebt.</p><div class="t3-writing-lines">'+(sol?'<p>Bijvoorbeeld: om te drinken.</p>':'<span></span>')+'</div>';
+const corrections=EGYPT_FACTS.filter(f=>!f.right).map(f=>f.correction);
+return '<h3>Waar of niet waar?</h3><p>Omcirkel waar of niet waar. Is de zin fout? Schrijf de letter van de juiste verbetering. Is de zin waar? Zet een streepje.</p>'+EGYPT_FACTS.map((f,i)=>`<div class="egypt-fact-paper"><b>${i+1}. ${f.text}</b><div class="truth-paper"><span class="${sol&&f.right?'solution-circle':''}">waar</span><span class="${sol&&!f.right?'solution-circle':''}">niet waar</span></div><p class="correction-letter">Verbetering: ${sol?(f.right?'–':String.fromCharCode(65+corrections.indexOf(f.correction))):'____'}</p></div>`).join('')+'<h3>Kies de juiste verbetering.</h3><div class="correction-bank">'+corrections.map((t,i)=>`<p><b>${String.fromCharCode(65+i)}.</b> ${t}</p>`).join('')+'</div>';
+}
