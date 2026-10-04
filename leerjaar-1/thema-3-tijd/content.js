@@ -643,7 +643,7 @@ const TIME_CONTENT={
                   "text": "ja"
                 }
               ],
-              "image": "assets/eigen/volwassene.png"
+              "image": "assets/eigen/familie.png"
             }
           ]
         }
