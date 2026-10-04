@@ -11,7 +11,7 @@ button.onclick=()=>{document.body.dataset.view='homework';delete document.body.d
 addEventListener('afterprint',()=>delete document.body.dataset.print);
 const picture=o=>`${o.image?`<img src="${o.image}" alt="">`:''}${o.text?`<span>${esc(o.text)}</span>`:''}`;
 function matching(pairs,sol){const right=derange(pairs),h=pairs.length*110+10;
- const item=(o,x,y)=>`${o.image?`<image href="${o.image}" x="${x+10}" y="${y+4}" width="210" height="72"/>`:''}<foreignObject x="${x}" y="${y+(o.image?77:18)}" width="230" height="62"><div xmlns="http://www.w3.org/1999/xhtml" class="match-label">${esc(o.text)}</div></foreignObject>`;
+ const item=(o,x,y)=>`${o.image?`<image href="${o.image}" x="${x+10}" y="${y+4}" width="210" height="72"/>`:''}<foreignObject x="${x}" y="${y+(o.image?77:21)}" width="230" height="${o.image?30:62}"><div xmlns="http://www.w3.org/1999/xhtml" class="match-label">${esc(o.text)}</div></foreignObject>`;
  return `<svg class="paper-pair-svg" viewBox="0 0 700 ${h}" xmlns="http://www.w3.org/2000/svg">${pairs.map((p,i)=>item(p.left,0,i*110)+`<circle cx="250" cy="${i*110+52}" r="3"/>`).join('')}${right.map((p,i)=>item(p.right,470,i*110)+`<circle cx="450" cy="${i*110+52}" r="3"/>`).join('')}${sol?pairs.map((p,i)=>`<line x1="250" y1="${i*110+52}" x2="450" y2="${right.indexOf(p)*110+52}" stroke="#1975ae" stroke-width="2.5"/>`).join(''):''}</svg>`;
 }
 function makeExercise(n,title,body,lesson){return `<section class="t3-exercise paper-exercise" data-lesson="Les ${lesson}"><h3 data-task-number="${n}"><span class="exercise-number" style="background:${['#dfa900','#f06452','#218657'][(n-1)%3]}">${n}</span><span class="exercise-instruction">${title}</span></h3><div class="paper-exercise-body">${body}</div></section>`}

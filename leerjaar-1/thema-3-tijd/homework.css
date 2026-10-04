@@ -45,3 +45,5 @@
 .time-weekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:1mm}.time-weekdays span{font-size:10pt;padding:2mm 0;background:white;border:1px solid #b5cbd6}
 .t3-page .week-repeat{font-size:9pt;margin:2mm 0 3mm}
 .time-relative-days{display:grid;grid-template-columns:repeat(5,1fr);gap:3mm}.time-relative-days>div{position:relative;display:flex;align-items:center;flex-direction:column;padding:2mm 1mm;border:1px solid #ccd8df;background:white}.time-relative-days>div:not(:last-child)::after{content:'→';position:absolute;right:-3.2mm;top:8mm;font-size:14pt;color:#155a70}.time-relative-days .today{border:2px solid #4f86b9;background:#eef6fc}.time-relative-days img{width:17mm;height:18mm;object-fit:contain}.time-relative-days b{font-size:10pt;margin-top:1mm}
+
+.t3-page .match-label{height:100%;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
