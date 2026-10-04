@@ -1,0 +1,227 @@
+[
+  {
+    "name": "baby",
+    "prompt": "Use case: scientific-educational. Create one original standalone PNG educational illustration for age 6 children learning human life stages. Subject: a 5 month old baby lying safely on its back on a small pale blanket, wearing a mint green romper, chubby baby proportions, no adult. Friendly clean children's textbook hand-drawn illustration, crisp warm dark outlines, flat natural colours and very light shading, realistic age proportions rather than chibi. Full body visible centered, isolated on a genuinely transparent background, generous clear margin, square canvas. Only this one person and the explicitly described small props. Large readable silhouette suitable for printing at 3cm tall. No text, no letters, no numbers, no labels, no border, no watermark. Consistent illustrated classroom card style.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "peuter",
+    "prompt": "Use case: scientific-educational. Create one original standalone PNG educational illustration for age 6 children learning human life stages. Subject: a 2 year old toddler with short brown hair, standing taking an unsteady small step with arms slightly out for balance, teal shirt and ochre shorts, toddler proportions. Friendly clean children's textbook hand-drawn illustration, crisp warm dark outlines, flat natural colours and very light shading, realistic age proportions rather than chibi. Full body visible centered, isolated on a genuinely transparent background, generous clear margin, square canvas. Only this one person and the explicitly described small props. Large readable silhouette suitable for printing at 3cm tall. No text, no letters, no numbers, no labels, no border, no watermark. Consistent illustrated classroom card style.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "kleuter",
+    "prompt": "Use case: scientific-educational. Create one original standalone PNG educational illustration for age 6 children learning human life stages. Subject: a 4 year old preschool child with brown hair, red shirt and blue shorts, standing holding one large colourful building block, preschool proportions clearly older than a toddler. Friendly clean children's textbook hand-drawn illustration, crisp warm dark outlines, flat natural colours and very light shading, realistic age proportions rather than chibi. Full body visible centered, isolated on a genuinely transparent background, generous clear margin, square canvas. Only this one person and the explicitly described small props. Large readable silhouette suitable for printing at 3cm tall. No text, no letters, no numbers, no labels, no border, no watermark. Consistent illustrated classroom card style.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "schoolkind",
+    "prompt": "Use case: scientific-educational. Create one original standalone PNG educational illustration for age 6 children learning human life stages. Subject: a 7 year old schoolchild with brown hair, teal shirt and blue trousers, standing with a small school backpack and a closed exercise book, school age proportions. Friendly clean children's textbook hand-drawn illustration, crisp warm dark outlines, flat natural colours and very light shading, realistic age proportions rather than chibi. Full body visible centered, isolated on a genuinely transparent background, generous clear margin, square canvas. Only this one person and the explicitly described small props. Large readable silhouette suitable for printing at 3cm tall. No text, no letters, no numbers, no labels, no border, no watermark. Consistent illustrated classroom card style.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "volwassene",
+    "prompt": "Use case: scientific-educational. Create one original standalone PNG educational illustration for age 6 children learning human life stages. Subject: a 35 year old adult woman with brown hair, teal blouse and blue trousers, standing in a relaxed posture, clearly adult proportions. Friendly clean children's textbook hand-drawn illustration, crisp warm dark outlines, flat natural colours and very light shading, realistic age proportions rather than chibi. Full body visible centered, isolated on a genuinely transparent background, generous clear margin, square canvas. Only this one person and the explicitly described small props. Large readable silhouette suitable for printing at 3cm tall. No text, no letters, no numbers, no labels, no border, no watermark. Consistent illustrated classroom card style.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "oudere",
+    "prompt": "Use case: scientific-educational. Create one original standalone PNG educational illustration for age 6 children learning human life stages. Subject: a 75 year old woman with grey hair and gentle age lines, glasses, coral cardigan and blue trousers, standing upright with a friendly smile, clearly elderly without exaggerated frailty. Friendly clean children's textbook hand-drawn illustration, crisp warm dark outlines, flat natural colours and very light shading, realistic age proportions rather than chibi. Full body visible centered, isolated on a genuinely transparent background, generous clear margin, square canvas. Only this one person and the explicitly described small props. Large readable silhouette suitable for printing at 3cm tall. No text, no letters, no numbers, no labels, no border, no watermark. Consistent illustrated classroom card style.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "telefoon-vroeger",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: one vintage mustard-yellow rotary dial telephone with a coiled cable, clear rotary dial, no printed digits. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "telefoon-nu",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: one modern touchscreen smartphone upright, generic colourful simple geometric app icons, no brand or text. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "tv-vroeger",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: one old wooden box television with two rabbit-ear aerials and small black-and-white screen. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "tv-nu",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: one modern thin flat screen television on two short feet, plain blue screen. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "archeoloog",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: a friendly woman archaeologist kneeling and gently brushing earth off an ancient pottery fragment, small trowel nearby, modern fieldwork clothes, no treasure, no text. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "werktuig",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: a small group of three prehistoric tools: a chipped stone hand axe, a stone axe securely tied to a wooden handle, and a wooden spear with stone tip, no metal or modern tools. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "grotschildering",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: a small irregular ochre rock wall fragment with prehistoric-style red ochre drawings of a bison, deer and handprint, no modern objects. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "jagen",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: two prehistoric adults in simple hide clothing carrying wooden spears and quietly observing a distant deer in a small grassy patch, no violence, no blood, clearly hunting for food, not modern safari. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "verzamelen",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: one prehistoric adult and child in simple hide clothing collecting red berries and nuts into a woven basket beside a bush, small isolated scene, no modern objects. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "ontdekking",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: two prehistoric people warming their hands near a small safely contained campfire on a patch of earth, simple hide clothes, friendly calm scene, no modern objects. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "piramide",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: one large ancient Egyptian limestone pyramid with a smaller pyramid behind on a small sand patch, readable triangle shapes, no tourists. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "farao",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: one ancient Egyptian pharaoh standing upright wearing a striped nemes headdress, linen kilt and broad gold collar, holding a ceremonial staff, friendly face, full body. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "priester",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: one ancient Egyptian priest with shaved head wearing a simple white linen robe, standing with palms raised in prayer beside a small offering bowl, no crown, no modern religious symbols, full body. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "boer",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: one ancient Egyptian farmer in a simple white linen kilt, bending to tend a small patch of golden wheat with a wooden hoe, no crown, no modern machinery, full body. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "schrijver",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: one ancient Egyptian scribe sitting cross-legged writing on a papyrus sheet with a reed pen, simple white linen clothing, no crown, full body. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "papyrus",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: one rolled-open blank papyrus sheet with clear woven fibrous texture, two green papyrus stems with umbrella-shaped tops beside it, no writing. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "hierogliefen",
+    "prompt": "Use case: scientific-educational. Asset: original standalone PNG classroom picture card for children aged 6. Subject: one small rectangular sandstone slab with three horizontal rows of stylized carved ancient Egyptian pictorial hieroglyphic signs: birds, eye, reeds, water waves, and seated figures, clear distinct signs, no Latin letters, no numbers. Friendly clean textbook illustration, crisp warm dark outlines, natural flat colours with subtle shading, realistic recognizable proportions, not emoji, not photorealistic. Isolated on genuinely transparent background, whole subject visible with generous margins, square composition. A single cohesive clear illustration readable at 3 centimetres tall. No text labels, no captions, no border, no watermark. Historically suitable clothing and materials when an ancient setting is specified.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "telefoon-dan",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: a vintage 1990s black cordless home telephone upright in its charging base with push buttons, no numbers or text. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. No labels, no letters, no numbers.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "tv-dan",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: a 1990s grey CRT colour television with thick deep case and a simple colour pattern on its screen. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. No labels, no letters, no numbers.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "platenspeler",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: a wooden record player with a large black vinyl record and tonearm, three-quarter view. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. No labels, no letters, no numbers.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "cd-speler",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: a portable silver CD player boombox with its CD lid open and one shiny disc inside. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. No labels, no letters, no numbers.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "muziek-nu",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: a modern smartphone beside a pair of small wireless earbuds, phone screen has a simple musical note and play symbol, no text. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. No labels, no letters, no numbers.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "camera-vroeger",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: an antique black folding bellows camera with extended accordion bellows, no tripod. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. No labels, no letters, no numbers.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "camera-dan",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: a vintage 1980s black and silver film camera with lens and a small roll of photographic film beside it. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. No labels, no letters, no numbers.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "camera-nu",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: a modern digital camera viewed from behind at a slight angle, large colour preview screen showing a simple landscape and clearly visible lens shape. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. No labels, no letters, no numbers.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "eergisteren",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: a simple small desktop tear-off calendar with red binding, white page showing only the large printed minus two symbol '-2', and a small blue arrow pointing left beside the calendar. No other text or numerals. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. Precisely render the requested single number on the calendar.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "gisteren",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: a simple small desktop tear-off calendar with red binding, white page showing only the large printed minus one symbol '-1', and a small blue arrow pointing left beside the calendar. No other text or numerals. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. Precisely render the requested single number on the calendar.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "vandaag",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: a simple small desktop tear-off calendar with red binding, white page showing only the large printed zero '0', and a small blue arrow pointing down beside the calendar. No other text or numerals. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. Precisely render the requested single number on the calendar.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "morgen",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: a simple small desktop tear-off calendar with red binding, white page showing only the large printed plus one symbol '+1', and a small green arrow pointing right beside the calendar. No other text or numerals. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. Precisely render the requested single number on the calendar.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "overmorgen",
+    "prompt": "Use case: scientific-educational. Original standalone PNG classroom illustration. Subject: a simple small desktop tear-off calendar with red binding, white page showing only the large printed plus two symbol '+2', and a small green arrow pointing right beside the calendar. No other text or numerals. Clean friendly textbook illustration, clear dark outlines, natural flat colours and subtle shading, isolated on genuinely transparent background. Entire object centered with generous margin, square composition, no border or watermark, no brand. Easy to recognize printed at 3cm wide. Precisely render the requested single number on the calendar.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "oude-brief",
+    "prompt": "Use case: scientific-educational. Original PNG picture for a homework exercise for children aged 6 about caring for heritage. Subject: an old handwritten letter on yellowed folded paper next to a small faded envelope, writing shown as illegible ink strokes. Friendly clear textbook illustration, clean warm dark outlines, natural colours, subtle shading, simple scene, entire subject visible, isolated on genuinely transparent background. No captions, no words, no numbers, no good/bad marks, no ticks or crosses, no coloured answer circles, no border. Recognizable at 4 cm wide. Square composition.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "oude-foto",
+    "prompt": "Use case: scientific-educational. Original PNG picture for a homework exercise for children aged 6 about caring for heritage. Subject: one old sepia family photograph with a scalloped paper border showing a family in old-fashioned clothes, clearly a physical old photograph. Friendly clear textbook illustration, clean warm dark outlines, natural colours, subtle shading, simple scene, entire subject visible, isolated on genuinely transparent background. No captions, no words, no numbers, no good/bad marks, no ticks or crosses, no coloured answer circles, no border. Recognizable at 4 cm wide. Square composition.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "oude-pot",
+    "prompt": "Use case: scientific-educational. Original PNG picture for a homework exercise for children aged 6 about caring for heritage. Subject: an ancient clay pottery vessel with a small repaired crack and worn surface, an archaeological historical object. Friendly clear textbook illustration, clean warm dark outlines, natural colours, subtle shading, simple scene, entire subject visible, isolated on genuinely transparent background. No captions, no words, no numbers, no good/bad marks, no ticks or crosses, no coloured answer circles, no border. Recognizable at 4 cm wide. Square composition.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "erfgoed-kijken",
+    "prompt": "Use case: scientific-educational. Original PNG picture for a homework exercise for children aged 6 about caring for heritage. Subject: one young child standing a respectful distance from an old stone statue on a low pedestal, hands behind their back, looking carefully without touching. Friendly clear textbook illustration, clean warm dark outlines, natural colours, subtle shading, simple scene, entire subject visible, isolated on genuinely transparent background. No captions, no words, no numbers, no good/bad marks, no ticks or crosses, no coloured answer circles, no border. Recognizable at 4 cm wide. Square composition.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "erfgoed-klimmen",
+    "prompt": "Use case: scientific-educational. Original PNG picture for a homework exercise for children aged 6 about caring for heritage. Subject: one young child climbing onto the pedestal of an old stone statue, hands gripping the statue, clearly inappropriate behaviour but no injury. Friendly clear textbook illustration, clean warm dark outlines, natural colours, subtle shading, simple scene, entire subject visible, isolated on genuinely transparent background. No captions, no words, no numbers, no good/bad marks, no ticks or crosses, no coloured answer circles, no border. Recognizable at 4 cm wide. Square composition.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "foto-voorzichtig",
+    "prompt": "Use case: scientific-educational. Original PNG picture for a homework exercise for children aged 6 about caring for heritage. Subject: one young child at a table carefully holding an old family photo by its edges with both hands, calm care, the physical sepia photograph is visible. Friendly clear textbook illustration, clean warm dark outlines, natural colours, subtle shading, simple scene, entire subject visible, isolated on genuinely transparent background. No captions, no words, no numbers, no good/bad marks, no ticks or crosses, no coloured answer circles, no border. Recognizable at 4 cm wide. Square composition.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "foto-scheuren",
+    "prompt": "Use case: scientific-educational. Original PNG picture for a homework exercise for children aged 6 about caring for heritage. Subject: one young child at a table tearing an old family photograph into two pieces, clearly visible tear, no text. Friendly clear textbook illustration, clean warm dark outlines, natural colours, subtle shading, simple scene, entire subject visible, isolated on genuinely transparent background. No captions, no words, no numbers, no good/bad marks, no ticks or crosses, no coloured answer circles, no border. Recognizable at 4 cm wide. Square composition.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "gids-luisteren",
+    "prompt": "Use case: scientific-educational. Original PNG picture for a homework exercise for children aged 6 about caring for heritage. Subject: a museum guide pointing to an old painting while one young child stands calmly and listens attentively, small simple scene. Friendly clear textbook illustration, clean warm dark outlines, natural colours, subtle shading, simple scene, entire subject visible, isolated on genuinely transparent background. No captions, no words, no numbers, no good/bad marks, no ticks or crosses, no coloured answer circles, no border. Recognizable at 4 cm wide. Square composition.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "name": "gids-roepen",
+    "prompt": "Use case: scientific-educational. Original PNG picture for a homework exercise for children aged 6 about caring for heritage. Subject: a museum guide pointing to an old painting while one young child shouts loudly with hands cupped near their open mouth, use small radiating sound lines, no speech balloon or text. Friendly clear textbook illustration, clean warm dark outlines, natural colours, subtle shading, simple scene, entire subject visible, isolated on genuinely transparent background. No captions, no words, no numbers, no good/bad marks, no ticks or crosses, no coloured answer circles, no border. Recognizable at 4 cm wide. Square composition.",
+    "mode": "built-in image_gen"
+  }
+]

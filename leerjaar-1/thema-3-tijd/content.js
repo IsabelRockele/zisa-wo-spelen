@@ -5,21 +5,21 @@ const TIME_CONTENT={
       "word": "de archeoloog",
       "help": "Deze onderzoeker zoekt oude voorwerpen en onderzoekt wat ze over vroeger vertellen.",
       "kind": "person",
-      "image": "assets/archeoloog.png"
+      "image": "assets/eigen/archeoloog.png"
     },
     {
       "id": "baby",
       "word": "de baby",
       "help": "Een heel jong kind dat nog veel hulp nodig heeft.",
       "kind": "person",
-      "image": "assets/baby.png"
+      "image": "assets/eigen/baby.png"
     },
     {
       "id": "boer",
       "word": "de boer",
       "help": "Deze persoon zaait, verzorgt en oogst gewassen.",
       "kind": "person",
-      "image": "assets/boer.png"
+      "image": "assets/eigen/boer.png"
     },
     {
       "id": "bron",
@@ -40,7 +40,7 @@ const TIME_CONTENT={
       "word": "eergisteren",
       "help": "Twee dagen voor vandaag.",
       "kind": "time",
-      "image": "assets/eergisteren.png"
+      "image": "assets/eigen/eergisteren.png"
     },
     {
       "id": "erfgoed",
@@ -61,7 +61,7 @@ const TIME_CONTENT={
       "word": "de farao",
       "help": "De koning van het oude Egypte.",
       "kind": "person",
-      "image": "assets/farao.png"
+      "image": "assets/eigen/farao.png"
     },
     {
       "id": "geschiedenis",
@@ -75,14 +75,14 @@ const TIME_CONTENT={
       "word": "gisteren",
       "help": "De dag voor vandaag.",
       "kind": "time",
-      "image": "assets/gisteren.png"
+      "image": "assets/eigen/gisteren.png"
     },
     {
       "id": "grotschildering",
       "word": "de grotschildering",
       "help": "Een tekening die mensen lang geleden op een grotwand maakten.",
       "kind": "what",
-      "image": "assets/grotschildering.png"
+      "image": "assets/eigen/grotschildering.png"
     },
     {
       "id": "heden",
@@ -96,21 +96,21 @@ const TIME_CONTENT={
       "word": "de hiërogliefen",
       "help": "Tekens waarmee mensen in het oude Egypte schreven.",
       "kind": "what",
-      "image": "assets/hierogliefen.png"
+      "image": "assets/eigen/hierogliefen.png"
     },
     {
       "id": "jagen",
       "word": "jagen",
       "help": "Wilde dieren vangen of doden om bijvoorbeeld hun vlees en huid te gebruiken.",
       "kind": "verb",
-      "image": "assets/jagen.png"
+      "image": "assets/eigen/jagen.png"
     },
     {
       "id": "kleuter",
       "word": "de kleuter",
       "help": "Een jong kind dat al meer zelf kan dan een peuter.",
       "kind": "person",
-      "image": "assets/kleuter.png"
+      "image": "assets/eigen/kleuter.png"
     },
     {
       "id": "levenslijn",
@@ -131,28 +131,28 @@ const TIME_CONTENT={
       "word": "morgen",
       "help": "De dag na vandaag.",
       "kind": "time",
-      "image": "assets/morgen.png"
+      "image": "assets/eigen/morgen.png"
     },
     {
       "id": "ontdekking",
       "word": "de ontdekking",
       "help": "Mensen vinden iets dat al bestaat, maar dat ze nog niet kenden.",
       "kind": "what",
-      "image": "assets/ontdekking.png"
+      "image": "assets/eigen/ontdekking.png"
     },
     {
       "id": "overmorgen",
       "word": "overmorgen",
       "help": "Twee dagen na vandaag.",
       "kind": "time",
-      "image": "assets/overmorgen.png"
+      "image": "assets/eigen/overmorgen.png"
     },
     {
       "id": "papyrus",
       "word": "de papyrus",
       "help": "Materiaal uit plantenstengels waarop mensen in het oude Egypte schreven.",
       "kind": "what",
-      "image": "assets/papyrus.png"
+      "image": "assets/eigen/papyrus.png"
     },
     {
       "id": "periode",
@@ -166,14 +166,14 @@ const TIME_CONTENT={
       "word": "de peuter",
       "help": "Een jong kind dat leert lopen en praten.",
       "kind": "person",
-      "image": "assets/peuter.png"
+      "image": "assets/eigen/peuter.png"
     },
     {
       "id": "piramide",
       "word": "de piramide",
       "help": "Een groot bouwwerk in het oude Egypte dat als graf voor een farao diende.",
       "kind": "what",
-      "image": "assets/piramide.png"
+      "image": "assets/eigen/piramide.png"
     },
     {
       "id": "prehistorie",
@@ -187,7 +187,7 @@ const TIME_CONTENT={
       "word": "de priester",
       "help": "Deze persoon zorgde in het oude Egypte voor het geloof en bad tot de goden.",
       "kind": "person",
-      "image": "assets/priester.png"
+      "image": "assets/eigen/priester.png"
     },
     {
       "id": "schrift",
@@ -201,7 +201,7 @@ const TIME_CONTENT={
       "word": "de schrijver",
       "help": "Deze persoon kon in het oude Egypte lezen, schrijven en tellen.",
       "kind": "person",
-      "image": "assets/schrijver.png"
+      "image": "assets/eigen/schrijver.png"
     },
     {
       "id": "stand",
@@ -243,7 +243,7 @@ const TIME_CONTENT={
       "word": "vandaag",
       "help": "De dag die het nu is.",
       "kind": "time",
-      "image": "assets/vandaag.png"
+      "image": "assets/eigen/vandaag.png"
     },
     {
       "id": "verandering",
@@ -264,14 +264,14 @@ const TIME_CONTENT={
       "word": "verzamelen",
       "help": "Dingen bij elkaar zoeken, zoals bessen en noten.",
       "kind": "verb",
-      "image": "assets/verzamelen.png"
+      "image": "assets/eigen/verzamelen.png"
     },
     {
       "id": "werktuig",
       "word": "het werktuig",
       "help": "Een voorwerp dat helpt om een taak te doen.",
       "kind": "what",
-      "image": "assets/werktuig.png"
+      "image": "assets/eigen/werktuig.png"
     }
   ],
   "lessons": [
@@ -286,7 +286,7 @@ const TIME_CONTENT={
           "instruction": "Luister naar de vraag. Tik op het juiste antwoord.",
           "questions": [
             {
-              "text": "Vandaag is het dinsdag. Welke dag was het gisteren?",
+              "text": "Vandaag: dinsdag. Gisteren?",
               "options": [
                 {
                   "text": "maandag"
@@ -297,10 +297,11 @@ const TIME_CONTENT={
                 {
                   "text": "vrijdag"
                 }
-              ]
+              ],
+              "image": "assets/eigen/gisteren.png"
             },
             {
-              "text": "Vandaag is het vrijdag. Welke dag is het morgen?",
+              "text": "Vandaag: vrijdag. Morgen?",
               "options": [
                 {
                   "text": "zaterdag"
@@ -311,10 +312,11 @@ const TIME_CONTENT={
                 {
                   "text": "zondag"
                 }
-              ]
+              ],
+              "image": "assets/eigen/morgen.png"
             },
             {
-              "text": "Vandaag is het woensdag. Welke dag was het eergisteren?",
+              "text": "Vandaag: woensdag. Eergisteren?",
               "options": [
                 {
                   "text": "maandag"
@@ -325,10 +327,11 @@ const TIME_CONTENT={
                 {
                   "text": "vrijdag"
                 }
-              ]
+              ],
+              "image": "assets/eigen/eergisteren.png"
             },
             {
-              "text": "Vandaag is het maandag. Welke dag is het overmorgen?",
+              "text": "Vandaag: maandag. Overmorgen?",
               "options": [
                 {
                   "text": "woensdag"
@@ -339,10 +342,11 @@ const TIME_CONTENT={
                 {
                   "text": "dinsdag"
                 }
-              ]
+              ],
+              "image": "assets/eigen/overmorgen.png"
             },
             {
-              "text": "Welke dag komt na zondag?",
+              "text": "Na zondag komt …",
               "options": [
                 {
                   "text": "maandag"
@@ -353,7 +357,8 @@ const TIME_CONTENT={
                 {
                   "text": "vrijdag"
                 }
-              ]
+              ],
+              "image": "assets/eigen/vandaag.png"
             }
           ]
         },
@@ -364,7 +369,7 @@ const TIME_CONTENT={
           "instruction": "Luister naar de vraag. Tik op het juiste antwoord.",
           "questions": [
             {
-              "text": "Van maandag tot de volgende maandag: dat is een ...",
+              "text": "Maandag tot maandag: één …",
               "options": [
                 {
                   "text": "week"
@@ -375,10 +380,11 @@ const TIME_CONTENT={
                 {
                   "text": "jaar"
                 }
-              ]
+              ],
+              "image": "assets/eigen/vandaag.png"
             },
             {
-              "text": "Van je verjaardag tot je volgende verjaardag: dat is een ...",
+              "text": "Verjaardag tot verjaardag: één …",
               "options": [
                 {
                   "text": "jaar"
@@ -389,7 +395,8 @@ const TIME_CONTENT={
                 {
                   "text": "dag"
                 }
-              ]
+              ],
+              "image": "assets/eigen/vandaag.png"
             },
             {
               "text": "Wat duurt het kortst?",
@@ -403,10 +410,11 @@ const TIME_CONTENT={
                 {
                   "text": "een jaar"
                 }
-              ]
+              ],
+              "image": "assets/eigen/vandaag.png"
             },
             {
-              "text": "Wat duurt langer dan een week, maar korter dan een jaar?",
+              "text": "Langer dan een week, korter dan een jaar?",
               "options": [
                 {
                   "text": "een maand"
@@ -417,7 +425,8 @@ const TIME_CONTENT={
                 {
                   "text": "een uur"
                 }
-              ]
+              ],
+              "image": "assets/eigen/vandaag.png"
             }
           ]
         },
@@ -474,7 +483,8 @@ const TIME_CONTENT={
                 {
                   "text": "later"
                 }
-              ]
+              ],
+              "image": "assets/eigen/gisteren.png"
             },
             {
               "text": "Ik luister op dit moment. Wanneer is dat?",
@@ -488,7 +498,8 @@ const TIME_CONTENT={
                 {
                   "text": "vroeger"
                 }
-              ]
+              ],
+              "image": "assets/eigen/vandaag.png"
             },
             {
               "text": "Morgen ga ik op bezoek. Wanneer is dat?",
@@ -502,7 +513,8 @@ const TIME_CONTENT={
                 {
                   "text": "nu"
                 }
-              ]
+              ],
+              "image": "assets/eigen/morgen.png"
             },
             {
               "text": "Toen ik een baby was, dronk ik uit een fles. Wanneer was dat?",
@@ -516,7 +528,8 @@ const TIME_CONTENT={
                 {
                   "text": "nu"
                 }
-              ]
+              ],
+              "image": "assets/eigen/baby.png"
             }
           ]
         },
@@ -566,19 +579,19 @@ const TIME_CONTENT={
           "items": [
             {
               "text": "de baby",
-              "image": "assets/baby.png"
+              "image": "assets/eigen/baby.png"
             },
             {
               "text": "de peuter",
-              "image": "assets/peuter.png"
+              "image": "assets/eigen/peuter.png"
             },
             {
               "text": "de kleuter",
-              "image": "assets/kleuter.png"
+              "image": "assets/eigen/kleuter.png"
             },
             {
               "text": "het schoolkind",
-              "image": "assets/schoolkind.png"
+              "image": "assets/eigen/schoolkind.png"
             }
           ]
         },
@@ -589,33 +602,34 @@ const TIME_CONTENT={
           "instruction": "Luister naar de vraag. Tik op het juiste antwoord.",
           "questions": [
             {
-              "text": "Wat staat op jouw levenslijn?",
+              "text": "Op mijn levenslijn staan …",
               "options": [
                 {
-                  "text": "Belangrijke momenten uit jouw leven."
+                  "text": "mijn levensmomenten"
                 },
                 {
-                  "text": "De dagen van deze week."
+                  "text": "de weekdagen"
                 },
                 {
-                  "text": "Alle straten van je dorp."
+                  "text": "de straten"
                 }
-              ]
+              ],
+              "image": "assets/eigen/schoolkind.png"
             },
             {
               "text": "Wie was jij eerst?",
               "options": [
                 {
                   "text": "een baby",
-                  "image": "assets/baby.png"
+                  "image": "assets/eigen/baby.png"
                 },
                 {
                   "text": "een schoolkind",
-                  "image": "assets/schoolkind.png"
+                  "image": "assets/eigen/schoolkind.png"
                 },
                 {
                   "text": "een volwassene",
-                  "image": "assets/volwassene.png"
+                  "image": "assets/eigen/volwassene.png"
                 }
               ]
             },
@@ -623,15 +637,13 @@ const TIME_CONTENT={
               "text": "Zijn alle families hetzelfde?",
               "options": [
                 {
-                  "text": "Nee, elke familie is anders."
+                  "text": "nee"
                 },
                 {
-                  "text": "Ja, iedereen heeft dezelfde familie."
-                },
-                {
-                  "text": "Een familie heeft altijd vier mensen."
+                  "text": "ja"
                 }
-              ]
+              ],
+              "image": "assets/eigen/volwassene.png"
             }
           ]
         }
@@ -650,21 +662,21 @@ const TIME_CONTENT={
             {
               "left": {
                 "text": "een telefoon van vroeger",
-                "image": "assets/telefoon-vroeger.png"
+                "image": "assets/eigen/telefoon-vroeger.png"
               },
               "right": {
                 "text": "een telefoon van nu",
-                "image": "assets/telefoon-nu.png"
+                "image": "assets/eigen/telefoon-nu.png"
               }
             },
             {
               "left": {
                 "text": "een televisie van vroeger",
-                "image": "assets/tv-vroeger.png"
+                "image": "assets/eigen/tv-vroeger.png"
               },
               "right": {
                 "text": "een televisie van nu",
-                "image": "assets/tv-nu.png"
+                "image": "assets/eigen/tv-nu.png"
               }
             }
           ]
@@ -680,15 +692,15 @@ const TIME_CONTENT={
               "options": [
                 {
                   "text": "de oudere",
-                  "image": "assets/oudere.png"
+                  "image": "assets/eigen/oudere.png"
                 },
                 {
                   "text": "de baby",
-                  "image": "assets/baby.png"
+                  "image": "assets/eigen/baby.png"
                 },
                 {
                   "text": "het schoolkind",
-                  "image": "assets/schoolkind.png"
+                  "image": "assets/eigen/schoolkind.png"
                 }
               ]
             },
@@ -697,20 +709,20 @@ const TIME_CONTENT={
               "options": [
                 {
                   "text": "de baby",
-                  "image": "assets/baby.png"
+                  "image": "assets/eigen/baby.png"
                 },
                 {
                   "text": "de volwassene",
-                  "image": "assets/volwassene.png"
+                  "image": "assets/eigen/volwassene.png"
                 },
                 {
                   "text": "de oudere",
-                  "image": "assets/oudere.png"
+                  "image": "assets/eigen/oudere.png"
                 }
               ]
             },
             {
-              "text": "Wat kon je met deze oude telefoon?",
+              "text": "Wat deed je met deze telefoon?",
               "options": [
                 {
                   "text": "bellen"
@@ -722,7 +734,7 @@ const TIME_CONTENT={
                   "text": "foto’s maken"
                 }
               ],
-              "image": "assets/telefoon-vroeger.png"
+              "image": "assets/eigen/telefoon-vroeger.png"
             }
           ]
         }
@@ -739,44 +751,53 @@ const TIME_CONTENT={
           "instruction": "Luister naar de vraag. Tik op het juiste antwoord.",
           "questions": [
             {
-              "text": "Wat kan vertellen hoe opa er als kind uitzag?",
+              "text": "Welke prent vertelt over vroeger?",
               "options": [
                 {
-                  "text": "een oude foto van opa"
+                  "text": "oude foto",
+                  "image": "assets/eigen/oude-foto.png"
                 },
                 {
-                  "text": "een nieuwe winkelbon"
+                  "text": "nieuwe telefoon",
+                  "image": "assets/eigen/telefoon-nu.png"
                 },
                 {
-                  "text": "het weerbericht van morgen"
+                  "text": "nieuwe tv",
+                  "image": "assets/eigen/tv-nu.png"
                 }
               ]
             },
             {
-              "text": "Wat bewaren we als erfgoed?",
+              "text": "Wat bewaren we van vroeger?",
               "options": [
                 {
-                  "text": "Een bijzonder oud gebouw."
+                  "text": "oude pot",
+                  "image": "assets/eigen/oude-pot.png"
                 },
                 {
-                  "text": "Een leeg snoeppapiertje van vandaag."
+                  "text": "nieuwe muziekspeler",
+                  "image": "assets/eigen/muziek-nu.png"
                 },
                 {
-                  "text": "Een kapotte plastic zak."
+                  "text": "nieuwe tv",
+                  "image": "assets/eigen/tv-nu.png"
                 }
               ]
             },
             {
-              "text": "Wat kan een oude brief vertellen?",
+              "text": "Waarin lees je over vroeger?",
               "options": [
                 {
-                  "text": "Wat iemand vroeger schreef."
+                  "text": "oude brief",
+                  "image": "assets/eigen/oude-brief.png"
                 },
                 {
-                  "text": "Wat morgen zeker gebeurt."
+                  "text": "nieuwe camera",
+                  "image": "assets/eigen/camera-nu.png"
                 },
                 {
-                  "text": "Wat iedereen nu denkt."
+                  "text": "nieuwe telefoon",
+                  "image": "assets/eigen/telefoon-nu.png"
                 }
               ]
             }
@@ -789,44 +810,41 @@ const TIME_CONTENT={
           "instruction": "Luister naar de vraag. Tik op het juiste antwoord.",
           "questions": [
             {
-              "text": "De gids vertelt over een oud gebouw. Wat doe je?",
+              "text": "Wat doe je bij de gids?",
               "options": [
                 {
-                  "text": "Ik luister aandachtig."
+                  "text": "ik luister",
+                  "image": "assets/eigen/gids-luisteren.png"
                 },
                 {
-                  "text": "Ik roep heel luid."
-                },
-                {
-                  "text": "Ik kras mijn naam in de muur."
+                  "text": "ik roep",
+                  "image": "assets/eigen/gids-roepen.png"
                 }
               ]
             },
             {
-              "text": "Je ziet een oud beeld. Wat doe je?",
+              "text": "Wat doe je bij het oude beeld?",
               "options": [
                 {
-                  "text": "Ik bekijk het voorzichtig."
+                  "text": "ik kijk",
+                  "image": "assets/eigen/erfgoed-kijken.png"
                 },
                 {
-                  "text": "Ik klim erop."
-                },
-                {
-                  "text": "Ik breek er iets af."
+                  "text": "ik klim",
+                  "image": "assets/eigen/erfgoed-klimmen.png"
                 }
               ]
             },
             {
-              "text": "Je mag een oude foto bekijken. Wat doe je?",
+              "text": "Hoe houd je de oude foto vast?",
               "options": [
                 {
-                  "text": "Ik houd ze voorzichtig vast."
+                  "text": "voorzichtig",
+                  "image": "assets/eigen/foto-voorzichtig.png"
                 },
                 {
-                  "text": "Ik scheur ze."
-                },
-                {
-                  "text": "Ik teken erop."
+                  "text": "ik scheur",
+                  "image": "assets/eigen/foto-scheuren.png"
                 }
               ]
             }
@@ -845,47 +863,51 @@ const TIME_CONTENT={
           "instruction": "Luister naar de vraag. Tik op het juiste antwoord.",
           "questions": [
             {
-              "text": "Wat doet een archeoloog?",
+              "text": "Wie onderzoekt oude voorwerpen?",
               "options": [
                 {
-                  "text": "Oude voorwerpen onderzoeken."
+                  "text": "archeoloog",
+                  "image": "assets/eigen/archeoloog.png"
                 },
                 {
-                  "text": "Het weer van morgen voorspellen."
+                  "text": "boer",
+                  "image": "assets/eigen/boer.png"
                 },
                 {
-                  "text": "Nieuwe broodjes bakken."
+                  "text": "schrijver",
+                  "image": "assets/eigen/schrijver.png"
+                }
+              ]
+            },
+            {
+              "text": "Geschiedenis gaat over …",
+              "options": [
+                {
+                  "text": "vroeger"
+                },
+                {
+                  "text": "morgen"
+                },
+                {
+                  "text": "kleuren"
                 }
               ],
-              "image": "assets/archeoloog.png"
+              "image": "assets/eigen/oude-pot.png"
             },
             {
-              "text": "Wat leert geschiedenis ons?",
+              "text": "Oude voorwerpen vertellen over …",
               "options": [
                 {
-                  "text": "Hoe mensen vroeger leefden."
+                  "text": "vroeger"
                 },
                 {
-                  "text": "Welke dag het morgen wordt."
+                  "text": "later"
                 },
                 {
-                  "text": "Welke kleur jij het mooist vindt."
+                  "text": "morgen"
                 }
-              ]
-            },
-            {
-              "text": "Waarom bekijken we oude voorwerpen?",
-              "options": [
-                {
-                  "text": "Ze vertellen iets over vroeger."
-                },
-                {
-                  "text": "Ze voorspellen de toekomst."
-                },
-                {
-                  "text": "Ze zijn altijd speelgoed."
-                }
-              ]
+              ],
+              "image": "assets/eigen/oude-brief.png"
             }
           ]
         },
@@ -898,28 +920,28 @@ const TIME_CONTENT={
             {
               "left": {
                 "text": "een oud werktuig",
-                "image": "assets/werktuig.png"
+                "image": "assets/eigen/werktuig.png"
               },
               "right": {
-                "text": "Hoe mensen vroeger werkten."
+                "text": "werken"
               }
             },
             {
               "left": {
                 "text": "een oude grotschildering",
-                "image": "assets/grotschildering.png"
+                "image": "assets/eigen/grotschildering.png"
               },
               "right": {
-                "text": "Wat mensen op een grotwand tekenden."
+                "text": "tekenen"
               }
             },
             {
               "left": {
                 "text": "oude tekens",
-                "image": "assets/hierogliefen.png"
+                "image": "assets/eigen/hierogliefen.png"
               },
               "right": {
-                "text": "Hoe mensen vroeger schreven."
+                "text": "schrijven"
               }
             }
           ]
@@ -937,61 +959,70 @@ const TIME_CONTENT={
           "instruction": "Luister naar de vraag. Tik op het juiste antwoord.",
           "questions": [
             {
-              "text": "Hoe vonden de eerste mensen voedsel?",
+              "text": "Hoe vonden ze eten?",
               "options": [
                 {
-                  "text": "Ze jaagden en verzamelden."
+                  "text": "verzamelen",
+                  "image": "assets/eigen/verzamelen.png"
                 },
                 {
-                  "text": "Ze gingen naar de supermarkt."
+                  "text": "bellen",
+                  "image": "assets/eigen/telefoon-nu.png"
                 },
                 {
-                  "text": "Ze bestelden een pizza."
+                  "text": "tv kijken",
+                  "image": "assets/eigen/tv-nu.png"
                 }
               ]
             },
             {
-              "text": "Waarvoor gebruikten ze vuur?",
+              "text": "Wat deden ze met vuur?",
               "options": [
                 {
-                  "text": "Om warm te blijven en voedsel te bereiden."
+                  "text": "zich verwarmen",
+                  "image": "assets/eigen/ontdekking.png"
                 },
                 {
-                  "text": "Om hun gsm op te laden."
+                  "text": "bellen",
+                  "image": "assets/eigen/telefoon-nu.png"
                 },
                 {
-                  "text": "Om televisie te kijken."
+                  "text": "tv kijken",
+                  "image": "assets/eigen/tv-nu.png"
                 }
               ]
             },
             {
-              "text": "Wat maakten ze op de wand van een grot?",
+              "text": "Wat maakten ze in een grot?",
               "options": [
                 {
-                  "text": "grotschilderingen"
+                  "text": "grotschilderingen",
+                  "image": "assets/eigen/grotschildering.png"
                 },
                 {
-                  "text": "verkeerslichten"
+                  "text": "telefoons",
+                  "image": "assets/eigen/telefoon-nu.png"
                 },
                 {
-                  "text": "winkels"
+                  "text": "televisies",
+                  "image": "assets/eigen/tv-nu.png"
+                }
+              ]
+            },
+            {
+              "text": "Werktuigen waren van …",
+              "options": [
+                {
+                  "text": "steen, hout en been"
+                },
+                {
+                  "text": "plastic"
+                },
+                {
+                  "text": "papier"
                 }
               ],
-              "image": "assets/grotschildering.png"
-            },
-            {
-              "text": "Waarvan maakten ze werktuigen?",
-              "options": [
-                {
-                  "text": "Van steen, hout en been."
-                },
-                {
-                  "text": "Van plastic."
-                },
-                {
-                  "text": "Van papier."
-                }
-              ]
+              "image": "assets/eigen/werktuig.png"
             }
           ]
         },
@@ -1004,7 +1035,7 @@ const TIME_CONTENT={
             {
               "left": {
                 "text": "",
-                "image": "assets/jagen.png"
+                "image": "assets/eigen/jagen.png"
               },
               "right": {
                 "text": "jagen"
@@ -1013,7 +1044,7 @@ const TIME_CONTENT={
             {
               "left": {
                 "text": "",
-                "image": "assets/verzamelen.png"
+                "image": "assets/eigen/verzamelen.png"
               },
               "right": {
                 "text": "verzamelen"
@@ -1022,7 +1053,7 @@ const TIME_CONTENT={
             {
               "left": {
                 "text": "",
-                "image": "assets/ontdekking.png"
+                "image": "assets/eigen/ontdekking.png"
               },
               "right": {
                 "text": "vuur gebruiken"
@@ -1043,24 +1074,24 @@ const TIME_CONTENT={
           "instruction": "Luister naar de vraag. Tik op het juiste antwoord.",
           "questions": [
             {
-              "text": "Wie was de leider in het oude Egypte?",
+              "text": "Wie leidde Egypte?",
               "options": [
                 {
                   "text": "de farao",
-                  "image": "assets/farao.png"
+                  "image": "assets/eigen/farao.png"
                 },
                 {
                   "text": "de boer",
-                  "image": "assets/boer.png"
+                  "image": "assets/eigen/boer.png"
                 },
                 {
                   "text": "de priester",
-                  "image": "assets/priester.png"
+                  "image": "assets/eigen/priester.png"
                 }
               ]
             },
             {
-              "text": "Hoe heet de belangrijke rivier in Egypte?",
+              "text": "De rivier in Egypte heet …",
               "options": [
                 {
                   "text": "de Nijl"
@@ -1071,36 +1102,38 @@ const TIME_CONTENT={
                 {
                   "text": "de Maas"
                 }
-              ]
+              ],
+              "image": "assets/eigen/boer.png"
             },
             {
-              "text": "Waarvoor diende een piramide?",
+              "text": "Een piramide was een …",
               "options": [
                 {
-                  "text": "Als graf van een farao."
+                  "text": "graf"
                 },
                 {
-                  "text": "Als school voor alle kinderen."
+                  "text": "school"
                 },
                 {
-                  "text": "Als winkel."
+                  "text": "winkel"
                 }
               ],
-              "image": "assets/piramide.png"
+              "image": "assets/eigen/piramide.png"
             },
             {
-              "text": "Waarom was het rivierwater belangrijk?",
+              "text": "Water helpt om …",
               "options": [
                 {
-                  "text": "De boeren konden er hun gewassen mee laten groeien."
+                  "text": "planten te laten groeien"
                 },
                 {
-                  "text": "De boeren maakten er telefoons mee."
+                  "text": "telefoons te maken"
                 },
                 {
-                  "text": "Er groeiden geen planten bij de rivier."
+                  "text": "planten te laten drogen"
                 }
-              ]
+              ],
+              "image": "assets/eigen/boer.png"
             }
           ]
         },
@@ -1113,28 +1146,28 @@ const TIME_CONTENT={
             {
               "left": {
                 "text": "",
-                "image": "assets/farao.png"
+                "image": "assets/eigen/farao.png"
               },
               "right": {
-                "text": "Ik leid het land."
+                "text": "het land leiden"
               }
             },
             {
               "left": {
                 "text": "",
-                "image": "assets/priester.png"
+                "image": "assets/eigen/priester.png"
               },
               "right": {
-                "text": "Ik bid tot de goden."
+                "text": "bidden"
               }
             },
             {
               "left": {
                 "text": "",
-                "image": "assets/boer.png"
+                "image": "assets/eigen/boer.png"
               },
               "right": {
-                "text": "Ik werk op het land."
+                "text": "het land bewerken"
               }
             }
           ]
@@ -1152,7 +1185,7 @@ const TIME_CONTENT={
           "instruction": "Luister naar de vraag. Tik op het juiste antwoord.",
           "questions": [
             {
-              "text": "Hoe heten de tekens uit het oude Egypte?",
+              "text": "Hoe heten deze tekens?",
               "options": [
                 {
                   "text": "hiërogliefen"
@@ -1164,66 +1197,71 @@ const TIME_CONTENT={
                   "text": "cijfers van een klok"
                 }
               ],
-              "image": "assets/hierogliefen.png"
+              "image": "assets/eigen/hierogliefen.png"
             },
             {
-              "text": "Waarop schreven Egyptische schrijvers?",
+              "text": "Waarop schreven ze?",
               "options": [
                 {
                   "text": "papyrus",
-                  "image": "assets/papyrus.png"
+                  "image": "assets/eigen/papyrus.png"
                 },
                 {
                   "text": "een televisie",
-                  "image": "assets/tv-nu.png"
+                  "image": "assets/eigen/tv-nu.png"
                 },
                 {
                   "text": "een telefoon",
-                  "image": "assets/telefoon-nu.png"
+                  "image": "assets/eigen/telefoon-nu.png"
                 }
               ]
             },
             {
-              "text": "Kon iedereen in het oude Egypte schrijven?",
+              "text": "Wie kon schrijven?",
               "options": [
                 {
-                  "text": "Nee, vooral mensen die het geleerd hadden."
+                  "text": "wie het leerde"
                 },
                 {
-                  "text": "Ja, ook alle baby’s."
+                  "text": "alle baby’s"
                 },
                 {
-                  "text": "Niemand kon schrijven."
+                  "text": "niemand"
+                }
+              ],
+              "image": "assets/eigen/schrijver.png"
+            },
+            {
+              "text": "Wie schreef in Egypte?",
+              "options": [
+                {
+                  "text": "schrijver",
+                  "image": "assets/eigen/schrijver.png"
+                },
+                {
+                  "text": "boer",
+                  "image": "assets/eigen/boer.png"
+                },
+                {
+                  "text": "baby",
+                  "image": "assets/eigen/baby.png"
                 }
               ]
             },
             {
-              "text": "Wat deed een schrijver?",
+              "text": "Wat hielp de tekens te lezen?",
               "options": [
                 {
-                  "text": "Hij schreef brieven en noteerde hoeveelheden."
+                  "text": "de steen van Rosetta"
                 },
                 {
-                  "text": "Hij was altijd de koning."
+                  "text": "een telefoon"
                 },
                 {
-                  "text": "Hij bouwde alleen muren."
+                  "text": "een kalender"
                 }
-              ]
-            },
-            {
-              "text": "Wat hielp onderzoekers om hiërogliefen te begrijpen?",
-              "options": [
-                {
-                  "text": "De steen van Rosetta met verschillende schriften."
-                },
-                {
-                  "text": "Een nieuwe telefoon."
-                },
-                {
-                  "text": "Een kalender van vandaag."
-                }
-              ]
+              ],
+              "image": "assets/eigen/hierogliefen.png"
             }
           ]
         },
@@ -1236,7 +1274,7 @@ const TIME_CONTENT={
             {
               "left": {
                 "text": "",
-                "image": "assets/papyrus.png"
+                "image": "assets/eigen/papyrus.png"
               },
               "right": {
                 "text": "papyrus"
@@ -1245,7 +1283,7 @@ const TIME_CONTENT={
             {
               "left": {
                 "text": "",
-                "image": "assets/hierogliefen.png"
+                "image": "assets/eigen/hierogliefen.png"
               },
               "right": {
                 "text": "hiërogliefen"
@@ -1254,7 +1292,7 @@ const TIME_CONTENT={
             {
               "left": {
                 "text": "",
-                "image": "assets/schrijver.png"
+                "image": "assets/eigen/schrijver.png"
               },
               "right": {
                 "text": "de schrijver"
@@ -1276,15 +1314,15 @@ const TIME_CONTENT={
           "items": [
             {
               "text": "de eerste mensen",
-              "image": "assets/jagen.png"
+              "image": "assets/eigen/jagen.png"
             },
             {
               "text": "het oude Egypte",
-              "image": "assets/piramide.png"
+              "image": "assets/eigen/piramide.png"
             },
             {
               "text": "wij, nu",
-              "image": "assets/schoolkind.png"
+              "image": "assets/eigen/schoolkind.png"
             }
           ]
         },
@@ -1295,33 +1333,34 @@ const TIME_CONTENT={
           "instruction": "Luister naar de vraag. Tik op het juiste antwoord.",
           "questions": [
             {
-              "text": "Wat betekent het verleden?",
+              "text": "Het verleden is …",
               "options": [
                 {
-                  "text": "Wat al gebeurd is."
+                  "text": "vroeger"
                 },
                 {
-                  "text": "Wat nu gebeurt."
+                  "text": "nu"
                 },
                 {
-                  "text": "Wat nog moet komen."
+                  "text": "later"
                 }
-              ]
+              ],
+              "image": "assets/eigen/oude-foto.png"
             },
             {
               "text": "Welke persoon onderzoekt oude voorwerpen?",
               "options": [
                 {
                   "text": "de archeoloog",
-                  "image": "assets/archeoloog.png"
+                  "image": "assets/eigen/archeoloog.png"
                 },
                 {
                   "text": "de baby",
-                  "image": "assets/baby.png"
+                  "image": "assets/eigen/baby.png"
                 },
                 {
                   "text": "de farao",
-                  "image": "assets/farao.png"
+                  "image": "assets/eigen/farao.png"
                 }
               ]
             },
@@ -1330,29 +1369,32 @@ const TIME_CONTENT={
               "options": [
                 {
                   "text": "de baby",
-                  "image": "assets/baby.png"
+                  "image": "assets/eigen/baby.png"
                 },
                 {
                   "text": "de kleuter",
-                  "image": "assets/kleuter.png"
+                  "image": "assets/eigen/kleuter.png"
                 },
                 {
                   "text": "de volwassene",
-                  "image": "assets/volwassene.png"
+                  "image": "assets/eigen/volwassene.png"
                 }
               ]
             },
             {
-              "text": "Wat zochten de eerste mensen in de natuur?",
+              "text": "Wat deden ze om eten te vinden?",
               "options": [
                 {
-                  "text": "Voedsel en materialen."
+                  "text": "verzamelen",
+                  "image": "assets/eigen/verzamelen.png"
                 },
                 {
-                  "text": "Televisies."
+                  "text": "tv kijken",
+                  "image": "assets/eigen/tv-nu.png"
                 },
                 {
-                  "text": "Auto’s."
+                  "text": "bellen",
+                  "image": "assets/eigen/telefoon-nu.png"
                 }
               ]
             }
@@ -1362,3 +1404,4 @@ const TIME_CONTENT={
     }
   ]
 };
+window.timeWordClass=t=>/^(vroeger|het verleden|verleden)$/.test(t)?"time-past":/^(nu|het heden|heden)$/.test(t)?"time-present":/^(later|de toekomst|toekomst)$/.test(t)?"time-future":"";

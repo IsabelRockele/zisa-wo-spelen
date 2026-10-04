@@ -10,3 +10,8 @@ De woordenlijst heeft op pagina 1 de kop “Thema 1”, maar de voetteksten en d
 Leerkrachtopbouw: dezelfde wandplaten, dagstroken, QR-kaartjes en sprekende muur met duplexoptie als thema 2 van het eerste leerjaar. Huistaken gebruiken dezelfde blauwe titel, gekleurde opdrachtkoppen en doorlopende nummering; leerling- en oplossingenbladen delen dezelfde antwoordvolgorde. Antwoorden worden aangekruist, genummerd of verbonden op het oplossingenblad.
 
 Kinderen: afzonderlijke voorleesknoppen voor opdrachten en antwoordkeuzes, keuzevragen, verbinden, volgorde en een luisterwoordenboek. Browser-spraaksynthese met Nederlandse of Vlaamse stem. Handmatige herhaling blijft beschikbaar. Les 1 is verkenning en les 12/13 reflectie/evaluatie; hiervoor zijn geen vaste kindantwoorden toegevoegd.
+
+
+Update 4 oktober 2026: 45 eigen transparante PNG-illustraties via de ingebouwde ImageGen-tool vervangen de prenten in de huistaken en ondersteunen de online oefeningen. Prompts staan in `assets/eigen/prompts.json`. Les 5 heeft vier extra prentenopdrachten; les 6 gebruikt omcirkelen en prenten kiezen. Tijdwoordparen hebben vaste kleuren. Per les is er één online tegel, die alle oefeningen na elkaar aanbiedt.
+
+Alle zes thema’s hebben een gedeelde woordenschatoefening met makkelijk (prent en woord) en moeilijk (alleen prent, eerst zelf benoemen). Woordenlijsten zijn overgenomen van de bestaande wandplaten; voorlezen start uitsluitend op verzoek.
