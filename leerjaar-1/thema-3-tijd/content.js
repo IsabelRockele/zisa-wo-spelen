@@ -1103,7 +1103,7 @@ const TIME_CONTENT={
                   "text": "de Maas"
                 }
               ],
-              "image": "assets/eigen/boer.png"
+              "image": "assets/eigen/nijl.png"
             },
             {
               "text": "Een piramide was een …",
