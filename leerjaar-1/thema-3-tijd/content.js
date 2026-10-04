@@ -722,7 +722,7 @@ const TIME_CONTENT={
               ]
             },
             {
-              "text": "Wat deed je met deze telefoon?",
+              "text": "Wat deed je hiermee?",
               "options": [
                 {
                   "text": "bellen"
@@ -1405,3 +1405,4 @@ const TIME_CONTENT={
   ]
 };
 window.timeWordClass=t=>/^(vroeger|het verleden|verleden)$/.test(t)?"time-past":/^(nu|het heden|heden)$/.test(t)?"time-present":/^(later|de toekomst|toekomst)$/.test(t)?"time-future":"";
+
