@@ -3,7 +3,7 @@
 .wall-pages{overflow-x:auto;padding:0 0 12px}
 .wall-sheet{box-sizing:border-box;display:grid;grid-template-columns:repeat(3,62mm);grid-template-rows:repeat(3,78mm);gap:5mm 2mm;width:190mm;margin:0 auto 28px;break-inside:avoid}
 .wall-back-card,.wall-empty{box-sizing:border-box;width:62mm;height:78mm}
-.wall-back-card{display:flex;align-items:center;justify-content:center;background:white;border:1px dashed #ddd;padding:5mm;text-align:center;color:#b5b5b5;font-size:23px;font-weight:400;overflow-wrap:anywhere}
+.wall-back-card{display:flex;align-items:flex-start;justify-content:center;background:white;border:1px dashed #ddd;padding:10mm 5mm 5mm;text-align:center;color:#b5b5b5;font-size:23px;font-weight:400;overflow-wrap:anywhere}
 .wall-fronts-only .wall-back-sheet{display:none}
 @media screen{.wall-back-sheet{position:relative;margin-top:40px}.wall-back-sheet::before{content:attr(aria-label) ' · woorden in lichtgrijs';position:absolute;top:-27px;left:0;font-size:16px;color:#52665e}}
 @media print{
