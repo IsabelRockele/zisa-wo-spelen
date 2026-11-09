@@ -1,0 +1,1 @@
+window.PRACTICE_WORDS = THEME_FOUR.words;
