@@ -45,6 +45,17 @@ function visualHtml(v){return `<img class="vocab-visual" src="${ASSET+v.image}" 
 function stripQuestion(v,i){const questions=v.kind==='verb'?[`Doe voor wat “${v.word}” betekent.`,`Gebruik “${v.word}” in een goede zin.`,`Geef een voorbeeld van “${v.word}”.`]:[`Wijs iets aan dat bij “${v.word}” past.`,`Gebruik “${v.word}” in een goede zin.`,`Leg in je eigen woorden uit wat “${v.word}” betekent.`,`Geef een voorbeeld van “${v.word}”.`];return questions[i%questions.length]}
 function renderMaterials(type){show('teacher');$$('[data-material]').forEach(b=>b.classList.toggle('active',b.dataset.material===type));$('#selectionTools').hidden=false;const root=$('#materials');root.className=`materials materials-${type}`;root.innerHTML='';vocab.forEach((v,i)=>{const el=document.createElement('article');el.className=`material ${type==='wall'?'wall':type==='strips'?'strip':'poster'} selected`;el.dataset.kind=v.kind;let content;if(type==='wall')content=`${visualHtml(v)}<div class="wall-description">${v.definition}</div>`;else if(type==='strips')content=`<b class="strip-word">${v.word}</b><span class="strip-question">${stripQuestion(v,i)}</span><small><strong>Houvast leerkracht:</strong> ${v.definition}</small>`;else content=`${visualHtml(v)}<h3>${v.word}</h3>`;el.innerHTML=`<input type="checkbox" checked aria-label="Kies ${v.word}">${content}`;el.querySelector('input').onchange=e=>el.classList.toggle('selected',e.target.checked);root.append(el)})}
 function toggleAll(on){$$('.material').forEach(x=>{x.classList.toggle('selected',on);x.querySelector('input').checked=on})}
-function makeQr(poster){show('qr');const n=poster?1:Math.max(1,Math.min(40,+$('#qrCount').value||1));const url=location.href.split('#')[0];const qr=`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(url)}`;const root=$('#qrOutput');root.innerHTML='';root.classList.toggle('poster-output',poster);for(let i=0;i<n;i++){const c=document.createElement('article');c.className='qr-card'+(poster?' poster':'');c.innerHTML=poster?`<p>ZISA WO SPELEN</p><h2>Ik oefen</h2><h3>Beest en bos · 1ste leerjaar</h3><img src="${qr}" alt="QR-code naar Thema 2"><strong>Scan en oefen mee!</strong>`:`<h2>Ik oefen</h2><h3>Beest en bos · 1ste leerjaar</h3><img src="${qr}" alt="QR-code naar Thema 2"><p>Scan en oefen mee!</p>`;root.append(c)}}
+function makeQr(poster){show('qr');const n=poster?1:Math.max(1,Math.min(40,+$('#qrCount').value||1));const url=location.href.split('#')[0];const qr=`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(url)}`;const root=$('#qrOutput');root.innerHTML='';root.classList.toggle('poster-output',poster);
+  if (poster) {
+    renderThemeQrPoster(root, "Beest en bos", box => {
+      const image = document.createElement("img");
+      image.src = qr;
+      image.alt = "QR-code naar Beest en bos";
+      image.width = 260;
+      box.append(image);
+    });
+    return;
+  }
+for(let i=0;i<n;i++){const c=document.createElement('article');c.className='qr-card';c.innerHTML=`<h2>Ik oefen</h2><h3>Beest en bos · 1ste leerjaar</h3><img src="${qr}" alt="QR-code naar Thema 2"><p>Scan en oefen mee!</p>`;root.append(c)}}
 $('#exerciseMenuButton').onclick=()=>show('home');
 init();
